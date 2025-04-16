@@ -1,0 +1,25 @@
+.lightsMainCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.div2 {
+    width: fit-content;
+}
+
+.secContainer {
+    background: #ffffff;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.secContainer .currentObj {
+    border-radius: 10px;
+}
+
+.secContainer1 {
+    display: flex;
+}
