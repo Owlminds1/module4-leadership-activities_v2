@@ -1,0 +1,294 @@
+{
+    "L1": {
+        "C25": {
+            "Warm up activity": {
+                "link": "/L1/C25/Warm-up-activity",
+                "name": "Animal Freeze Dance"
+            },
+            "Activity 1": {
+                "link": "/L1/C25/Activity-1",
+                "name": "Find the leadership qualities"
+            },
+            "Activity 2": {
+                "link": "/L1/C25/Activity-2",
+                "name": "A Leader Can, Have, Are"
+            },
+            "Activity 3": {
+                "link": "/L1/C25/Activity-3",
+                "name": "Who's the Leader?"
+            },
+            "Activity 4": {
+                "link": "/L1/C25/Activity-4",
+                "name": "Leadership Detective Challenge"
+            },
+            "Additional Activity 1": {
+                "link": "/L1/C25/Additional-Activity-1",
+                "name": "Watch and Observe"
+            }
+        },
+        "C26": {
+            "Activity 2": {
+                "link": "/L1/C26/Activity-2",
+                "name": "Real World Problem Solving"
+            }
+        },
+        "C29": {
+            "Activity 1": {
+                "link": "/L1/C29/Activity-1",
+                "name": "Be the Detective!"
+            },
+            "Activity 2": {
+                "link": "/L1/C29/Activity-2",
+                "name": "Think-Pair-Solo"
+            },
+            "Activity 3": {
+                "link": "/L1/C29/Activity-3",
+                "name": "Red Light, Green Light & Yellow Light"
+            },
+            "Activity 4": {
+                "link": "/L1/C29/Activity-4",
+                "name": "Pros and Cons Chart"
+            }
+        },
+        "C30": {
+            "Warm up activity": {
+                "link": "/L1/C30/Warm-up-activity",
+                "name": "Mystery Sound Guessing"
+            },
+            "Activity 1": {
+                "link": "/L1/C30/Activity-1",
+                "name": "Consequence Map"
+            },
+            "Activity 2": {
+                "link": "/L1/C30/Activity-2",
+                "name": "Consequences Match"
+            },
+            "Activity 3": {
+                "link": "/L1/C30/Activity-3",
+                "name": "Big Plan to Help at Home"
+            },
+            "Post Class Activity": {
+                "link": "/L1/C30/pca",
+                "name": "My Helping Hands Choice Board"
+            }
+        },
+        "C31": {
+            "Activity 1": {
+                "link": "/L1/C31/Activity-1",
+                "name": "I Messages vs. Blame Game"
+            },
+            "Activity 2": {
+                "link": "/L1/C31/Activity-2",
+                "name": "Expressing Emotions"
+            },
+            "Activity 3": {
+                "link": "/L1/C31/Activity-3",
+                "name": "The Tolerance Tower"
+            },
+            "Activity 4": {
+                "link": "/L1/C31/Activity-4",
+                "name": "Conflict Role-Play"
+            }
+        }
+    },
+    "L2": {
+        "C25": {
+            "Activity 1": {
+                "link": "/L2/C25/Activity-1",
+                "name": "Find the leadership qualities"
+            },
+            "Activity 2": {
+                "link": "/L2/C25/Activity-2",
+                "name": " Leadership Scavenger Hunt"
+            },
+            "Activity 3": {
+                "link": "/L2/C25/Activity-3",
+                "name": "Leadership Detective Challenge"
+            },
+            "Activity 4": {
+                "link": "/L2/C25/Activity-4",
+                "name": "Building a Strong Team"
+            },
+            "Additional Activity 1": {
+                "link": "/L2/C25/Additional-Activity-1",
+                "name": "Watch and Observe"
+            }
+        },
+        "C26": {
+            "Activity 2": {
+                "link": "/L2/C26/Activity-2",
+                "name": "The Great Balloon Challenge"
+            },
+            "Activity 3": {
+                "link": "/L2/C26/Activity-3",
+                "name": "Perspective Switch Game"
+            },
+            "Activity 4": {
+                "link": "/L2/C26/Activity-4",
+                "name": "Mastering Teamwork"
+            }
+        },
+        "C29": {
+            "Activity 1": {
+                "link": "/L2/C29/Activity-1",
+                "name": "Be the Detective!"
+            },
+            "Activity 2": {
+                "link": "/L2/C29/Activity-2",
+                "name": "Impact Match"
+            },
+            "Activity 3": {
+                "link": "/L2/C29/Activity-3",
+                "name": "Fix the Bossy!"
+            },
+            "Activity 4": {
+                "link": "/L2/C29/Activity-4",
+                "name": "Pros and Cons Chart"
+            },
+            "Post Class Activity": {
+                "link": "/L2/C29/pca",
+                "name": "Be a Kind Helper"
+            }
+        },
+        "C30": {
+            "Activity 1": {
+                "link": "/L2/C30/Activity-1",
+                "name": "STOP & Decide"
+            },
+            "Activity 2": {
+                "link": "/L2/C30/Activity-2",
+                "name": "Council of Kids - Let’s Make the Rules!"
+            },
+            "Activity 3": {
+                "link": "/L2/C30/Activity-3",
+                "name": "Think Again"
+            },
+            "Post Class Activity": {
+                "link": "/L2/C30/pca",
+                "name": "Family Council"
+            }
+        },
+        "C31": {
+            "Activity 1": {
+                "link": "/L2/C31/Activity-1",
+                "name": "'I' Messages vs. Blame Game"
+            },
+            "Activity 2": {
+                "link": "/L2/C31/Activity-2",
+                "name": "See It from Both Sides!"
+            },
+            "Activity 3": {
+                "link": "/L2/C31/Activity-3",
+                "name": "The Tolerance Tower"
+            },
+            "Activity 4": {
+                "link": "/L2/C31/Activity-4",
+                "name": "Conflict Role-Play"
+            }
+        }
+    },
+    "L3": {
+        "C25": {
+            "Activity 1": {
+                "link": "/L3/C25/Activity-1",
+                "name": "Find the leadership qualities"
+            },
+            "Activity 2": {
+                "link": "/L3/C25/Activity-2",
+                "name": "Leadership Detective Challenge"
+            },
+            "Activity 3": {
+                "link": "/L3/C25/Activity-3",
+                "name": "Leading the Right Way"
+            },
+            "Activity 4": {
+                "link": "/L3/C25/Activity-4",
+                "name": "Role Playing Leadership Strategies"
+            },
+            "Additional Activity 1": {
+                "link": "/L3/C25/Additional-Activity-1",
+                "name": "Watch and Observe"
+            }
+        },
+        "C26": {
+            "Activity 1": {
+                "link": "/L3/C26/Activity-1",
+                "name": "Mastering Teamwork"
+            },
+            "Activity 2": {
+                "link": "/L3/C26/Activity-2",
+                "name": "The Social Loafing Challenge"
+            },
+            "Activity 3": {
+                "link": "/L3/C26/Activity-3",
+                "name": "The 30-Second Brain Blitz!"
+            }
+        },
+        "C29":{
+            "Activity 1": {
+                "link": "/L3/C29/Activity-1",
+                "name": "Be the Detective"
+            },
+            "Activity 2": {
+                "link": "/L3/C29/Activity-2",
+                "name": "T-Chart Discussion"
+            },
+            "Activity 3": {
+                "link": "/L3/C29/Activity-3",
+                "name": "Role-Play"
+            },
+            "Activity 4": {
+                "link": "/L3/C29/Activity-4",
+                "name": "Procrastination Buster"
+            },
+            "Additional Activity 1": {
+                "link": "/L3/C29/Additional-Activity-1",
+                "name": "Climate vs. Weather"
+            }
+        },
+        "C30":{
+            "Warm up activity": {
+                "link": "/L3/C30/Warm-up-activity",
+                "name": "Choose Your Adventure"
+            },
+            "Activity 1": {
+                "link": "/L3/C30/Activity-1",
+                "name": "Power Up Your Decisions"
+            },
+            "Activity 2": {
+                "link": "/L3/C30/Activity-2",
+                "name": "SWOT It Out!"
+            },
+            "Activity 3": {
+                "link": "/L3/C30/Activity-3",
+                "name": "Oops! Let’s Fix That!"
+            }
+        },
+        "C31": {
+            "Activity 1": {
+                "link": "/L3/C31/Activity-1",
+                "name": "Delta vs Sigma"
+            },
+            "Activity 2": {
+                "link": "/L3/C31/Activity-2",
+                "name": "The Tolerance Tower"
+            },
+            "Activity 3": {
+                "link": "/L3/C31/Activity-3",
+                "name": "'I' Messages vs. Blame Game"
+            },
+            "Activity 4.1": {
+                "link": "/L3/C31/Activity-4-1",
+                "name": "The Art of Respectful Disagreement 1"
+            },
+            "Activity 4.2": {
+                "link": "/L3/C31/Activity-4-2",
+                "name": "The Art of Respectful Disagreement 2"
+            },
+            "Post Class Activity": {
+                "link": "/L3/C31/pca",
+                "name": "Conflict Reflection Journal"
+            }
+        }
+    }
+}
