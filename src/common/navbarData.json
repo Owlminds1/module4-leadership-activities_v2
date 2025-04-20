@@ -142,6 +142,24 @@
                 "name": "Mastering Teamwork"
             }
         },
+        "C28":{
+            "Activity 1": {
+                "link": "/L2/C28/Activity-1",
+                "name": "Goal Getters"
+            },
+            "Activity 2": {
+                "link": "/L2/C28/Activity-2",
+                "name": "Shine Bright Like A STAR"
+            },
+            "Activity 3": {
+                "link": "/L2/C28/Activity-3",
+                "name": "Plan a Campaign"
+            },
+            "Activity 4.2": {
+                "link": "/L2/C28/Activity-4-2",
+                "name": "Jingle Notebook"
+            }
+        },
         "C29": {
             "Activity 1": {
                 "link": "/L2/C29/Activity-1",

@@ -4,17 +4,17 @@ import { useState } from 'react';
 import { jsPDF } from 'jspdf';
 import './style.css';
 
-export default function P3() {
+export default function P3(props) {
   const seenHeading = "Planning Your Goal";
 
   const questions = [
-    "What jobs can I help with during mealtime?",
-    "When is the best time for me to do my mealtime jobs?",
-    "What can I do if I forget to help?",
-    "How will I feel after helping with mealtime?",
-    "What will help me keep going, even if the job gets boring to do every day?",
-    "What fun thing can I do to celebrate reaching my goal?",
-    "Who at home can be part of my Home Harmony Hero team?"
+    "My Green Goal?",
+    "Why does this matter?",
+    "Where and when I’ll do it?",
+    "What might make it tricky?",
+    "My backup plan?",
+    "Who can help me?",
+    "How will I celebrate after 7 days?"
   ];
 
   const [answers, setAnswers] = useState(Array(questions.length).fill(''));
@@ -28,7 +28,8 @@ export default function P3() {
   const generatePDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(18);
-    doc.text('Planning Your Goal', 10, 15);
+    const heading = 'Planning Your Goal : ' + props.goal
+    doc.text(heading, 10, 15);
     doc.setFontSize(12);
 
     let y = 30;
@@ -47,14 +48,13 @@ export default function P3() {
         y = 20;
       }
     });
-
     doc.save('planning-your-goal.pdf');
   };
 
   return (
     <div className='slidesMainContainer p-6 max-w-4xl mx-auto'>
       <h1 className="text-3xl font-bold mb-10 text-blue-700">
-        {seenHeading}
+        {seenHeading} : {props.goal}
       </h1>
 
       <div className="space-y-8">

@@ -5,16 +5,16 @@ import { jsPDF } from 'jspdf';
 import './style.css';
 
 export default function P3() {
-  const seenHeading = "Planning Your Goal";
+  const seenHeading = "Plan The Campaign";
 
   const questions = [
-    "What jobs can I help with during mealtime?",
-    "When is the best time for me to do my mealtime jobs?",
-    "What can I do if I forget to help?",
-    "How will I feel after helping with mealtime?",
-    "What will help me keep going, even if the job gets boring to do every day?",
-    "What fun thing can I do to celebrate reaching my goal?",
-    "Who at home can be part of my Home Harmony Hero team?"
+    "Campaign Title",
+    "What’s the problem your campaign is solving?",
+    "What’s the goal of your campaign?",
+    "How can you get people involved?",
+    "Where will your campaign happen?",
+    "Who can help you with your campaign?",
+    "Campaign Slogan"
   ];
 
   const [answers, setAnswers] = useState(Array(questions.length).fill(''));
@@ -28,7 +28,7 @@ export default function P3() {
   const generatePDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(18);
-    doc.text('Planning Your Goal', 10, 15);
+    doc.text('The Campaign', 10, 15);
     doc.setFontSize(12);
 
     let y = 30;
@@ -48,7 +48,7 @@ export default function P3() {
       }
     });
 
-    doc.save('planning-your-goal.pdf');
+    doc.save('The Campaign.pdf');
   };
 
   return (
