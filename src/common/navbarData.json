@@ -256,6 +256,28 @@
                 "name": "The 30-Second Brain Blitz!"
             }
         },
+        "C28":{
+            "Warm up activity": {
+                "link": "/L3/C28/Warm-up-activity",
+                "name": "Alphabet Story"
+            },
+            "Activity 1": {
+                "link": "/L3/C28/Activity-1",
+                "name": "Perspective Swap"
+            },
+            "Activity 2": {
+                "link": "/L3/C28/Activity-2",
+                "name": "Shine Bright Like A STAR"
+            },
+            "Activity 3": {
+                "link": "/L3/C28/Activity-3",
+                "name": "Plan a Campaign"
+            },
+            "Activity 4": {
+                "link": "/L3/C28/Activity-4",
+                "name": "The Manifesto"
+            }
+        },
         "C29":{
             "Activity 1": {
                 "link": "/L3/C29/Activity-1",

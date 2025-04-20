@@ -25,51 +25,51 @@ export default function Slider() {
     ]
 
     const objHeading = [
-        "If I want to get better at running, I’d: ",
-        "Luca and the LEGO Spaceship",
-        "The Science Project",
-        "The Class Skit Challenge",
-        "Can you think of something you want to get better at?"
+        "I want to learn how to make pancakes on my own for breakfast",
+        "The Forgotten Lines",
+        "The Group Project Challenge",
+        "The Team’s Tiebreaker Trouble",
+        "Think of a time when something wasn’t going your way—maybe at school, in a hobby, or with friends"
     ]
 
     const objSubHeading = [
         "",
-        "Luca wants to build a LEGO spaceship all by himself. He starts strong, but the pieces keep falling off. After a few tries, he sighs and says, ‘I’m just not good at this!’",
-        "Sara and Maya are working together on a volcano science project. They get excited at first but then disagree on how to build it. The lava doesn’t flow properly in their first try, and both start feeling frustrated.",
-        "A group of classmates is preparing a skit for the school assembly. At first, everyone is excited, but then they start forgetting their lines or not showing up to practice. The group feels like giving up.",
+        "Liam has been selected to give a small speech during the school assembly. He practised a lot but forgets his lines during rehearsal. He gets nervous and says, 'Maybe I’m not meant to speak in front of others.'",
+        "Ella is doing a group project with two friends, but they keep getting distracted and not helping. Ella feels like she’s doing all the work and says, 'Why should I even bother trying if no one else cares?'",
+        "Team Blaze, a group of students including Maya, Aiden, and Zoe, is competing in a trivia quiz competition. They’ve made it to the final round but start arguing about answers. Maya says, 'Forget it, we’re just going to lose now!'",
         ""
     ]
 
     const solutionObj = [
         [
-            "Run 1 km without stopping",
-            "Mark each day I practice",
-            "Get tips from a coach",
-            "Enjoy a smoothie after each run!"
+            "Be able to make pancakes without help by the weekend.",
+            "Each time I try, I’ll note what went well and what I need to fix (like flipping them better or getting the mix right).",
+            "Ask an adult to show me the steps safely or help me the first time.",
+            "Enjoy my pancakes and maybe add extra toppings once I get it right!"
         ],
         [
-            "What is Luca’s goal?",
-            "How can Luca track his progress?",
-            "Who can help or cheer him on?",
-            "What reward can Luca give himself?"            
+            "What is Liam’s goal?",
+            "How can Liam track his progress while practising?",
+            "Who can help Liam feel more confident?",
+            "What reward can Liam give himself after his speech?"            
         ],
         [
-            "What is their goal?",
-            "How can they track their progress?",
-            "Who can help or cheer them on?",
-            "What reward can they give themselves?"            
+            "What goal can Ella set for her group?",
+            "How can she track if her teammates are helping?",
+            "Who can she talk to for help in solving this fairly?",
+            "What’s a good reward when the group works together successfully?"            
         ],
         [
-            "What is the team’s goal?",
-            "How can they track their progress?",
-            "Who can help or cheer them on?",
-            "What reward can the team give themselves?"            
+            "What goal can the team set together?",
+            "How can they track their teamwork during the competition?",
+            "Who can help the team get back on track?",
+            "What’s a fun reward if the team works well together?"            
         ],
         [
-            "What is one thing I want to get better at?",
-            "How will I track my progress?",
-            "Who can help or cheer me on?",
-            "What will I reward myself for?"
+            "What was your goal in that situation?",
+            "How could you have tracked your progress?",
+            "Who could you have talked to for help?",
+            "What small reward could have kept you motivated?"
         ]
     ]
 
