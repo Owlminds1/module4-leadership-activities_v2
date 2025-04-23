@@ -43,7 +43,7 @@ export default function Home() {
           <P4 />
         }
 
-        {currentPart < 3 &&
+        {currentPart != 1 && currentPart < 3 &&
           <button
             onClick={handleNext}
             className="mt-[50px] bg-green-600 text-white px-[25px] py-[6px] text-[18px] rounded-[10px] border-0 cursor-pointer hover:text-[19px]">

@@ -13,7 +13,7 @@ import Image from "next/image";
 
 const KeepTryingModel = (props) => {
   return (
-    <Dialog open={props.open} onOpenChange={props.setOpen}>
+    <Dialog open={props.open} onOpenChange={props.closeModal}>
     <DialogContent className="">
       <DialogHeader>
         <DialogTitle className="text-center text-2xl">{props.title}</DialogTitle>

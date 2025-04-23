@@ -25,7 +25,7 @@ const initialOptions = [
 export default function DragDropOptions() {
     const [modalTitle, setModalTitle] = useState('')
     const [modalContent, setModalContent] = useState('')
-    const [open, setOpen] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
 
     const [sections, setSections] = useState({
         options: initialOptions.map(item => ({ ...item, color: "bg-yellow-500" })), // Default yellow
@@ -72,14 +72,18 @@ export default function DragDropOptions() {
         setTimeout(function () {
             if (correctCount === totalCount) {
                 setModalTitle('Yeh! All answers are correct!')
-                setOpen(true)
+                setOpenModal(true)
             } else {
                 setModalTitle('Oops! your answers are incorrect.')
-                setOpen(true)
+                setOpenModal(true)
             }
         }, 200)
     };
 
+
+    const closeModal = () => {
+        setOpenModal(false)
+    }
     return (
         <div className="relative h-screen p-5 flex flex-col sequenceConatinerX">
             <DragDropContext onDragEnd={onDragEnd}>
@@ -171,8 +175,8 @@ export default function DragDropOptions() {
             <Modal
                 title={modalTitle}
                 content={modalContent}
-                open={open}
-                setOpen={setOpen}
+                open={openModal}
+                closeModal={closeModal}
             />
         </div>
     );
