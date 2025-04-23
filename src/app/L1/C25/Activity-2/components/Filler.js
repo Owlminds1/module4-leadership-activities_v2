@@ -16,7 +16,7 @@ export default function Filler() {
     };
 
     return (
-        <div className="flex p-6 mt-4">
+        <div className="flex p-6 mt-2">
             <div className="w-1/2">
                 <center>
                     <h1 className='text-[25px] font-semibold mb-4'>Maya and the Rainy Day</h1>

@@ -4,6 +4,8 @@ import './style.css'
 import { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
+import Modal from "@/components/ModalInit";
+
 const initialOptions = [
     { id: "1", text: "Problem-solving", answer: "canOptions" },
     { id: "2", text: "Confidence", answer: "hasOptions" },
@@ -19,7 +21,12 @@ const initialOptions = [
     { id: "12", text: "Think outside the box", answer: "canOptions" },
 ];
 
+
 export default function DragDropOptions() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [open, setOpen] = useState(false);
+
     const [sections, setSections] = useState({
         options: initialOptions.map(item => ({ ...item, color: "bg-yellow-500" })), // Default yellow
         canOptions: [],
@@ -29,17 +36,17 @@ export default function DragDropOptions() {
 
     const onDragEnd = (result) => {
         if (!result.destination) return;
-    
+
         const sourceList = [...sections[result.source.droppableId]];
         const destinationList = [...sections[result.destination.droppableId]];
-    
+
         const [movedItem] = sourceList.splice(result.source.index, 1);
-    
+
         // Prevent duplicates by ensuring the item isn't already in the destination list
         if (!destinationList.some(item => item.id === movedItem.id)) {
             destinationList.splice(result.destination.index, 0, movedItem);
         }
-    
+
         setSections({
             ...sections,
             [result.source.droppableId]: sourceList,
@@ -64,9 +71,11 @@ export default function DragDropOptions() {
         setSections(updatedSections);
         setTimeout(function () {
             if (correctCount === totalCount) {
-                alert("Yeh! All answers are correct!");
+                setModalTitle('Yeh! All answers are correct!')
+                setOpen(true)
             } else {
-                alert("Oops! your answers are incorrect.");
+                setModalTitle('Oops! your answers are incorrect.')
+                setOpen(true)
             }
         }, 200)
     };
@@ -157,6 +166,14 @@ export default function DragDropOptions() {
                     </Droppable>
                 </div>
             </DragDropContext>
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={open}
+                setOpen={setOpen}
+            />
         </div>
     );
 }
