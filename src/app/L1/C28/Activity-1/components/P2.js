@@ -90,16 +90,6 @@ export default function P2(props) {
     const [answerIndexs, setAnswerIndexs] = useState([])
     const [hiddenImages, setHiddenImages] = useState(Array(images.length).fill(false));
 
-
-    // useEffect(() => {
-    //     if (answerIndexs.length === hideableIndexes.length) {
-    //         setModalTitle("Good Job!")
-    //         setOpenModal(true)
-    //         // alert("Good Job!")
-    //         // props.handleNext()
-    //     }
-    // }, [answerIndexs]);
-
     const handleClick = (index) => {
         if (hideableIndexes.includes(index)) {
             setHiddenImages((prev) => {
