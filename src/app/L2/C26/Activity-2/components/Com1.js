@@ -11,10 +11,18 @@ import Flashlight from '../assets/flashlight.jpeg';
 import Food from '../assets/food.jpeg';
 import FirstAid from '../assets/firstAid.jpeg';
 
+
+import Modal from "@/components/ModalInit";
+
 import Image from 'next/image'
 
 import { useState } from 'react';
+
 export default function Com1() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+    const [moveToNextQ, setMoveToNextQ] = useState(false)
 
     const [currentObjIndex, setCurrentObjIndex] = useState(0)
 
@@ -42,11 +50,13 @@ export default function Com1() {
     const handleOptionSelection = (selectionOption) => {
         let answer = isAnswerCorrect(selectionOption);
         if (answer) {
-            alert('Yeh! The answer is correct');
-            setCurrentObjIndex(currentObjIndex + 1)
+            setMoveToNextQ(true)
+            setModalTitle('Yay! The answers are correct!')            
         } else {
-            alert('Oops! The answer is incorrect');
+            setMoveToNextQ(false)
+            setModalTitle('Oops! The answer is incorrect');
         }
+        setOpenModal(true)
     }
 
     const isAnswerCorrect = (selectionOption) => {
@@ -54,6 +64,13 @@ export default function Com1() {
             return true;
         }
         return false;
+    }
+
+    const closeModal = () => {
+        setOpenModal(false)
+        if(moveToNextQ){
+            setCurrentObjIndex(currentObjIndex + 1)
+        }
     }
 
     return (
@@ -104,6 +121,15 @@ export default function Com1() {
                     <h1 className='activityEndHeading'>The Activity is completed</h1>
                 </div>
             )}
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
+
         </div>
     );
 }

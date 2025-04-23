@@ -4,6 +4,7 @@ import './style.css'
 
 import { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import Modal from "@/components/ModalInit";
 
 const initialOptions = [
     { id: "1", text: "Listens to others", answer: "supportOptions" },
@@ -25,6 +26,10 @@ const initialOptions = [
 ];
 
 export default function DragDropOptions() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+
     const [sections, setSections] = useState({
         options: initialOptions.map(item => ({ ...item, color: "bg-yellow-500" })), // Default yellow
         supportOptions: [],
@@ -56,7 +61,7 @@ export default function DragDropOptions() {
         const updatedSections = { ...sections };
         let correctCount = 0;
         let totalCount = 0;
-
+        
         ["supportOptions", "underminesOptions"].forEach((sectionKey) => {
             updatedSections[sectionKey] = updatedSections[sectionKey].map(item => {
                 const isCorrect = item.answer === sectionKey;
@@ -67,34 +72,49 @@ export default function DragDropOptions() {
         });
 
         setSections(updatedSections);
+
         setTimeout(function () {
-            if (correctCount === totalCount) {
-                alert("Yeh! All answers are correct!");
-            } else {
-                alert("Oops! your answers are incorrect.");
+            if(sections.supportOptions.length != 7 || sections.underminesOptions.length != 6){
+                setModalTitle('The activity is not yet completed.')
             }
+            else if (correctCount === totalCount) {
+                setModalTitle('Yay! All answers are correct!')
+            } else {
+                setModalTitle("Oops! your answers are incorrect.");
+            }
+            setOpenModal(true)
         }, 200)
     };
 
     const showSubmitBtn = () => {
         let show = false;
-
-        if (sections.options.length === 0) {
+        if(sections.supportOptions.length > 0 || sections.underminesOptions.length > 0){
             show = true;
-        } else if (sections.options.length === 3) {
-            show = true;
-            for (let i = 0; i < sections.options.length; i++) {
-                if (sections.options[i]["id"] !== "14" &&
-                    sections.options[i]["id"] !== "15" &&
-                    sections.options[i]["id"] !== "16") {
-                    show = false;
-                    break;
-                }
-            }
         }
+
+        // OLD LOGIC
+        // if (sections.options.length === 0) {
+        //     show = true;
+        // } 
+        // else if (sections.options.length === 3) {
+        //     show = true;
+        //     for (let i = 0; i < sections.options.length; i++) {
+        //         if (sections.options[i]["id"] !== "14" &&
+        //             sections.options[i]["id"] !== "15" &&
+        //             sections.options[i]["id"] !== "16") {
+        //             show = false;
+        //             break;
+        //         }
+        //     }
+        // }
 
         return show;
     };
+
+
+    const closeModal = () => {
+        setOpenModal(false)
+    }
 
     return (
         <div className="relative h-screen p-5 flex flex-col sequenceConatinerX">
@@ -141,7 +161,6 @@ export default function DragDropOptions() {
                 </div>
 
 
-                {/* Submit Button (Only when options are empty) */}
                 {showSubmitBtn() &&
                     <div className="flex justify-center mt-4">
                         <button
@@ -154,7 +173,7 @@ export default function DragDropOptions() {
                 }
 
                 {/* Bottom Options Section */}
-                <div className="absolute bottom-10 w-full flex justify-center p-2 bg-blue-500">
+                <div className="w-full mt-4 flex justify-center p-2 bg-blue-500">
                     <Droppable droppableId="options">
                         {(provided) => (
                             <div
@@ -183,6 +202,15 @@ export default function DragDropOptions() {
                     </Droppable>
                 </div>
             </DragDropContext>
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
+
         </div>
     );
 }

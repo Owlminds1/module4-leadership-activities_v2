@@ -18,6 +18,7 @@ import S2_C4 from '../assets/scenarios/scenario_2/c4.jpeg';
 import S2_C5 from '../assets/scenarios/scenario_2/c5.jpeg';
 
 import Filler from './Filler'
+import Modal from "@/components/ModalInit";
 
 
 import { useState, useEffect } from "react";
@@ -26,8 +27,29 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
 
 export default function DragDropOptions() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+    const [moveToNextQ, setMoveToNextQ] = useState(false)
+
     const [currentObjIndex, setCurrentObjIndex] = useState(0);
     const [isSVisible, setIsSVisible] = useState(true)
+
+    /*
+    Answer The Class Science Fair Project: 
+        Task 1: Emma 
+        Task 2: Sophie 
+        Task 3: Leo
+        Task 4: Noah OR Lucas 
+        Task 5: Noah OR Lucas
+    
+    Answer Set Planning a School Field Trip: 
+        Task 1 : Jack 
+        Task 2 : Lily 
+        Task 3 : Olivia 
+        Task 4 : James 
+        Task 5 : Ryan
+*/
     const obj = [
         {
             heading: 'The Class Science Fair Project',
@@ -118,29 +140,40 @@ export default function DragDropOptions() {
             }
         })
         if (rightAns == currentObj.tasks.length) {
-            alert('Yeh! The answer is correct')
+            setModalTitle('Yay! The answer is correct')
+            setMoveToNextQ(true)
+        } else {
+            setMoveToNextQ(false)
+            setModalTitle('Oops! The answer is incorrect')
+        }
+        setOpenModal(true)
+    }
+
+    const handleStart = () => {
+        setIsSVisible(false)
+    }
+
+    const closeModal = () => {
+        setOpenModal(false)
+        if (moveToNextQ) {
             setCurrentObjIndex((prevIndex) => prevIndex + 1);
             setIsSVisible(true)
-        } else {
-            alert('Oops! The answe is incorrect')
         }
     }
 
-    const handleStart=()=>{
-        setIsSVisible(false)
-    }
+
     return (
         <div>
             {currentObjIndex < obj.length ? (
                 <div>
                     {isSVisible ?
                         (
-                            <Filler 
-                            heading={currentObj.heading}
-                            subHeading={currentObj.subHeading}
-                            imagex={currentObj.img}
-                            handleStart={handleStart}
-                                />
+                            <Filler
+                                heading={currentObj.heading}
+                                subHeading={currentObj.subHeading}
+                                imagex={currentObj.img}
+                                handleStart={handleStart}
+                            />
                         ) : (
                             <div className="relative h-screen flex flex-col">
                                 <DragDropContext onDragEnd={onDragEnd}>
@@ -222,6 +255,15 @@ export default function DragDropOptions() {
                 </div>
 
             )}
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
+
         </div>
 
     );
