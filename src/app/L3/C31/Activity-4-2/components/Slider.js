@@ -94,7 +94,6 @@ export default function Slider() {
 
     const handleOpiSelection = (opiSelectedIndex) => {
         const s = `s${currentObjIndex}`
-
         if (!selectedOpiToCarry[s]) {
             setSelectedOpiToCarry((prevSelectedOpiToCarry) => ({
                 ...prevSelectedOpiToCarry, [s]: {
@@ -107,7 +106,7 @@ export default function Slider() {
                 setSelectedOpi(opiSelectedIndex)
             }
         } else {
-            alert('Please refresh the page to change the choice')
+            // not in use remove in next iteration alert('Please refresh the page to change the choice')
         }
     }
 

@@ -1,8 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import Modal from "@/components/ModalInit";
 
 export default function QnA() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+    const [nextQ, setNextQ] = useState(false);
+
     const [currentObjIndex, setCurrentObjIndex] = useState(0);
     const [timeLeft, setTimeLeft] = useState(30);
 
@@ -33,12 +39,21 @@ export default function QnA() {
     const [quizCompleted, setQuizCompleted] = useState(false)
 
     useEffect(() => {
+        // console.log(timeLeft, currentObjIndex, objects.length)
         if (timeLeft === 0) {
-            alert('Moving to next challenge!');
-            nextQuestion();
+            if (currentObjIndex === (objects.length - 1)) {
+                nextQuestion()
+            } else {
+                setModalTitle('Moving to next challenge!');
+                setNextQ(true)
+                setOpenModal(true)
+            }
         }
-        const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
-        return () => clearInterval(timer);
+
+        if (!openModal && currentObjIndex <= (objects.length - 1)) {
+            const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
+            return () => clearInterval(timer);
+        }
     }, [timeLeft]);
 
 
@@ -48,9 +63,18 @@ export default function QnA() {
             setTimeLeft(30);
         } else {
             setQuizCompleted(true)
-            // alert(`Quiz complete! Your final score is ${score}/${objects.length}`);
         }
     };
+
+
+    const closeModal = () => {
+        setOpenModal(false)
+        setModalContent('')
+        if (nextQ) {
+            nextQuestion();
+            setNextQ(false)
+        }
+    }
 
     return (
         <div className="qnaMaincon p-4 space-y-4">
@@ -60,12 +84,33 @@ export default function QnA() {
                 </h1>
             ) : (
                 <div>
-                    <p className="text-right text-[30px] mt-4 mb-4 text-red-500 font-bold">Time left: {timeLeft}s</p>
+                    <p style={openModal ? { visibility: 'hidden' } : {}}
+                        className="text-right text-[30px] mt-4 mb-4 text-red-500 font-bold"
+                    >
+                        Time left: {timeLeft}s
+                    </p>
+
                     <p className="text-lg font-semibold text-center mb-4 bg-gray-100 p-4 rounded-lg text-[23px]">
                         Question {currentObjIndex + 1}: {objects[currentObjIndex].text}
                     </p>
+
+
+                    <button
+                        onClick={nextQuestion}
+                        className="cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">
+                        Next
+                    </button>
+
                 </div>
             )}
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
+
         </div>
     );
 }

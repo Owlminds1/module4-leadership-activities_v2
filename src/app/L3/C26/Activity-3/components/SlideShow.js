@@ -2,8 +2,14 @@
 
 import './style.css'
 import { useState, useEffect } from 'react';
+import Modal from "@/components/ModalInit";
 
 export default function SlideShow() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+    const [nextQ, setNextQ] = useState(false);
+
     const [currentObjIndex, setCurrentObjIndex] = useState(0);
     const [timeLeft, setTimeLeft] = useState(30);
     const [score, setScore] = useState(0);
@@ -133,23 +139,35 @@ export default function SlideShow() {
 
     const [quizCompleted, setQuizCompleted] = useState(false)
     useEffect(() => {
-        if (timeLeft === 0) {
-            alert('You missed answering! Moving to the next question.');
-            nextQuestion();
+        // console.log(timeLeft, currentObjIndex, objects.length)
+        if (timeLeft < 0) {
+            if (currentObjIndex === (objects.length - 1)) {
+                nextQuestion()
+            } else {
+                setModalTitle('You missed answering! Moving to the next question.');
+                setNextQ(true)
+                setOpenModal(true)
+            }
         }
-        const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
-        return () => clearInterval(timer);
+
+        if (!openModal) {
+            const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
+            return () => clearInterval(timer);
+        }
     }, [timeLeft]);
 
     const handleSelectedOption = (selectedOption) => {
         if (selectedOption === objects[currentObjIndex].correctAnswer) {
-            alert('Correct Answer');
+            setModalTitle('Yay! Your answer is correct!')
             setScore(prevScore => prevScore + 1);
         } else {
-            alert('Incorrect Answer');
+            setModalTitle('Incorrect Answer');
+            setModalContent(`Correct answer is : ${objects[currentObjIndex].options[objects[currentObjIndex].correctAnswer]}`)
         }
-        nextQuestion();
+        setNextQ(true)
+        setOpenModal(true)
     };
+
 
     const nextQuestion = () => {
         if (currentObjIndex < objects.length - 1) {
@@ -157,9 +175,17 @@ export default function SlideShow() {
             setTimeLeft(30);
         } else {
             setQuizCompleted(true)
-            // alert(`Quiz complete! Your final score is ${score}/${objects.length}`);
         }
     };
+
+    const closeModal = () => {
+        setOpenModal(false)
+        setModalContent('')
+        if (nextQ) {
+            nextQuestion();
+            setNextQ(false)
+        }
+    }
 
     return (
         <div className="slideShowContainer p-4 space-y-4">
@@ -169,7 +195,11 @@ export default function SlideShow() {
                 </h1>
             ) : (
                 <div>
-                    <p className="text-right text-[30px] mt-4 mb-4 text-red-500 font-bold">Time left: {timeLeft}s</p>
+                    <p style={openModal ? { visibility: 'hidden' } : {}}
+                        className="text-right text-[30px] mt-4 mb-4 text-red-500 font-bold"
+                    >
+                        Time left: {timeLeft}s
+                    </p>
                     <p className="text-lg font-semibold text-center mb-4 bg-gray-100 p-4 rounded-lg">
                         Question {currentObjIndex + 1}: {objects[currentObjIndex].text}
                     </p>
@@ -188,6 +218,14 @@ export default function SlideShow() {
                     </center>
                 </div>
             )}
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
         </div>
     );
 }
