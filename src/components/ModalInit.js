@@ -11,7 +11,7 @@ import Image from "next/image";
 
 
 
-const KeepTryingModel = (props) => {
+const ModalInit = (props) => {
   return (
     <Dialog open={props.open} onOpenChange={props.closeModal}>
     <DialogContent className="">
@@ -33,4 +33,4 @@ const KeepTryingModel = (props) => {
   )
 }
 
-export default KeepTryingModel
+export default ModalInit

@@ -2,6 +2,7 @@
 import "./style.css";
 import { useState, useRef, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import Modal from "@/components/ModalInit";
 
 const initialOptions = [
     { id: "1", text:"The teacher notices and praises your responsibility." , answer: "You throw your rubbish in the bin after lunch without being reminded."},
@@ -19,6 +20,10 @@ const shuffleArray = (array) => {
 };
 
 export default function DragDropOptions() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+
     const alertTriggered = useRef(false);
     const [sections, setSections] = useState(null);
 
@@ -57,7 +62,8 @@ export default function DragDropOptions() {
 
     const handleSubmit = () => {
         if(sections.options.length > 0 ){
-            alert("Please complete the activity")
+            setModalTitle("Please complete the activity")
+            setOpenModal(true)
             return;
         }
         if (alertTriggered.current) return;
@@ -82,10 +88,20 @@ export default function DragDropOptions() {
         setSections(updatedSections);
 
         setTimeout(() => {
-            alert(correctCount === totalCount && totalCount > 0 ? "Yay! All answers are correct!" : "Oops! Some answers are incorrect.");
+            if(correctCount === totalCount && totalCount > 0){
+                setModalTitle("Yay! All answers are correct!")   
+            }else {
+                setModalTitle("Oops! Some answers are incorrect.")
+            }
+            setOpenModal(true)
             alertTriggered.current = false;
         }, 200);
     };
+
+
+    const closeModal = () => {
+        setOpenModal(false)
+    }
 
     return (
         <div className="relative h-screen flex flex-col sequenceContainerX">
@@ -141,6 +157,15 @@ export default function DragDropOptions() {
                     </Droppable>
                 </div>
             </DragDropContext>
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
+
         </div>
     );
 }

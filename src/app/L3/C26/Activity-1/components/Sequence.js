@@ -2,6 +2,8 @@
 import './style.css'
 
 import Image from 'next/image'
+import Modal from "@/components/ModalInit";
+
 import S1 from '../assets/scenarios/scenario_1/s1.jpeg';
 import S1_C1 from '../assets/scenarios/scenario_1/c1.jpeg';
 import S1_C2 from '../assets/scenarios/scenario_1/c2.jpeg';
@@ -31,9 +33,35 @@ import Filler from './Filler'
 import { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
+// S1 
+// Task 1: Daniel 
+// Task 2: Sophie 
+// Task 3: Jack
+// Task 4: Olivia 
+// Task 5: Ethan
+
+// S2
+// Task 1 : Ben 
+// Task 2 : Lucas 
+// Task 3 : Emma 
+// Task 4 : Noah 
+// Task 5 : Zara
+
+
+// S2
+// Task 1 : Jack 
+// Task 2 : Mai 
+// Task 3 : Olivia 
+// Task 4 : Liam 
+// Task 5 : Sophie
 
 
 export default function DragDropOptions() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+    const [nextQ, setNextQ] = useState(false);
+
     const [currentObjIndex, setCurrentObjIndex] = useState(0);
     const [isSVisible, setIsSVisible] = useState(true)
     const obj = [
@@ -96,8 +124,8 @@ export default function DragDropOptions() {
                 { id: 1, name: 'Jake', img: S3_C1, skills: ['Engineer'] },
                 { id: 2, name: 'Mia', img: S3_C2, skills: ['Scientist'] },
                 { id: 3, name: 'Oliver', img: S3_C3, skills: ['Doctor'] },
-                { id: 4, name: 'Liam', img: S3_C4, skills: ['Pilot','Engineer'] },
-                { id: 5, name: 'Sophie', img: S3_C5, skills: ['Communications expert','Scientist'] },
+                { id: 4, name: 'Liam', img: S3_C4, skills: ['Pilot', 'Engineer'] },
+                { id: 5, name: 'Sophie', img: S3_C5, skills: ['Communications expert', 'Scientist'] },
             ],
             ans: [
                 [1], [2], [3], [4], [5]
@@ -148,29 +176,39 @@ export default function DragDropOptions() {
             }
         })
         if (rightAns == currentObj.tasks.length) {
-            alert('Yeh! The answer is correct')
-            setCurrentObjIndex((prevIndex) => prevIndex + 1);
-            setIsSVisible(true)
+            setModalTitle('Yay! The answer is correct')
+            setNextQ(true)
         } else {
-            alert('Oops! The answe is incorrect')
+            setModalTitle('Oops! The answer is incorrect')
         }
+        setOpenModal(true)
     }
 
-    const handleStart=()=>{
+    const handleStart = () => {
         setIsSVisible(false)
     }
+
+    const closeModal = () => {
+        setOpenModal(false)
+        if(nextQ){
+            setCurrentObjIndex((prevIndex) => prevIndex + 1);
+            setIsSVisible(true)
+            setNextQ(false)
+        }
+    }
+    
     return (
         <div>
             {currentObjIndex < obj.length ? (
                 <div>
                     {isSVisible ?
                         (
-                            <Filler 
-                            heading={currentObj.heading}
-                            subHeading={currentObj.subHeading}
-                            imagex={currentObj.img}
-                            handleStart={handleStart}
-                                />
+                            <Filler
+                                heading={currentObj.heading}
+                                subHeading={currentObj.subHeading}
+                                imagex={currentObj.img}
+                                handleStart={handleStart}
+                            />
                         ) : (
                             <div className="relative h-screen flex flex-col">
                                 <DragDropContext onDragEnd={onDragEnd}>
@@ -252,6 +290,14 @@ export default function DragDropOptions() {
                 </div>
 
             )}
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
         </div>
 
     );

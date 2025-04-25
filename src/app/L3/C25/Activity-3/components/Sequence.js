@@ -3,6 +3,7 @@ import './style.css'
 
 import { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import Modal from "@/components/ModalInit";
 
 const initialOptions = [
     { id: "1", text: "Encourages team members", answer: "boostsMorale" },
@@ -22,6 +23,10 @@ const initialOptions = [
 ];
 
 export default function DragDropOptions() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+
     const [sections, setSections] = useState({
         options: initialOptions.map(item => ({ ...item, color: "bg-yellow-500" })), // Default yellow
         boostsMorale: [],
@@ -66,17 +71,18 @@ export default function DragDropOptions() {
         setSections(updatedSections);
         setTimeout(function () {
             if (correctCount === totalCount) {
-                alert("Yeh! All answers are correct!");
+                setModalTitle('Yay! All answers are correct!')
             } else {
-                alert("Oops! your answers are incorrect.");
+                setModalTitle("Oops! your answers are incorrect.");
             }
+            setOpenModal(true)
         }, 200)
     };
 
 
     const showSubmitBtn = () => {
         let show = false;
-        
+
         if (sections.options.length === 0) {
             show = true;
         } else if (sections.options.length === 3) {
@@ -94,6 +100,10 @@ export default function DragDropOptions() {
         return show;
     };
     
+
+    const closeModal = () => {
+        setOpenModal(false)
+    }
     return (
         <div className="relative h-screen p-5 flex flex-col sequenceConatinerX">
             <DragDropContext onDragEnd={onDragEnd}>
@@ -181,6 +191,13 @@ export default function DragDropOptions() {
                     </Droppable>
                 </div>
             </DragDropContext>
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
         </div>
     );
 }

@@ -72,11 +72,10 @@ export default function DragDropOptions() {
         setTimeout(function () {
             if (correctCount === totalCount) {
                 setModalTitle('Yay! All answers are correct!')
-                setOpenModal(true)
             } else {
                 setModalTitle('Oops! your answers are incorrect.')
-                setOpenModal(true)
             }
+            setOpenModal(true)
         }, 200)
     };
 

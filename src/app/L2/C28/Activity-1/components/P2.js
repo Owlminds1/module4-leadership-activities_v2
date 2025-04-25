@@ -4,6 +4,7 @@ import './p2Style.css'
 import Image from 'next/image';
 import { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import Modal from "@/components/ModalInit";
 
 import I1 from '../assets/p2/i1.jpeg';
 import I2 from '../assets/p2/i2.jpeg';
@@ -32,6 +33,11 @@ const initialOptions = [
 ];
 
 export default function DragDropOptions(props) {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
+    const [moveToNextQ, setmoveToNextQ] = useState(false);
+
     const [sections, setSections] = useState({
         options: initialOptions.map(item => ({ ...item, color: "bg-yellow-500" })), // Default yellow
         recycleTrash: [],
@@ -76,14 +82,22 @@ export default function DragDropOptions(props) {
         setSections(updatedSections);
         setTimeout(function () {
             if (correctCount === totalCount) {
-                alert("Good job moving to next part!");
-                props.handleNext();
+                setModalTitle('Good job moving to next part!')
+                setmoveToNextQ(true)
             } else {
-                alert("Oops! your answers are incorrect.");
+                setModalTitle("Oops! your answers are incorrect.");
             }
+            setOpenModal(true)
         }, 200)
     };
 
+
+    const closeModal = () => {
+        setOpenModal(false)
+        if (moveToNextQ) {
+            props.handleNext()
+        }
+    }
     return (
         <div className="relative h-screen p-5 flex flex-col sequenceConatinerX">
             <DragDropContext onDragEnd={onDragEnd}>
@@ -172,6 +186,14 @@ export default function DragDropOptions(props) {
                     </Droppable>
                 </div>
             </DragDropContext>
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
+
         </div>
     );
 }

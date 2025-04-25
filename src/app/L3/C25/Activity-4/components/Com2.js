@@ -4,9 +4,13 @@ import './styleCom2.css'
 import S1 from '../assets/s1.jpeg';
 import S2 from '../assets/s2.jpeg';
 import Image from 'next/image'
+import Modal from "@/components/ModalInit";
 
 import { useState } from 'react';
 export default function SlideShow() {
+    const [modalTitle, setModalTitle] = useState('')
+    const [modalContent, setModalContent] = useState('')
+    const [openModal, setOpenModal] = useState(false);
 
     const [currentObjIndex, setCurrentObjIndex] = useState(0)
 
@@ -31,10 +35,14 @@ export default function SlideShow() {
         if (currentObjIndex < objects.length - 1) {
             setCurrentObjIndex(currentObjIndex + 1)
         } else {
-            alert('The activity is completed.')
+            setModalTitle('The activity is completed.')
+            setOpenModal(true)
         }
     }
 
+    const closeModal = () => {
+        setOpenModal(false)
+    }
 
     return (
         <div className="slideShowContainer">
@@ -63,6 +71,15 @@ export default function SlideShow() {
                 </div>
 
             </div>
+
+
+            <Modal
+                title={modalTitle}
+                content={modalContent}
+                open={openModal}
+                closeModal={closeModal}
+            />
+
         </div>
     );
 }
