@@ -164,7 +164,7 @@
                 "name": "Mastering Teamwork"
             }
         },
-        "C28":{
+        "C28": {
             "Activity 1": {
                 "link": "/L2/C28/Activity-1",
                 "name": "Goal Getters"
@@ -300,7 +300,7 @@
                 "name": "The 30-Second Brain Blitz!"
             }
         },
-        "C28":{
+        "C28": {
             "Warm up activity": {
                 "link": "/L3/C28/Warm-up-activity",
                 "name": "Alphabet Story"
@@ -322,7 +322,7 @@
                 "name": "The Manifesto"
             }
         },
-        "C29":{
+        "C29": {
             "Activity 1": {
                 "link": "/L3/C29/Activity-1",
                 "name": "Be the Detective"
@@ -344,7 +344,7 @@
                 "name": "Climate vs. Weather"
             }
         },
-        "C30":{
+        "C30": {
             "Warm up activity": {
                 "link": "/L3/C30/Warm-up-activity",
                 "name": "Choose Your Adventure"
@@ -386,6 +386,32 @@
             "Post Class Activity": {
                 "link": "/L3/C31/pca",
                 "name": "Conflict Reflection Journal"
+            }
+        },
+        "C32": {
+            "Activity 1": {
+                "link": "/L3/C32/Activity-1",
+                "name": "Spin the Leadership Wheel"
+            },
+            "Activity 2": {
+                "link": "/L3/C32/Activity-2",
+                "name": "Social Loafer Alert"
+            },
+            "Activity 2.1": {
+                "link": "/L3/C32/Activity-2-1",
+                "name": "Social Loafer Scenario"
+            },
+            "Activity 3": {
+                "link": "/L3/C32/Activity-3",
+                "name": "I Messages vs. Blame"
+            },
+            "Activity 4": {
+                "link": "/L3/C32/Activity-4",
+                "name": "SWOT or No SWOT"
+            },
+            "Activity 5": {
+                "link": "/L3/C32/Activity-5",
+                "name": "Comic Strip"
             }
         }
     }
