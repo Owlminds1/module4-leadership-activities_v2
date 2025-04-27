@@ -103,6 +103,28 @@
                 "link": "/L1/C31/Activity-4",
                 "name": "Conflict Role-Play"
             }
+        },
+        "C32": {
+            "Activity 1": {
+                "link": "/L1/C32/Activity-1",
+                "name": "What Would a Leader Do?"
+            },
+            "Activity 2": {
+                "link": "/L1/C32/Activity-2",
+                "name": "Good Decision / Bad Decision"
+            },
+            "Activity 3": {
+                "link": "/L1/C32/Activity-3",
+                "name": "I Messages vs. Blame"
+            },
+            "Activity 4": {
+                "link": "/L1/C32/Activity-4",
+                "name": "Stop & Think Adventure!"
+            },
+            "Activity 5": {
+                "link": "/L1/C32/Activity-5",
+                "name": "Mars Trip"
+            }
         }
     },
     "L2": {
