@@ -239,6 +239,28 @@
                 "link": "/L2/C31/Activity-4",
                 "name": "Conflict Role-Play"
             }
+        },
+        "C32": {
+            "Activity 1": {
+                "link": "/L2/C32/Activity-1",
+                "name": "Spin the Leadership Wheel"
+            },
+            "Activity 2": {
+                "link": "/L2/C32/Activity-2",
+                "name": "Motivation News Channel"
+            },
+            "Activity 3": {
+                "link": "/L2/C32/Activity-3",
+                "name": "I Messages vs. Blame"
+            },
+            "Activity 4": {
+                "link": "/L2/C32/Activity-4",
+                "name": "Framework Flashback"
+            },
+            "Activity 5": {
+                "link": "/L2/C32/Activity-5",
+                "name": "Comic Strip"
+            }
         }
     },
     "L3": {
