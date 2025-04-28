@@ -2,13 +2,59 @@ import './style.css';
 import { useState } from "react";
 
 export default function Com() {
-    const [text, setText] = useState("");
+    const [currentObjIndex, setCurrentObjIndex] = useState(0);
     const [items, setItems] = useState([]);
 
-    const handleAddText = () => {
-        if (text.trim() !== "") {
-            setItems([...items, text]); // Add text to the list
-            setText(""); // Clear input
+    const obj = [
+        {
+            question: "Katherine faced many obstacles because of her race and gender. But instead of giving up, she kept going. What leadership quality does that show?",
+            answer: "Perseverance & Determination"
+        },
+        {
+            question: "Katherine believed in her abilities even when others doubted her. What leadership quality does that show?",
+            answer: "Confidence"
+        },
+        {
+            question: "Katherine knew that her work was important, so she stayed focused even when things were tough. What leadership quality does that show?",
+            answer: "Dedication"
+        },
+        {
+            question: "Katherine’s work opened doors for many women in science. What leadership quality does that show?",
+            answer: "Inspiring"
+        },
+        {
+            question: "Katherine's calculations had to be perfect because astronauts’ lives depended on them. She took her work seriously and made sure it was done right. What leadership quality does that show?",
+            answer: "Responsibility"
+        },
+        {
+            question: "Even though Katherine made history, she didn’t seek fame. She stayed focused on her work and helped others succeed. What leadership quality does that show?",
+            answer: "Humility"
+        }
+    ];
+
+    const handleStart = () => {
+        setItems([{
+            question: obj[0].question,
+            answer: ""
+        }]);
+        setCurrentObjIndex(0);
+    };
+
+    const handleRevealLeadershipQuality = () => {
+        const updatedItems = [...items];
+        updatedItems[currentObjIndex].answer = obj[currentObjIndex].answer;
+        setItems(updatedItems);
+
+        // After showing the answer, if there are more questions, move to next
+        const nextIndex = currentObjIndex + 1;
+        if (nextIndex < obj.length) {
+            setTimeout(() => { // small timeout to allow UI update
+                setItems(prev => [
+                    ...prev,
+                    { question: obj[nextIndex].question, answer: "" }
+                ]);
+                setCurrentObjIndex(nextIndex);
+            }, 300); // 300ms
         }
     };
 
@@ -22,45 +68,37 @@ export default function Com() {
                 ></video>
             </div>
 
-
-            <div className="w-1/2 flex flex-col space-y-4">
-
+            <div className="w-1/2 flex flex-col space-y-4 ml-4">
                 <center>
-                    <input
-                        type="text"
-                        value={text}
-                        onChange={(e) => setText(e.target.value)}
-                        className="w-3/4 p-2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Enter the leadership qualities"
-                    />
-
-                    <br />
-                    <br />
-
-                    <button
-                        onClick={handleAddText}
-                        className="px-4 py-2 bg-blue-500 text-white w-[200px] rounded-md shadow-md hover:bg-blue-600 transition"
-                    >
-                        Submit
-                    </button>
-                </center>
-
-                <div className="mt-4">
-                    {items.length > 0 &&
-                        <h1 
-                            style={{fontSize:'30px'}}
-                            className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 my-1">Leadership qualities</h1>
-                    }
-                    {items.map((item, index) => (
-                        <p
-                            key={index}
-                            style={{fontSize:'23px'}}
-                            className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 my-1"
+                    {items.length > 0 ? (
+                        <div className="text-left">
+                            {items.map((item, index) => (
+                                <div key={index} className="mb-6">
+                                    <h1 className="text-lg font-semibold mb-2">Q{index + 1}. {item.question}</h1>
+                                    {item.answer ? (
+                                        <h2 className="text-green-600 font-semibold text-md text-lg">A{index + 1}. {item.answer}</h2>
+                                    ) : (
+                                        index === currentObjIndex && (
+                                            <button
+                                                onClick={handleRevealLeadershipQuality}
+                                                className="cursor-pointer px-4 py-2 bg-blue-500 text-white w-full mt-4 rounded-md shadow-md hover:bg-blue-600 transition"
+                                            >
+                                                Reveal Leadership Quality
+                                            </button>
+                                        )
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <button
+                            onClick={handleStart}
+                            className="cursor-pointer px-4 py-2 bg-green-500 text-white w-[200px] rounded-md shadow-md hover:bg-green-600 transition"
                         >
-                            {item}
-                        </p>
-                    ))}
-                </div>
+                            Start
+                        </button>
+                    )}
+                </center>
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ export default function Home() {
         <Image className="logo" src={Logo} alt="log" />
       </div>
 
-      <br />
+      {/* <br /> */}
       <center>
         <Com />
       </center>
