@@ -7,7 +7,7 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import Modal from "@/components/ModalInit";
 
 const initialOptions = [
-    { id: "1", text: "Problem-solving", answer: "canOptions" },
+    { id: "1", text: "Solve Problems", answer: "canOptions" },
     { id: "2", text: "Confidence", answer: "hasOptions" },
     { id: "3", text: "Positive", answer: "areOptions" },
     { id: "4", text: "Encourage others", answer: "canOptions" },
@@ -16,7 +16,7 @@ const initialOptions = [
     { id: "7", text: "Take initiative", answer: "canOptions" },
     { id: "8", text: "Respect for others", answer: "hasOptions" },
     { id: "9", text: "Responsible", answer: "areOptions" },
-    { id: "10", text: "Work as a team (Teamwork)", answer: "canOptions" },
+    { id: "10", text: "Work as a team", answer: "canOptions" },
     { id: "11", text: "Bravery", answer: "hasOptions" },
     { id: "12", text: "Think outside the box", answer: "canOptions" },
 ];
@@ -100,10 +100,10 @@ export default function DragDropOptions() {
                                     <h2 className="text-lg font-semibold mb-2 text-center">
                                         <u>
                                             {sectionKey === "canOptions"
-                                                ? "Can Options"
+                                                ? "What actions CAN leaders take?"
                                                 : sectionKey === "hasOptions"
-                                                    ? "Has Options"
-                                                    : "Are Options"}
+                                                    ? "What qualities leaders HAVE?"
+                                                    : "What ARE the behaviours a leader shows?"}
                                         </u>
                                     </h2>
                                     {sections[sectionKey].map((item, index) => (

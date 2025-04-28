@@ -8,8 +8,13 @@ import { useState } from 'react';
 
 export default function Home() {
   const [isStart, setIsStart] = useState(false)
+  const [startBtnVisiable, setStartBtnVisiable] = useState(false)
   const handleStart = () => {
     setIsStart(true)
+  }
+
+  const handleShowStartBtn = () => {
+    setStartBtnVisiable(true)
   }
 
   return (
@@ -17,17 +22,19 @@ export default function Home() {
       <center>
         <h1 className="headingContaienr">A Leader Can, Have, Are</h1>
       </center>
-      {/* <Sequence />÷ */}
+
 
       {isStart ? (
         <Sequence />
       ) : (
-        <Filler />
+        <Filler
+          handleShowStartBtn={handleShowStartBtn}
+        />
       )}
 
       <center>
-        {!isStart &&
-          <button className='buttonak1' onClick={handleStart}>Start</button>
+        {!isStart && startBtnVisiable &&
+          <button className='buttonak1' onClick={handleStart}>Create Tree map</button>
         }
       </center>
 

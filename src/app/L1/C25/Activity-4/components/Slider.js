@@ -22,9 +22,9 @@ export default function Slider() {
 
     const objHeading = [
         'At the end of the day, the classroom is messy, and everyone is rushing to leave.',
-        'A student is about to go on stage for a class performance but suddenly feels too nervous to perform.',
-        "At recess, some kids are trying to carry a big, heavy box of sports equipment, but it's too hard for them to lift.",
-        'A good leader can suggest taking turns, setting a timer, or finding another fun activity while they wait.'
+        'Ira is about to go on stage for a class performance but suddenly feels too nervous to perform.',
+        "During recess, Zoho and his friends are trying to carry a big, heavy box of sports equipment, but it's too hard for them to lift.",
+        'Ava and Sam both want to use the same swing, and they start arguing.'
     ]
 
     // (Is this leadership, or just kindness? Can small actions make someone a leader?)
@@ -37,6 +37,7 @@ export default function Slider() {
     return (
         <div className='slidesMainContainer'>
             <h1 className="heading">{objHeading[currentObj]}</h1>
+            <h1 className='mb-4 text-[22px] font-semibold'>What should a good leader do?</h1>
             <Image alt="currentObj" className='currentObj' src={obj[currentObj]} />
             {currentObj < obj.length - 1 &&
                 <button onClick={handleNext}>Next</button>
