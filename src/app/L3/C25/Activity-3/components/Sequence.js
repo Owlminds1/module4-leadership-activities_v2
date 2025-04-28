@@ -41,7 +41,6 @@ export default function DragDropOptions() {
 
         const [movedItem] = sourceList.splice(result.source.index, 1);
 
-        // Prevent duplicates by ensuring the item isn't already in the destination list
         if (!destinationList.some(item => item.id === movedItem.id)) {
             destinationList.splice(result.destination.index, 0, movedItem);
         }
@@ -52,7 +51,6 @@ export default function DragDropOptions() {
             [result.destination.droppableId]: destinationList,
         });
     };
-
 
     const handleSubmit = () => {
         const updatedSections = { ...sections };
@@ -69,7 +67,7 @@ export default function DragDropOptions() {
         });
 
         setSections(updatedSections);
-        setTimeout(function () {
+        setTimeout(() => {
             if (correctCount === totalCount) {
                 setModalTitle('Yay! All answers are correct!')
             } else {
@@ -79,10 +77,8 @@ export default function DragDropOptions() {
         }, 200)
     };
 
-
     const showSubmitBtn = () => {
         let show = false;
-
         if (sections.options.length === 0) {
             show = true;
         } else if (sections.options.length === 3) {
@@ -96,81 +92,28 @@ export default function DragDropOptions() {
                 }
             }
         }
-    
         return show;
     };
-    
 
     const closeModal = () => {
         setOpenModal(false)
     }
+
     return (
-        <div className="relative h-screen p-5 flex flex-col sequenceConatinerX">
+        <div className="relative min-h-screen p-5 flex flex-col">
             <DragDropContext onDragEnd={onDragEnd}>
-
-                {/* Top Sections */}
-                <div className="grid grid-cols-2 gap-4 w-full">
-                    {["boostsMorale", "hindersMorale"].map((sectionKey) => (
-                        <Droppable key={sectionKey} droppableId={sectionKey}>
-                            {(provided) => (
-                                <div
-                                    ref={provided.innerRef}
-                                    {...provided.droppableProps}
-                                    className="w-64 min-h-[500px] p-4 bg-gray-100 rounded-lg shadow-lg d2"
-                                >
-                                    <h2 className="text-lg font-semibold mb-2 text-center">
-                                        <u>
-                                            {sectionKey === "boostsMorale"
-                                                ? "Boosts Morale"
-                                                : sectionKey === "hindersMorale"
-                                                    ? "Hinders Morale"
-                                                    : "Are Options"}
-                                        </u>
-                                    </h2>
-                                    {sections[sectionKey].map((item, index) => (
-                                        <Draggable key={item.id} draggableId={item.id} index={index}>
-                                            {(provided) => (
-                                                <div
-                                                    ref={provided.innerRef}
-                                                    {...provided.draggableProps}
-                                                    {...provided.dragHandleProps}
-                                                    className={`${item.color} text-white p-2 mb-2 rounded-md cursor-pointer`}
-                                                >
-                                                    {item.text}
-                                                </div>
-                                            )}
-                                        </Draggable>
-                                    ))}
-                                    {provided.placeholder}
-                                </div>
-                            )}
-                        </Droppable>
-                    ))}
-                </div>
-
-
-                {/* {(sections.options.length === 0 || (sections.options.length === 1 && sections.options[0]['id'] === '12')) && ( */}
-                {showSubmitBtn() && (
-                    <div className="flex justify-center mt-4">
-                        <button
-                            onClick={handleSubmit}
-                            className="bg-green-600 cursor-pointer text-white px-6 py-2 rounded-md font-semibold shadow-lg hover:bg-green-700 transition duration-300"
-                        >
-                            Submit
-                        </button>
-                    </div>
-                )}
-
-                {/* Bottom Options Section */}
-                <div className="absolute bottom-10 w-full flex justify-center p-2 bg-blue-500">
+                
+                {/* Main Grid - 3 Columns */}
+                <div className="grid grid-cols-3 gap-4 w-full">
+                    {/* Options Column */}
                     <Droppable droppableId="options">
                         {(provided) => (
                             <div
                                 ref={provided.innerRef}
                                 {...provided.droppableProps}
-                                className="w-full p-4 flex flex-wrap gap-2 justify-center"
+                                className="min-h-[500px] p-4 bg-blue-100 rounded-lg shadow-lg flex flex-col items-center"
                             >
-                                <h2 className="w-full text-lg font-semibold text-center text-white mb-2">Options</h2>
+                                <h2 className="text-lg font-semibold mb-4 text-center text-blue-700 underline">Options</h2>
                                 {sections.options.map((item, index) => (
                                     <Draggable key={item.id} draggableId={item.id} index={index}>
                                         {(provided) => (
@@ -178,7 +121,63 @@ export default function DragDropOptions() {
                                                 ref={provided.innerRef}
                                                 {...provided.draggableProps}
                                                 {...provided.dragHandleProps}
-                                                className="bg-white text-black p-2 rounded-md cursor-pointer transition duration-300 hover:bg-green-500 hover:text-white"
+                                                className="bg-white text-black p-2 mb-2 rounded-md cursor-pointer transition hover:bg-green-500 hover:text-white w-full text-center"
+                                            >
+                                                {item.text}
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
+
+                    {/* Boosts Morale Column */}
+                    <Droppable droppableId="boostsMorale">
+                        {(provided) => (
+                            <div
+                                ref={provided.innerRef}
+                                {...provided.droppableProps}
+                                className="min-h-[500px] p-4 bg-green-100 rounded-lg shadow-lg flex flex-col items-center"
+                            >
+                                <h2 className="text-lg font-semibold mb-4 text-center text-green-700 underline">Boosts Morale</h2>
+                                {sections.boostsMorale.map((item, index) => (
+                                    <Draggable key={item.id} draggableId={item.id} index={index}>
+                                        {(provided) => (
+                                            <div
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                className={`${item.color} text-white p-2 mb-2 rounded-md cursor-pointer w-full text-center`}
+                                            >
+                                                {item.text}
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
+
+                    {/* Hinders Morale Column */}
+                    <Droppable droppableId="hindersMorale">
+                        {(provided) => (
+                            <div
+                                ref={provided.innerRef}
+                                {...provided.droppableProps}
+                                className="min-h-[500px] p-4 bg-red-100 rounded-lg shadow-lg flex flex-col items-center"
+                            >
+                                <h2 className="text-lg font-semibold mb-4 text-center text-red-700 underline">Hinders Morale</h2>
+                                {sections.hindersMorale.map((item, index) => (
+                                    <Draggable key={item.id} draggableId={item.id} index={index}>
+                                        {(provided) => (
+                                            <div
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                className={`${item.color} text-white p-2 mb-2 rounded-md cursor-pointer w-full text-center`}
                                             >
                                                 {item.text}
                                             </div>
@@ -190,6 +189,18 @@ export default function DragDropOptions() {
                         )}
                     </Droppable>
                 </div>
+
+                {/* Submit Button */}
+                {showSubmitBtn() && (
+                    <div className="flex justify-center mt-6">
+                        <button
+                            onClick={handleSubmit}
+                            className="bg-green-600 text-white px-6 py-2 rounded-md font-semibold shadow-lg hover:bg-green-700 transition"
+                        >
+                            Submit
+                        </button>
+                    </div>
+                )}
             </DragDropContext>
 
             <Modal

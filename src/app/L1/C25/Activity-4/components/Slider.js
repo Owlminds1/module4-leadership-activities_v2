@@ -37,7 +37,7 @@ export default function Slider() {
     return (
         <div className='slidesMainContainer'>
             <h1 className="heading">{objHeading[currentObj]}</h1>
-            <h1 className='mb-4 text-[22px] font-semibold'>What should a good leader do?</h1>
+            <h1 className='mb-4 text-[22px] font-semibold'>What should a leader do?</h1>
             <Image alt="currentObj" className='currentObj' src={obj[currentObj]} />
             {currentObj < obj.length - 1 &&
                 <button onClick={handleNext}>Next</button>

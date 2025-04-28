@@ -1,4 +1,3 @@
-
 "use client";
 import './style.css'
 
@@ -21,17 +20,17 @@ const initialOptions = [
     { id: "12", text: "Always follows others without thinking", answer: "underminesOptions" },
     { id: "13", text: "Gives honest feedback", answer: "supportOptions" },
     { id: "14", text: "Works alone on personal tasks", answer: "waste" },
-    { id: "15", text: "I Like to work in complete silence.", answer: "waste" },
+    { id: "15", text: "Likes to work in complete silence.", answer: "waste" },
     { id: "16", text: "Likes to keep things very organized", answer: "waste" },
 ];
 
 export default function DragDropOptions() {
-    const [modalTitle, setModalTitle] = useState('')
-    const [modalContent, setModalContent] = useState('')
+    const [modalTitle, setModalTitle] = useState('');
+    const [modalContent, setModalContent] = useState('');
     const [openModal, setOpenModal] = useState(false);
 
     const [sections, setSections] = useState({
-        options: initialOptions.map(item => ({ ...item, color: "bg-yellow-500" })), // Default yellow
+        options: initialOptions.map(item => ({ ...item, color: "bg-yellow-500" })),
         supportOptions: [],
         underminesOptions: []
     });
@@ -44,7 +43,6 @@ export default function DragDropOptions() {
 
         const [movedItem] = sourceList.splice(result.source.index, 1);
 
-        // Prevent duplicates by ensuring the item isn't already in the destination list
         if (!destinationList.some(item => item.id === movedItem.id)) {
             destinationList.splice(result.destination.index, 0, movedItem);
         }
@@ -56,12 +54,11 @@ export default function DragDropOptions() {
         });
     };
 
-
     const handleSubmit = () => {
         const updatedSections = { ...sections };
         let correctCount = 0;
         let totalCount = 0;
-        
+
         ["supportOptions", "underminesOptions"].forEach((sectionKey) => {
             updatedSections[sectionKey] = updatedSections[sectionKey].map(item => {
                 const isCorrect = item.answer === sectionKey;
@@ -73,115 +70,42 @@ export default function DragDropOptions() {
 
         setSections(updatedSections);
 
-        setTimeout(function () {
-            if(sections.supportOptions.length != 7 || sections.underminesOptions.length != 6){
-                setModalTitle('The activity is not yet completed.')
-            }
-            else if (correctCount === totalCount) {
-                setModalTitle('Yay! All answers are correct!')
+        setTimeout(() => {
+            if (correctCount === totalCount) {
+                setModalTitle('Yay! All answers are correct!');
             } else {
                 setModalTitle("Oops! your answers are incorrect.");
             }
-            setOpenModal(true)
-        }, 200)
+            setOpenModal(true);
+        }, 200);
     };
 
     const showSubmitBtn = () => {
-        let show = false;
-        if(sections.supportOptions.length > 0 || sections.underminesOptions.length > 0){
-            show = true;
-        }
-
-        // OLD LOGIC
-        // if (sections.options.length === 0) {
-        //     show = true;
-        // } 
-        // else if (sections.options.length === 3) {
-        //     show = true;
-        //     for (let i = 0; i < sections.options.length; i++) {
-        //         if (sections.options[i]["id"] !== "14" &&
-        //             sections.options[i]["id"] !== "15" &&
-        //             sections.options[i]["id"] !== "16") {
-        //             show = false;
-        //             break;
-        //         }
-        //     }
-        // }
-
-        return show;
+        return sections.supportOptions.length > 0 || sections.underminesOptions.length > 0;
     };
 
-
     const closeModal = () => {
-        setOpenModal(false)
-    }
+        setOpenModal(false);
+    };
 
     return (
         <div className="relative h-screen p-5 flex flex-col sequenceConatinerX">
             <DragDropContext onDragEnd={onDragEnd}>
 
-                {/* Top Sections */}
-                <div className="grid grid-cols-2 gap-4 w-full">
-                    {["supportOptions", "underminesOptions"].map((sectionKey) => (
-                        <Droppable key={sectionKey} droppableId={sectionKey}>
-                            {(provided) => (
-                                <div
-                                    ref={provided.innerRef}
-                                    {...provided.droppableProps}
-                                    className="w-64 min-h-[500px] p-4 bg-gray-100 rounded-lg shadow-lg d2"
-                                >
-                                    <h2 className="text-lg font-semibold mb-2 text-center">
-                                        <u>
-                                            {sectionKey === "supportOptions"
-                                                ? "Supports Team Morale"
-                                                : sectionKey === "underminesOptions"
-                                                    ? "Undermines Team Morale"
-                                                    : "Are Options"}
-                                        </u>
-                                    </h2>
-                                    {sections[sectionKey].map((item, index) => (
-                                        <Draggable key={item.id} draggableId={item.id} index={index}>
-                                            {(provided) => (
-                                                <div
-                                                    ref={provided.innerRef}
-                                                    {...provided.draggableProps}
-                                                    {...provided.dragHandleProps}
-                                                    className={`${item.color} text-white p-2 mb-2 rounded-md cursor-pointer`}
-                                                >
-                                                    {item.text}
-                                                </div>
-                                            )}
-                                        </Draggable>
-                                    ))}
-                                    {provided.placeholder}
-                                </div>
-                            )}
-                        </Droppable>
-                    ))}
-                </div>
+                {/* 3 Columns Layout */}
+                <div className="grid grid-cols-3 gap-4 w-full">
 
-
-                {showSubmitBtn() &&
-                    <div className="flex justify-center mt-4">
-                        <button
-                            onClick={handleSubmit}
-                            className="bg-green-600 cursor-pointer text-white px-6 py-2 rounded-md font-semibold shadow-lg hover:bg-green-700 transition duration-300"
-                        >
-                            Submit
-                        </button>
-                    </div>
-                }
-
-                {/* Bottom Options Section */}
-                <div className="w-full mt-4 flex justify-center p-2 bg-blue-500">
+                    {/* Options Column */}
                     <Droppable droppableId="options">
                         {(provided) => (
                             <div
                                 ref={provided.innerRef}
                                 {...provided.droppableProps}
-                                className="w-full p-4 flex flex-wrap gap-2 justify-center"
+                                className="min-h-[500px] p-4 bg-blue-100 rounded-lg shadow-lg"
                             >
-                                <h2 className="w-full text-lg font-semibold text-center text-white mb-2">Options</h2>
+                                <h2 className="text-lg font-semibold mb-4 text-center text-blue-700">
+                                    <u>Options</u>
+                                </h2>
                                 {sections.options.map((item, index) => (
                                     <Draggable key={item.id} draggableId={item.id} index={index}>
                                         {(provided) => (
@@ -189,7 +113,7 @@ export default function DragDropOptions() {
                                                 ref={provided.innerRef}
                                                 {...provided.draggableProps}
                                                 {...provided.dragHandleProps}
-                                                className="bg-white text-black p-2 rounded-md cursor-pointer transition duration-300 hover:bg-green-500 hover:text-white"
+                                                className="bg-white text-black p-2 mb-2 rounded-md cursor-pointer hover:bg-green-500 hover:text-white transition"
                                             >
                                                 {item.text}
                                             </div>
@@ -200,17 +124,90 @@ export default function DragDropOptions() {
                             </div>
                         )}
                     </Droppable>
+
+                    {/* Support Column */}
+                    <Droppable droppableId="supportOptions">
+                        {(provided) => (
+                            <div
+                                ref={provided.innerRef}
+                                {...provided.droppableProps}
+                                className="min-h-[500px] p-4 bg-green-100 rounded-lg shadow-lg"
+                            >
+                                <h2 className="text-lg font-semibold mb-4 text-center text-green-700">
+                                    <u>Supports Team Morale</u>
+                                </h2>
+                                {sections.supportOptions.map((item, index) => (
+                                    <Draggable key={item.id} draggableId={item.id} index={index}>
+                                        {(provided) => (
+                                            <div
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                className={`${item.color} text-white p-2 mb-2 rounded-md cursor-pointer`}
+                                            >
+                                                {item.text}
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
+
+                    {/* Undermines Column */}
+                    <Droppable droppableId="underminesOptions">
+                        {(provided) => (
+                            <div
+                                ref={provided.innerRef}
+                                {...provided.droppableProps}
+                                className="min-h-[500px] p-4 bg-red-100 rounded-lg shadow-lg"
+                            >
+                                <h2 className="text-lg font-semibold mb-4 text-center text-red-700">
+                                    <u>Undermines Team Morale</u>
+                                </h2>
+                                {sections.underminesOptions.map((item, index) => (
+                                    <Draggable key={item.id} draggableId={item.id} index={index}>
+                                        {(provided) => (
+                                            <div
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                className={`${item.color} text-white p-2 mb-2 rounded-md cursor-pointer`}
+                                            >
+                                                {item.text}
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
+
                 </div>
+
+                {/* Submit Button */}
+                {showSubmitBtn() &&
+                    <div className="flex justify-center mt-8">
+                        <button
+                            onClick={handleSubmit}
+                            className="bg-green-600 cursor-pointer text-white px-6 py-2 rounded-md font-semibold shadow-lg hover:bg-green-700 transition duration-300"
+                        >
+                            Submit
+                        </button>
+                    </div>
+                }
+
             </DragDropContext>
 
-
+            {/* Modal */}
             <Modal
                 title={modalTitle}
                 content={modalContent}
                 open={openModal}
                 closeModal={closeModal}
             />
-
         </div>
     );
 }
