@@ -56,7 +56,7 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 // Task 5 : Sophie
 
 
-export default function DragDropOptions() {
+export default function DragDropOptions(props) {
     const [modalTitle, setModalTitle] = useState('')
     const [modalContent, setModalContent] = useState('')
     const [openModal, setOpenModal] = useState(false);
@@ -68,13 +68,13 @@ export default function DragDropOptions() {
         {
             heading: 'School Trip Dilemma',
             img: S1,
-            subHeading: 'A class is going on a field trip, but they have only one bus with limited space, and not all supplies fit. The teacher assigns a team of students to figure out the best way to pack, making sure everyone gets what they need while keeping the bus balanced and organized.',
+            subHeading: "Fimona's class is going on a field trip. They have only one bus with limited space, and not all supplies fit. A team of students have to figure out the best way to pack supplies for the trip",
             tasks: [
-                'Who will be useful to move supplies.',
-                'Who will prioritise essential supplies.',
-                'Who can suggest better packing strategy',
-                'Who can think creatively to find alternative ways.',
-                'Who should be responsible for arranging items.',
+                'Move supplies.',
+                'Prioritise essential supplies.',
+                'Suggest better packing strategy.',
+                'Think creatively to find alternative ways.',
+                'Arranging items.',
             ],
             chars: [
                 { id: 1, name: 'Ethan', img: S1_C1, skills: ['Neat organizer', 'Heavy lifter'] },
@@ -92,11 +92,11 @@ export default function DragDropOptions() {
             img: S2,
             subHeading: 'A plane crashes on a deserted island, leaving a group stranded. They must survive and find a way to escape within 24 hours. Resources are limited, and they need to use their skills wisely. ',
             tasks: [
-                'Who will be responsible for building a strong shelter?',
-                'Who will be responsible for finding a clean water source? ',
-                'Who will identify and prepare food for the team?',
-                'Who will navigate the island and determine the best escape plan? ',
-                'Who will transport heavy materials like logs and supplies?'
+                'Build a strong shelter.',
+                'Find a clean water source.',
+                'Identify and prepare food for the team.',
+                'Navigate the island and determine the best escape plan.',
+                'Transport heavy materials like logs and supplies.'
             ],
             chars: [
                 { id: 1, name: 'Lucas', img: S2_C1, skills: ['Great at swimming'] },
@@ -114,11 +114,11 @@ export default function DragDropOptions() {
             img: S3,
             subHeading: "A spaceship’s oxygen system is failing, and the crew has only 30 minutes to fix it before running out of air. Everyone must use their expertise to restore the system while staying calm under pressure.",
             tasks: [
-                'Who will repair the broken oxygen system? ',
-                'Who will analyze the oxygen system to assist with repairs, need someone who can help with research and development?',
-                'Who will monitor the health of the crew to prevent oxygen-related issues? ',
-                'Who will manage spacecraft functions in case of emergency? ',
-                'Who will communicate with mission control for expert guidance?'
+                'Repair the broken oxygen system.',
+                'Analyze the oxygen system to assist with repairs.',
+                'Monitor the health of the crew to prevent oxygen-related problems.',
+                'Manage spacecraft functions in case of emergency. ',
+                'Communicate with mission control for expert guidance.'
             ],
             chars: [
                 { id: 1, name: 'Jake', img: S3_C1, skills: ['Engineer'] },
@@ -186,17 +186,19 @@ export default function DragDropOptions() {
 
     const handleStart = () => {
         setIsSVisible(false)
+        props.setIsHeadingVisiable(false)
     }
 
     const closeModal = () => {
         setOpenModal(false)
-        if(nextQ){
+        if (nextQ) {
             setCurrentObjIndex((prevIndex) => prevIndex + 1);
             setIsSVisible(true)
+            props.setIsHeadingVisiable(true)
             setNextQ(false)
         }
     }
-    
+
     return (
         <div>
             {currentObjIndex < obj.length ? (
@@ -212,8 +214,35 @@ export default function DragDropOptions() {
                         ) : (
                             <div className="relative h-screen flex flex-col">
                                 <DragDropContext onDragEnd={onDragEnd}>
+
+                                    {/* Draggable Characters Section */}
+                                    <div className="w-full flex justify-center p-2 bg-blue-500">
+                                        <Droppable droppableId="characters">
+                                            {(provided) => (
+                                                <div ref={provided.innerRef} {...provided.droppableProps} className="w-full p-4 flex flex-wrap gap-2 justify-center">
+                                                    <h2 className="w-full text-lg font-semibold text-center text-white mb-2">Know Your Team</h2>
+                                                    {sections.characters && sections.characters.map((char, index) => (
+                                                        <Draggable key={char.name} draggableId={char.name} index={index}>
+                                                            {(provided) => (
+                                                                <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="bg-white text-black p-1 rounded-md cursor-pointer transition duration-300 hover:bg-green-500 hover:text-white charImgContainer">
+                                                                    <p className='charName'>Name: {char.name}</p>
+                                                                    <Image className='charImg' src={char.img} alt='char' />
+                                                                    {char.skills.map((skill, idx) => (
+                                                                        <p className='charSkill mt-2' key={idx}>Skill: {skill}</p>
+                                                                    ))}
+                                                                </div>
+                                                            )}
+                                                        </Draggable>
+                                                    ))}
+                                                    {provided.placeholder}
+                                                </div>
+                                            )}
+                                        </Droppable>
+                                    </div>
+
+
                                     {/* Horizontal Task Containers */}
-                                    <div className="flex justify-center gap-6 mt-6">
+                                    <div className="absolute bottom-1 w-full flex justify-center gap-6 p-4">
                                         {currentObj.tasks.map((task) => (
                                             <Droppable key={task} droppableId={task}>
                                                 {(provided) => (
@@ -224,18 +253,15 @@ export default function DragDropOptions() {
                                                                 {(provided) => (
                                                                     <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className={`${char.color} charImgContainer text-white p-1 mb-2 rounded-md cursor-pointer`}>
                                                                         <div className="relative group inline-block">
-                                                                            <button className="bg-blue-500 text-white px-4 py-2 rounded">
-                                                                                <Image className='charImg' src={char.img} alt='char' />
-                                                                            </button>
+                                                                            <Image className='charImg' src={char.img} alt='char' />
                                                                             <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-max px-2 py-1 text-white text-sm bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                                                                                Name : {char.name}
+                                                                                Name: {char.name}
                                                                                 <br />
-                                                                                {char.skills.map((skill, index) => (
-                                                                                    <p className='charSkill' key={index}>{skill}</p>
+                                                                                {char.skills.map((skill, idx) => (
+                                                                                    <p className='charSkill' key={idx}>Skill: {skill}</p>
                                                                                 ))}
                                                                             </span>
                                                                         </div>
-
                                                                     </div>
                                                                 )}
                                                             </Draggable>
@@ -248,38 +274,17 @@ export default function DragDropOptions() {
                                     </div>
 
 
-                                    {sections.characters && sections.characters.length === 0 &&
-                                        <div className='text-center mt-6 '>
+                                    {sections.characters && sections.characters.length === 0 && (
+                                        <div className='text-center mt-6'>
                                             <button
                                                 onClick={handleSubmit}
-                                                className='bg-green-600 w-[50%] cursor-pointer text-white px-6 py-2 rounded-md font-semibold shadow-lg hover:bg-green-700 transition duration-300'>Submit</button>
+                                                className='bg-green-600 w-[50%] cursor-pointer text-white px-6 py-2 rounded-md font-semibold shadow-lg hover:bg-green-700 transition duration-300'
+                                            >
+                                                Submit
+                                            </button>
                                         </div>
-                                    }
+                                    )}
 
-                                    {/* Draggable Characters Section */}
-                                    <div className="absolute bottom-1 w-full flex justify-center p-2 bg-blue-500">
-                                        <Droppable droppableId="characters">
-                                            {(provided) => (
-                                                <div ref={provided.innerRef} {...provided.droppableProps} className="w-full p-4 flex flex-wrap gap-2 justify-center">
-                                                    <h2 className="w-full text-lg font-semibold text-center text-white mb-2">Characters</h2>
-                                                    {sections.characters && sections.characters.map((char, index) => (
-                                                        <Draggable key={char.name} draggableId={char.name} index={index}>
-                                                            {(provided) => (
-                                                                <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="bg-white text-black p-1 rounded-md cursor-pointer transition duration-300 hover:bg-green-500 hover:text-white charImgContainer">
-                                                                    <p className='charName'>{char.name}</p>
-                                                                    <Image className='charImg' src={char.img} alt='char' />
-                                                                    {char.skills.map((skill, index) => (
-                                                                        <p className='charSkill' key={index}>{skill}</p>
-                                                                    ))}
-                                                                </div>
-                                                            )}
-                                                        </Draggable>
-                                                    ))}
-                                                    {provided.placeholder}
-                                                </div>
-                                            )}
-                                        </Droppable>
-                                    </div>
                                 </DragDropContext>
                             </div>
                         )}

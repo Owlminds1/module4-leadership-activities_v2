@@ -10,6 +10,7 @@ import TalkieTalkie from '../assets/walkieTalkie.jpeg';
 import Flashlight from '../assets/flashlight.jpeg';
 import Food from '../assets/food.jpeg';
 import FirstAid from '../assets/firstAid.jpeg';
+import WarmCloths from '../assets/warmCloths.jpeg';
 
 
 import Modal from "@/components/ModalInit";
@@ -31,7 +32,7 @@ export default function Com1() {
             img: S1,
             heading: "The Balloon is Losing Hot Air Rapidly!",
             subHeading: "There’s a leak in the balloon, and it’s sinking quickly! You must drop something to stay airborne longer.",
-            ans: 1
+            ans: 6
         },
         {
             img: S2,
@@ -42,8 +43,8 @@ export default function Com1() {
         {
             img: S3,
             heading: "A Wild Animal is Blocking Your Landing Spot!",
-            subHeading: "You're about to land in a forest, but a large bear is near the clearing. You must stay in the air longer until it's safe to land.",
-            ans: 3
+            subHeading: "As you have already located where you will land, now you have to focus on staying in the air longer, and once the wild animals go away, you can land.",
+            ans: 1
         }
     ]
 
@@ -77,7 +78,7 @@ export default function Com1() {
         <div className="slideShowContainer">
             {currentObjIndex < objects.length ? (
                 <div className="flex items-center">
-
+                    
                     <div className="w-1/2 p-4 leftContainer">
                         <p className='objText0'>Scenario {currentObjIndex + 1} : {objects[currentObjIndex]['heading']}</p>
                         <p className="objText">{objects[currentObjIndex]['subHeading']}</p>
@@ -85,7 +86,8 @@ export default function Com1() {
                     </div>
 
                     <div className="w-1/2 p-4 rightContainer text-left">
-                        <h1 className='text-center optionsHeading'>Which item would you drop</h1>
+                        <h1 className='text-center optionsHeading'>Which item would you drop?</h1>
+                        
                         <div className="grid grid-cols-3 gap-4">
                             <div className="text-center optionContainer" onClick={() => { handleOptionSelection(1) }}>
                                 <Image src={Map} alt="map" className="w-full optionImg" />
@@ -102,7 +104,7 @@ export default function Com1() {
                         </div>
 
 
-                        <div className="grid grid-cols-2 gap-4 mt-4">
+                        <div className="grid grid-cols-3 gap-4 mt-4">
                             <div className="text-center optionContainer" onClick={() => { handleOptionSelection(4) }}>
                                 <Image src={Food} alt="Food" className="w-full optionImg" />
                                 <p className="optionTxt mt-2">Food</p>
@@ -110,6 +112,10 @@ export default function Com1() {
                             <div className="text-center optionContainer" onClick={() => { handleOptionSelection(5) }}>
                                 <Image src={FirstAid} alt="FirstAid" className="w-full optionImg" />
                                 <p className="optionTxt mt-2">First Aid Kit</p>
+                            </div>
+                            <div className="text-center optionContainer" onClick={() => { handleOptionSelection(6) }}>
+                                <Image src={WarmCloths} alt="FirstAid" className="w-full optionImg" />
+                                <p className="optionTxt mt-2">Warm Cloths</p>
                             </div>
                         </div>
                     </div>

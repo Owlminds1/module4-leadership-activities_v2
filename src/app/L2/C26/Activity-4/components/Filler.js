@@ -8,7 +8,7 @@ export default function Filler(props) {
             <h1 className='headingOg'>{props.heading}</h1>
             <h1 className="heading">{props.subHeading}</h1>
             <Image alt="currentObj" className='currentObj' src={props.imagex} />
-            <button onClick={props.handleStart}>Start</button>
+            <button onClick={props.handleStart}>Build Project</button>
             </center>
         </div>
     );

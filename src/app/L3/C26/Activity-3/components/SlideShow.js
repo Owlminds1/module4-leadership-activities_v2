@@ -145,6 +145,7 @@ export default function SlideShow() {
                 nextQuestion()
             } else {
                 setModalTitle('You missed answering! Moving to the next question.');
+                setModalContent(`Correct answer is : ${objects[currentObjIndex].options[objects[currentObjIndex].correctAnswer]}`)
                 setNextQ(true)
                 setOpenModal(true)
             }

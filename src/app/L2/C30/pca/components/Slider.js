@@ -2,89 +2,84 @@
 
 import './style.css'
 
-
 export default function Slider() {
     const data = [
         {
             col1: "Dad",
             col2: ""
-        },
-        {
-            col1: "",
-            col2: ""
-        },
-        {
-            col1: "",
-            col2: ""
-        },
-        {
-            col1: "",
-            col2: ""
         }
     ];
+
     return (
-        <div className='slidesMainContainer p-10'>
-            <div className='text-left text-[23px]'>
-                <p className='mb-3'>Date ____________</p>
-                <p className='mb-3'>Your Name ____________</p>
-                <p className='mb-3'>Topic ________________________________________________</p>
-
-                <br />
-                <br />
-                <br />
+        <div className="slidesMainContainer p-6 max-w-5xl mx-auto space-y-8 text-[18px] leading-relaxed">
+            {/* DISCUSSION */}
+            <div>
+                <p className="font-semibold">
+                    What did you discuss <span className="inline-block w-[60%] border-b border-gray-400 align-middle"></span>
+                </p>
             </div>
 
-            <p className='text-2xl font-bold mb-8'>
-                All family members were included? Who all attended the discussion {' '}
-                <span className='bg-[#c20c82] text-[16px] shadow-lg text-white font-semibol rounded px-3 py-2 mr-2'>(SPACE)</span> : ___________________ _______________________________________________________________________________________</p>
+            {/* SPACE */}
+            <div>
+                <p className="font-semibold">
+                    Did everyone get{' '}
+                    <span className="bg-[#c20c82] text-white text-sm font-semibold rounded px-3 py-1 shadow">
+                        SPACE
+                    </span>{' '}
+                    to feel included? <span className="inline-block w-[40%] border-b border-gray-400 align-middle"></span>
+                </p>
+            </div>
 
-            <br />
-            <br />
-            <br />
-
-            <div className="p-6 mb-8">
-                <h1 className="text-2xl font-bold mb-4">
-                    Thoughts of everyone {' '}
-                    <span className='bg-[#c20c82] text-[16px] shadow-lg text-white font-semibol rounded px-3 py-2 mr-2'>(VOICE)
-                    </span>
-                </h1>
-                <div className="overflow-x-auto">
-                    <table className="t1 w-full border-collapse border border-gray-300 shadow-md rounded-lg">
-                        <thead>
-                            <tr className="bg-gray-200">
-                                <th className="border border-gray-300 p-3 text-left th1">Family Member</th>
-                                <th className="border border-gray-300 p-3 text-left">Thought</th>
+            {/* VOICE */}
+            <div>
+                <p className="font-semibold mb-4">
+                    How was{' '}
+                    <span className="bg-[#c20c82] text-white text-sm font-semibold rounded px-3 py-1 shadow">
+                        VOICE
+                    </span>{' '}
+                    used to speak up?
+                </p>
+                <table className="w-full border border-gray-300 shadow-sm rounded overflow-hidden">
+                    <thead className="bg-gray-100">
+                        <tr>
+                            <th className="text-left p-3 border border-gray-300">Family Member</th>
+                            <th className="text-left p-3 border border-gray-300">Thought</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((row, index) => (
+                            <tr key={index} className="odd:bg-white even:bg-gray-50">
+                                <td className="p-3 border border-gray-300">{row.col1}</td>
+                                <td className="p-3 border border-gray-300">{row.col2 || '_________'}</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {data.map((row, index) => (
-                                <tr key={index} className="trx border border-gray-300 odd:bg-gray-100 even:bg-white">
-                                    <td className="border border-gray-300 p-3 td1">{row.col1}</td>
-                                    <td className="border border-gray-300 p-3">{row.col2}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                    <h1 className="mt-4 font-semibold text-[20px] text-blue-600">
-                        Add more rows as per the discussion
-                    </h1>
-                </div>
+                        ))}
+                    </tbody>
+                </table>
+                <p className="mt-3 text-sm text-blue-600">
+                    Add more rows as per the discussion.
+                </p>
             </div>
 
-            <br />
-            <br />
-            <br />
-            <p className='text-2xl font-bold mb-8'>
-                Was everyone heard properly? If not, how did you ensure that everyone's voice was included in the discussion? {' '}
-                <span className='bg-[#c20c82] text-[16px] shadow-lg text-white font-semibol rounded px-3 py-2 mr-2'>(AUDIENCE)</span> : ___________________ _______________________________________________________________________________________</p>
-            <br />
-            <br />
-            <br />
-            <p className='text-2xl font-bold mb-4'>
-                What decision was made? How did your family work together to reach that decision? {' '}
-                <span className='bg-[#c20c82] text-[16px] shadow-lg text-white font-semibol rounded px-3 py-2 mr-2'>(INLUENCE)</span> : ___________________ _______________________________________________________________________________________</p>
+            {/* AUDIENCE */}
+            <div>
+                <p className="font-semibold">
+                    Who was the{' '}
+                    <span className="bg-[#c20c82] text-white text-sm font-semibold rounded px-3 py-1 shadow">
+                        AUDIENCE
+                    </span>{' '}
+                    to listen and act on it? <span className="inline-block w-[65%] border-b border-gray-400 align-middle"></span>
+                </p>
+            </div>
 
-
+            {/* INFLUENCE */}
+            <div>
+                <p className="font-semibold">
+                    How did ideas transform into{' '}
+                    <span className="bg-[#c20c82] text-white text-sm font-semibold rounded px-3 py-1 shadow">
+                        INFLUENCE
+                    </span>? <span className="inline-block w-[65%] border-b border-gray-400 align-middle"></span>
+                </p>
+            </div>
         </div>
     );
 }

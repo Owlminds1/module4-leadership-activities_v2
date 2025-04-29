@@ -25,9 +25,9 @@ export default function Slider() {
     ]
 
     const objSubHeading = [
-        'Jake & Lily, two friends argue over who gets to use the swing first, where Lily just ran and sat on the swing.',
-        'Two siblings Mia & Noah both want to watch different TV shows at the same time.',
-        'Jordan asked for a pass so he could score a goal, but Sam took the shot himself because he thought he had a clear path.'
+        'Jake & Lily, two friends argue over who gets to use the swing first.  Lily just ran and sat on the swing',
+        'Two siblings, Mia & Noah both want to watch different TV shows at the same time.',
+        'Jordan asked for a pass so he could score a goal. Instead, Sam took the shot himself because he thought he had a clear path.'
     ]
 
     const handleNext = () => {

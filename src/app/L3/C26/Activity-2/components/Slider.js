@@ -22,23 +22,23 @@ export default function Slider() {
         {
             img: S1,
             objHeading: "The Group Poster Project",
-            objSubHeading: "Your teacher assigns a group poster project about environmental awareness. There are four students in your group: Emma, Liam, Alex, and Mia. Emma and Liam are working hard, but Alex and Mia are barely contributing. Mia is playing on her tablet, and Alex keeps saying, 'They’ve got it covered. I don’t need to do much.' As the deadline approaches, Emma and Liam feel frustrated because they are doing all the work.",
+            objSubHeading: "The class teacher assigns a group poster project about environmental awareness. There are four students in your group: Emma, Liam, Alex, and Mia. Emma and Liam are working hard, but Alex and Mia are barely contributing. Mia is playing on her tablet, and Alex keeps saying, 'They’ve got it covered. I don’t need to do much.' As the deadline approaches, Emma and Liam feel frustrated because they are doing all the work.",
             questions: []
         },
         {
             img: S2,
             objHeading: "The Tug-of-War Game",
-            objSubHeading: "At a sports event, the teacher organizes a tug-of-war game. Two teams of six players each are formed. When practicing with just two players, everyone pulls with full strength. But when all six players join, some of them, like Ryan and Zoe, stop pulling as hard. They assume the stronger players will handle it. The team loses because not everyone is giving their best effort.",
+            objSubHeading: "At a sports event, the teacher organized a tug-of-war game with two teams of six players each. During initial practice with just two players, everyone pulled with full strength. However, once all six players joined, some—like Ryan and Zoe—reduced their effort, assuming the stronger teammates would cover for them. In the end, the team lost because not everyone contributed their maximum effort.",
             questions: [
-                "What could the team have done to make sure everyone contributed equally?",
+                "How could the team have inspired every member to give their best and contribute equally?",
                 "What specific advice would you give to Ryan and Zoe?",
-                "How could the stronger players have motivated Ryan and Zoe to pull harder?"
+                "How could the stronger players have guided Ryan and Zoe to stay focused and pull harder?"
             ]
         },
         {
             img: S3,
             objHeading: "The Relay Race Challenge",
-            objSubHeading: "During sports day, teams are running a relay race. Everyone is excited and running fast, but Liam, the third runner, sees that his team is already behind. He thinks, 'We’re probably going to lose anyway, so I don’t need to run that fast.' Instead of sprinting, he slows down, assuming Sophia, the last runner, will make up for it. But because of this, the team falls further behind and loses the race.",
+            objSubHeading: "During sports day, teams are running a relay race. Everyone is excited and running fast, but Liam, the third runner, doesn't put much effort in and slows down, assuming Sophia, the last runner, will make up for it. But because of this, the team falls further behind and loses the race.",
             questions: [
                 "If you were on Liam’s team, what would you say to him to encourage him?",
                 "What could Liam’s team have done before the race to make sure everyone ran at full effort?"
@@ -47,7 +47,7 @@ export default function Slider() {
         {
             img: S4,
             objHeading: "The School Fundraiser Bake Sale",
-            objSubHeading: "A group of students is running a bake sale fundraiser. At first, everyone is helping, but after a while, some students stop working. They assume others will handle things, so they start chatting instead of helping customers. Soon, the stall is messy, and people are confused about prices because not enough students are actively working.",
+            objSubHeading: "A group of students organized a bake sale fundraiser. While participation was strong initially, several students lost focus, assuming others will keep things running. Instead of assisting customers, they began chatting amongst themselves. The stall grew messy, and customers were left confused about prices because too few students were paying attention.",
             questions: [
                 "What problem is happening at the bake sale?",
                 "Why do you think some have stopped helping?"
