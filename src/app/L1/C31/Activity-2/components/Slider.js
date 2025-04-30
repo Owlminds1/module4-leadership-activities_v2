@@ -12,6 +12,8 @@ import { useState } from 'react';
 
 export default function Slider() {
     const [currentObj, setCurrentObj] = useState(0)
+    const [emotion, setEmotion] = useState('')
+    const [err, setErr] = useState(false)
     const obj = [
         S1,
         S2,
@@ -31,9 +33,19 @@ export default function Slider() {
     ]
 
     const handleNext = () => {
-        setCurrentObj(currentObj + 1)
+        if (emotion === '') {
+            setErr(true)
+        } else {
+            setEmotion('')
+            setErr(false)
+            setCurrentObj(currentObj + 1)
+        }
     }
 
+    const handleInput = (e) => {
+        const val = e.target.value
+        setEmotion(val)
+    }
 
     return (
         <div className='slidesMainContainer'>
@@ -45,7 +57,13 @@ export default function Slider() {
 
                 </div>
                 <div className="w-1/2 bg-green-500 p-4 text-white rightCon">
-                    <input type="text" placeholder='Emotion Label' />
+                    {err &&
+                        <p className='text-[#3e1818] mb-2 text-[20px] font-semibold text-left '>Please input a emotion</p>
+                    }
+                    <input
+                        value={emotion}
+                        onChange={(e) => { handleInput(e) }}
+                        type="text" placeholder='Emotion Label' />
                 </div>
             </div>
 

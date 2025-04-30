@@ -28,18 +28,18 @@ export default function Slider() {
     ]
 
     const objSubHeading = [
-        'Emma and Noah are having snack time. Noah accidentally bumps Emma’s juice, and it spills all over the table. Emma shouts, "You did that on purpose!" Noah looks shocked and says, "No, I didn’t!"',
-        'Mia and her older brother, Lucas, share a bedroom. One evening, their mum asks them to clean up before dinner. Mia starts picking up her toys, but Lucas keeps playing with his video game. Frustrated, Mia says, “You never help! I have to do everything!”',
-        'Zoe and her older brother Jake are watching TV. Zoe wants to watch cartoons, but Jake wants to watch a sports game. Jake grabs the remote and says, "I had it first!" Zoe crosses her arms and says, "That’s not fair!"',
-        'Liam and his older sister, Sophie, see there’s only one cookie left on the plate. Liam reaches for it, but Sophie quickly grabs it first and says, "I got it first! It’s mine!" Liam frowns and says, "That’s not fair! I wanted it too!"'
+        'At snack time, Noah bumped Emma’s juice. It spilled! Emma yelled, "You did that!" Noah said, "No, it was an accident!"',
+        'Mia and Lucas shared a room. Mum asked them to clean up. Mia cleaned, but Lucas kept playing. Mia got upset and said, "You never help! I have to do everything',
+        'Zoe and Jake were watching TV. Jake wanted sports. Zoe wanted cartoons. Jake grabbed the remote and said, "I had it first!"  Zoe said, "That’s not fair!"',
+        'Liam and his older sister, Sophie, spotted one cookie left on the plate. As Liam reached for it, Sophie quickly grabbed it and said, "I got it first! It’s mine!" Liam frowned and said, "That’s not fair! I wanted it too!"'
     ]
 
     const solutionObj = [
         [
             "Emma takes a deep breath before reacting.",
             "Instead of blaming, she uses an 'I' statement: 'I feel frustrated because my juice spilled.'",
-            "They think of ways to fix the situation—maybe cleaning up together or asking for help.",
-            "Emma decided  to grab some napkins and clean up.",
+            "They think of ways to fix the situation—maybe clean up together or ask for help.",
+            "Emma decided  to grab some napkins and clean it up.",
             "Emma realizes it was an accident and says, It’s okay, let’s just clean it up!"
         ],
         [
@@ -60,7 +60,7 @@ export default function Slider() {
         [
             "Liam takes a deep breath before reacting.",
             "Instead of arguing, Liam says: I feel sad because I really wanted a cookie too.",
-            "They think of solutions: They could split the cookie, ask if more cookies are available, or take turns next time.",
+            "They think of solutions: they can split the cookie or ask if more cookies are available",
             "Liam suggests, How about we break it in half and share?",
             "Sophie agrees, and they both enjoy the cookie happily.            ",
         ]

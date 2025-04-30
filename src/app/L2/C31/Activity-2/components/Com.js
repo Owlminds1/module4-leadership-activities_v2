@@ -25,8 +25,8 @@ export default function Mystery() {
             heading: "Grandma’s Birthday Dinner",
             c1_name: "Lena",
             c2_name: "Ryan",
-            c1_obj: "Lena wants to take Grandma to Grandma’s favorite restaurant because it serves her favorite soup.",
-            c2_obj: "Ryan wants to have a home-cooked dinner because Grandma always says she loves family meals.",
+            c1_obj: "Lena wants to take Grandma to her favorite restaurant because they serve the soup Grandma loves most.",
+            c2_obj: "Ryan wants to have a home-cooked dinner because Grandma always says that family meals are her favorite.",
             c1_questions: [
                 "Why does Lena feel taking grandma to a restaurant is a better idea?",
                 "What solution would be fair as per Lena?",
@@ -215,29 +215,30 @@ export default function Mystery() {
                     <tbody>
                         <tr className="odd:bg-gray-100 even:bg-white">
                             <td className="border border-gray-300 px-2 py-2">
+                                {console.log(obj[currentObjIndex]["c1_questions"][0])}
                                 <textarea
                                     readOnly
-                                    defaultValue={obj[currentObjIndex]["c1_questions"][0]}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    value={obj[currentObjIndex]["c1_questions"][0]}
+                                    className="w-full bg-[#b21a3d] text-white h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     onChange={(e) => handleTextBoxChange(e, "c1", "0")}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    className="w-full bg-[#bcdcb7] h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     readOnly
-                                    defaultValue={obj[currentObjIndex]["c2_questions"][0]}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    value={obj[currentObjIndex]["c2_questions"][0]}
+                                    className="w-full bg-[#b21a3d] text-white h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     onChange={(e) => handleTextBoxChange(e, "c2", "0")}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    className="w-full bg-[#bcdcb7] h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                         </tr>
@@ -246,27 +247,27 @@ export default function Mystery() {
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     readOnly
-                                    defaultValue={obj[currentObjIndex]["c1_questions"][1]}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    value={obj[currentObjIndex]["c1_questions"][1]}
+                                    className="w-full bg-[#b21a3d] text-white h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     onChange={(e) => handleTextBoxChange(e, "c1", "1")}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    className="w-full bg-[#bcdcb7] h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     readOnly
-                                    defaultValue={obj[currentObjIndex]["c2_questions"][1]}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    value={obj[currentObjIndex]["c2_questions"][1]}
+                                    className="w-full bg-[#b21a3d] text-white h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     onChange={(e) => handleTextBoxChange(e, "c2", "1")}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    className="w-full bg-[#bcdcb7] h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                         </tr>
@@ -275,27 +276,27 @@ export default function Mystery() {
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     readOnly
-                                    defaultValue={obj[currentObjIndex]["c1_questions"][2]}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    value={obj[currentObjIndex]["c1_questions"][2]}
+                                    className="w-full bg-[#b21a3d] text-white h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     onChange={(e) => handleTextBoxChange(e, "c1", "2")}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    className="w-full bg-[#bcdcb7] h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     readOnly
-                                    defaultValue={obj[currentObjIndex]["c2_questions"][2]}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    value={obj[currentObjIndex]["c2_questions"][2]}
+                                    className="w-full bg-[#b21a3d] text-white h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                             <td className="border border-gray-300 px-2 py-2">
                                 <textarea
                                     onChange={(e) => handleTextBoxChange(e, "c2", "2")}
-                                    className="w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    className="w-full bg-[#bcdcb7] h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </textarea>
                             </td>
                         </tr>

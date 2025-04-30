@@ -4,13 +4,14 @@ import './style.css'
 import Image from 'next/image'
 import S1 from '../assets/s1.jpeg';
 import S2 from '../assets/s2.jpeg';
-import S3 from '../assets/s3.jpeg';
+import S3 from '../assets/s3.png';
 import { useState } from 'react';
 
 export default function Slider() {
     const [currentObj, setCurrentObj] = useState(0);
     const [progress, setProgress] = useState(0);
     const [revealedValues, setRevealedValues] = useState([]);
+    const [justAddedValues, setJustAddedValues] = useState([]);
 
     const obj = [S1, S2, S3];
 
@@ -21,9 +22,9 @@ export default function Slider() {
     ];
 
     const objSubHeading = [
-        'Emma is reading a comic, but her little brother, Noah, is playing loudly nearby. She feels frustrated because she can’t concentrate.',
-        'Liam’s team is playing soccer. Mia kicks the ball the wrong way, and the other team scores. Alex yells, ‘Mia, you’re terrible at this game!’ Mia looks sad and walks away.',
-        'At his cousin’s party, Ethan plays musical chairs. When the music stops, Kai bumps into him and takes the last chair. Kai cheers, ‘I won!’ Ethan feels frustrated.'
+        'Emma wanted to read her comic, but Noah was too loud. She felt upset because she couldn’t focus.',
+        'Mia kicked the ball the wrong way, and the other team scored. Alex yelled, "Mia, you’re terrible at this game!" Mia looked sad and walked away.',
+        'At his cousin’s party, Ethan played musical chairs. When the music stopped, Kai bumped into him and grabbed the last chair. "I won!" Kai cheered. Ethan felt upset and a little left out'
     ];
 
     const toleranceQtyObj = [
@@ -35,6 +36,7 @@ export default function Slider() {
     const handleNext = () => {
         if (currentObj < obj.length - 1) {
             setCurrentObj(currentObj + 1);
+            setJustAddedValues([]);
             let update = updateToleranceQtyObj()
             if(update){
                 updateProgress()
@@ -42,12 +44,19 @@ export default function Slider() {
         }
     };
 
+
     const updateProgress = () => {
         const update = updateToleranceQtyObj();
         if (update) {
-            let newProgress = (currentObj + 1) * 33; // 0 → 33, 33 → 66, 66 → 100
+            const newItems = toleranceQtyObj[currentObj].filter(
+                (item) => !revealedValues.includes(item)
+            );
+
+            setRevealedValues([...newItems, ...revealedValues]);
+            setJustAddedValues(newItems);
+
+            let newProgress = (currentObj + 1) * 33;
             setProgress(newProgress);
-            setRevealedValues([...revealedValues, ...toleranceQtyObj[currentObj]]);
         }
     };
 
@@ -64,13 +73,15 @@ export default function Slider() {
 
     const getGradient = () => {
         if (progress < 33) {
-            return "from-blue-500 to-cyan-400"; // Start color
+            return "from-blue-500 to-cyan-400"; // Peaceful blue to cyan
         } else if (progress < 66) {
-            return "from-cyan-400 to-yellow-400"; // Midway color
+            return "from-cyan-400 to-indigo-400"; // Peaceful cyan to indigo
         } else {
-            return "from-yellow-400 to-red-500"; // Near completion
+            return "from-indigo-400 to-purple-400"; // Peaceful indigo to purple
         }
     };
+    
+
 
     return (
         <div className="slidesMainContainer">
@@ -98,7 +109,13 @@ export default function Slider() {
                         {/* Revealed Tolerance Values */}
                         <div className="flex flex-col gap-2">
                             {revealedValues.map((value, index) => (
-                                <p key={index} className="bg-white text-black px-2 py-1 rounded-lg">
+                                <p
+                                    key={index}
+                                    className={`px-2 py-1 rounded-lg transition-all duration-300
+                                        ${justAddedValues.includes(value)
+                                            ? 'bg-[#ffea00] text-black font-semibold'
+                                            : 'bg-white text-black'}`}
+                                >
                                     {value}
                                 </p>
                             ))}

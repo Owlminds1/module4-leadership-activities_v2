@@ -21,7 +21,7 @@ export default function Slider() {
         },
         {
             scenario: "The Community Safety Debate",
-            scenarioT: "A local town is deciding on a new safety rule. The majority (Delta group) wants to set a curfew for all kids under 14 after 8 PM, arguing that it will keep them safe. A smaller group (Sigma group) believes kids should be allowed to stay out later with parental permission, saying it’s unfair to restrict responsible kids.",
+            scenarioT: "A local town is debating a new safety rule. The majority group, called Delta, wants to set a curfew for all kids under 14, requiring them to be home by 8 PM to help keep them safe. A smaller group, called Sigma, argues that kids who have parental permission and show responsibility should be allowed to stay out later. They believe it’s unfair to restrict all kids because of a few concerns.",
             questions: [
                 "How does your group feel about the curfew?",
                 "Why does your group think this is the best solution?",

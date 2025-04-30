@@ -15,7 +15,6 @@ export default function Home() {
         </h1>
       </div>
       <hr />
-      <br />
       <center>
         <Slider />
       </center>

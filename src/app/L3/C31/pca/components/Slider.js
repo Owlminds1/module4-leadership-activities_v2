@@ -46,7 +46,7 @@ export default function Slider() {
                                 <th className="border border-gray-300 p-3 text-left">Date</th>
                                 <th className="border border-gray-300 p-3 text-left">What happened?</th>
                                 <th className="border border-gray-300 p-3 text-left">How did I feel?</th>
-                                <th className="border border-gray-300 p-3 text-left">How did I handled the situation</th>
+                                <th className="border border-gray-300 p-3 text-left">How did I handle the situation?</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -20,12 +20,12 @@ export default function Slider() {
 
     const objHeading = [
         'The Line Cutter',
-        'The Parent-Sibling Conflict',
+        'The TV Remote Conflict',
         'The Bike Mix-Up'
     ]
 
     const objSubHeading = [
-        'Liam is waiting in line for lunch at school when Jack suddenly cuts in front of him. Liam feels frustrated because he has been waiting his turn.',
+        'Liam waited in line for lunch at school. Suddenly, Jack cut in front of him. Liam felt upset because he had been waiting his turn.',
         'Sophia and her younger brother, Lucas, both want to watch different TV shows. They start arguing. Their dad walks in and says, "Lucas can pick today because he’s younger." Sophia feels upset and thinks it’s unfair.',
         'Daniel leaves his bike outside his friend’s house while playing inside. When he comes back, he sees another kid, Ryan, riding it without asking.'
     ]

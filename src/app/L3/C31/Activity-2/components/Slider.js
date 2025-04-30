@@ -11,6 +11,7 @@ export default function Slider() {
     const [currentObj, setCurrentObj] = useState(0);
     const [progress, setProgress] = useState(0);
     const [revealedValues, setRevealedValues] = useState([]);
+    const [justAddedValues, setJustAddedValues] = useState([]);
 
     const obj = [S1, S2, S3];
 
@@ -21,8 +22,8 @@ export default function Slider() {
     ];
 
     const objSubHeading = [
-        'Sam(wears glasses) asks to join a game of tag, but Jake says, "You can’t play! You’ll just slow us down!" Sam loves tags and feels hurt.',
-        'Sophia and Emma always sit together and they are best friends. One day, Mai, another classmate, invites Emma to sit with them. Sophia gets upset and says, "I thought we were best friends! If you sit with Mia, we’re not friends anymore!" Emma feels torn between making a new friend and keeping Sophia happy.',
+        'Sam wanted to play tag. Jake said, "No, you’ll slow us down!" Sam felt sad.',
+        'Sophia and Emma were best friends and always sit together and they are best friends. One day, Mai, another classmate, invites Emma to sit with them. Sophia gets upset and says, "I thought we were best friends! If you sit with Mia, we’re not friends anymore!" Emma feels torn between making a new friend and keeping Sophia happy.',
         'Oliver and Mia are talking about their favourite movies. Oliver loves superhero films, while Mia prefers animated movies. Oliver laughs and says, "Animated movies are for little kids. You should watch real movies like mine!" Mia feels embarrassed and annoyed that her opinion wasn’t respected.'
     ];
 
@@ -35,6 +36,7 @@ export default function Slider() {
     const handleNext = () => {
         if (currentObj < obj.length - 1) {
             setCurrentObj(currentObj + 1);
+            setJustAddedValues([]);
             let update = updateToleranceQtyObj()
             if(update){
                 updateProgress()
@@ -45,9 +47,15 @@ export default function Slider() {
     const updateProgress = () => {
         const update = updateToleranceQtyObj();
         if (update) {
-            let newProgress = (currentObj + 1) * 33; // 0 → 33, 33 → 66, 66 → 100
+            const newItems = toleranceQtyObj[currentObj].filter(
+                (item) => !revealedValues.includes(item)
+            );
+
+            setRevealedValues([...newItems, ...revealedValues]);
+            setJustAddedValues(newItems);
+
+            let newProgress = (currentObj + 1) * 33;
             setProgress(newProgress);
-            setRevealedValues([...revealedValues, ...toleranceQtyObj[currentObj]]);
         }
     };
 
@@ -64,11 +72,11 @@ export default function Slider() {
 
     const getGradient = () => {
         if (progress < 33) {
-            return "from-blue-500 to-cyan-400"; // Start color
+            return "from-blue-500 to-cyan-400"; // Peaceful blue to cyan
         } else if (progress < 66) {
-            return "from-cyan-400 to-yellow-400"; // Midway color
+            return "from-cyan-400 to-indigo-400"; // Peaceful cyan to indigo
         } else {
-            return "from-yellow-400 to-red-500"; // Near completion
+            return "from-indigo-400 to-purple-400"; // Peaceful indigo to purple
         }
     };
 
@@ -98,7 +106,13 @@ export default function Slider() {
                         {/* Revealed Tolerance Values */}
                         <div className="flex flex-col gap-2">
                             {revealedValues.map((value, index) => (
-                                <p key={index} className="bg-white text-black px-2 py-1 rounded-lg">
+                                <p
+                                    key={index}
+                                    className={`px-2 py-1 rounded-lg transition-all duration-300
+                                        ${justAddedValues.includes(value)
+                                            ? 'bg-[#ffea00] text-black font-semibold'
+                                            : 'bg-white text-black'}`}
+                                >
                                     {value}
                                 </p>
                             ))}
