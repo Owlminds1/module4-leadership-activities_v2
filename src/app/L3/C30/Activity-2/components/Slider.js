@@ -11,38 +11,42 @@ import S3 from '../assets/s3.jpeg';
 
 import { useState } from 'react';
 
-export default function Slider() {
+export default function Slider(props) {
     const [currentObjIndex, setCurrentObjIndex] = useState(0)
     const [showNextBtn, setShowNextBtn] = useState(false)
-
+    
     const obj = [
         {
             img: S1,
             heading: "Your Sports Day Plan",
             swotHeading1: "",
             swotHeading2: "",
-            subHeading: "Imagine your Sports Day just around the corner, and you’re excited! There are many events like running, swimming, high jump, and team games. But you can only enter two events, and you want to do your best and have fun."
+            subHeading: "Sports Day is just around the corner, and you’re buzzing with excitement! Running, swimming, high jump, team games — so many fun choices! But here’s a twist: you can only join two events.  Which ones will help you shine and have a great time?"
         },
         {
             img: S2,
             heading: "The Great School Lunch Debate",
             swotHeading1: "SWOT analysis for Alex’s Idea",
             swotHeading2: "SWOT analysis for Mia’s Idea",
-            subHeading: "Big news! Your class has been asked to redesign the lunch menu. You’re in a group with Alex and Mia, but they have very different ideas…” Alex’s Idea: Healthier lunches (fruits, veggies, low sugar), Mia’s Idea: Fun food (burgers, pizza, fries)"
+            subHeading: "Exciting news! Your class gets to redesign the school lunch menu! You’re working with Alex and Mia — but they don’t exactly agree.  Alex wants to bring in healthy options like fruits, veggies, and low-sugar foods.Mia thinks lunches should be fun, with burgers, pizza, and fries. How will your team create a menu everyone will love?"
         },
         {
             img: S3,
             heading: "Class Fund – How Should We Use It?",
             swotHeading1: "SWOT analysis for Option A – Science Kits",
-            swotHeading2: "SWOT analysis for Option A – Class Excursion",
+            swotHeading2: "SWOT analysis for Option A – Class Trip",
             subHeading: "Your class won $500 after a kindness challenge. Now your teacher wants your group to decide how to spend it wisely. There are two choices…” Option A: Buy Science Kits for hands-on learning. Option B: Plan a fun, learning-filled class trip."
         }
     ]
 
 
     const handleNext = () => {
+        let currentObjIndex_temp = currentObjIndex + 1
         setShowNextBtn(false)
-        setCurrentObjIndex(currentObjIndex + 1)
+        setCurrentObjIndex(currentObjIndex_temp)
+        if(currentObjIndex_temp > 0 ){
+            props.setHideHeading(false)
+        }
     }
 
 
@@ -66,6 +70,7 @@ export default function Slider() {
                     <div className="w-1/2 p-4 rightCon">
                         <SwotCom
                             seen="s1"
+                            questionSet="nonGeneral"
                             passOnSwotData={passOnSwotData}
                             currentObjIndex={currentObjIndex}
                         />

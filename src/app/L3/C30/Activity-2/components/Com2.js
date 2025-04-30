@@ -1,31 +1,30 @@
 'use client'
 
 import './style.css'
-
-import SwotCom from './SwotCom';
+import SwotCom from './SwotCom'
 import Image from 'next/image'
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 export default function Slider(props) {
     const [startSwot, setStartSwot] = useState(false)
     const [seenCounter, setSeenCounter] = useState({})
 
-
     useEffect(() => {
         setStartSwot(false)
-    }, [props.currentObjIndex]);
-
+    }, [props.currentObjIndex])
 
     const interMeditSassOnSwotData = (currentSwotData, currentSolutionLen, seen) => {
-        // console.log(currentSwotData, currentSolutionLen, seen)
         const newObj = {
-            [seen]: currentSolutionLen
+            [seen]: currentSolutionLen,
         }
-        setSeenCounter((prevSeenCounter) => ({ ...prevSeenCounter, ...newObj }));
-        // console.log(seenCounter)
-        if (seenCounter.s1 && seenCounter.s1 === 4 && seenCounter.s2 && seenCounter.s2 === 4) {
-            props.passOnSwotData(currentSwotData, currentSolutionLen, "s1&&s2")
+        setSeenCounter((prevSeenCounter) => ({ ...prevSeenCounter, ...newObj }))
+        if (
+            seenCounter.s1 &&
+            seenCounter.s1 === 4 &&
+            seenCounter.s2 &&
+            seenCounter.s2 === 4
+        ) {
+            props.passOnSwotData(currentSwotData, currentSolutionLen, 's1&&s2')
         }
     }
 
@@ -34,50 +33,61 @@ export default function Slider(props) {
     }
 
     return (
-        <div className='slidesMainContainer'>
-            {/* {console.log(props)} */}
+        <div className="flex flex-col md:flex-row gap-8 p-6 rounded-xl">
+            {/* Left Column */}
+            <div className="md:w-1/2 flex flex-col items-center justify-center">
+                <h1 className="text-4xl font-bold text-gray-800">{props.currentObj.heading}</h1>
+                <p className="text-xl text-gray-600 mt-2">{props.currentObj.subHeading}</p>
 
-            <div>
-                <h1 className="heading">{props.currentObj.heading}</h1>
-                <h1 className="subHeading">{props.currentObj.subHeading}</h1>
-                <Image alt="currentObj" className='currentObj' src={props.currentObj.img} />
+                <Image
+                    alt="currentObj"
+                    src={props.currentObj.img}
+                    width={350}
+                    height={350}
+                    className="rounded-lg mt-4 shadow-md object-contain"
+                />
+
+                {!startSwot && (
+                    <button
+                        onClick={handleStartSwot}
+                        className="cursor-pointer w-[100%] mt-4 bg-yellow-500 hover:bg-yellow-600 transition-colors duration-300 text-white px-6 py-3 rounded-xl text-lg font-semibold"
+                    >
+                        Start SWOT Analysis
+                    </button>
+                )}
+
             </div>
 
-            {!startSwot &&
-                <button
-                    onClick={handleStartSwot}
-                    className="mt-4 mt-12 font-semibold p-2 bg-yellow-500 text-white cursor-pointer text-[20px] px-4 rounded-lg"
-                >Start SWOT Analysis</button>
-            }
+            {/* Right Column */}
+            <div className="md:w-2/3 flex flex-col gap-6">
 
-
-            {startSwot &&
-                <>
-                    <br /><br /><br />
-                    <hr />
-                    <br />
-
-                    <div className="flex gap-4">
-                        <div className="w-1/2 p-4 rightCon">
-                            <h1 className='font-semibold text-[23px]'>{props.currentObj.swotHeading1}</h1>
+                {startSwot && (
+                    <div className="flex flex-col gap-6 mt-4">
+                        <div className="bg-white p-6 rounded-xl shadow-md">
+                            <h2 className="text-xl font-semibold mb-4 text-gray-700">
+                                {props.currentObj.swotHeading1}
+                            </h2>
                             <SwotCom
                                 seen="s1"
+                                questionSet="general"
                                 passOnSwotData={interMeditSassOnSwotData}
                                 currentObjIndex={props.currentObjIndex}
                             />
                         </div>
-
-                        <div className="w-1/2 p-4 rightCon">
-                            <h1 className='font-semibold text-[23px]'>{props.currentObj.swotHeading2}</h1>
+                        <div className="bg-white p-6 rounded-xl shadow-md">
+                            <h2 className="text-xl font-semibold mb-4 text-gray-700">
+                                {props.currentObj.swotHeading2}
+                            </h2>
                             <SwotCom
                                 seen="s2"
+                                questionSet="general"
                                 passOnSwotData={interMeditSassOnSwotData}
                                 currentObjIndex={props.currentObjIndex}
                             />
                         </div>
                     </div>
-                </>
-            }
+                )}
+            </div>
         </div>
-    );
+    )
 }

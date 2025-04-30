@@ -16,6 +16,21 @@ export default function Slider(props) {
         "T : Threats",
     ]
 
+    const nonGeneral = [
+        "What sports are you naturally good at? These are the ones you feel confident and perform well in.",
+        "What sports do you find difficult or need more practice in?",
+        "What sports could you improve in if you put in some extra effort before Sports Day?",
+        "What might stop you from doing well or enjoying Sports Day?",
+    ];
+
+
+    const generalQuestions = [
+        "What’s good about this idea?",
+        "What might kids not like?",
+        "What could it lead to later?",
+        "What could go wrong?"
+    ];
+
     const borderStyles = [
         'border-red-400 shadow-md shadow-red-200',
         'border-blue-400 shadow-md shadow-blue-200',
@@ -56,11 +71,17 @@ export default function Slider(props) {
                     {currentSolutionObj.length > 0 &&
                         <div className="grid grid-cols-2 gap-4 p-4 rounded-lg">
                             {currentSolutionObj.map((value, index) => (
-                                <div key={index}>
+                                <div key={index} className='flex flex-col justify-evenly'>
+                                    {/* {console.log(props.questions)} */}
                                     <p className='mb-2 font-semibold'>{value}</p>
+                                    {props && props.questionSet && 
+                                        <p>
+                                            {props.questionSet === 'nonGeneral' ? nonGeneral[index]: generalQuestions[index]}
+                                        </p>
+                                    }
                                     <textarea
                                         key={index}
-                                        className={`w-full h-42 p-2 rounded border ${borderStyles[index % borderStyles.length]}`}
+                                        className={`w-full h-28 p-2 rounded border ${borderStyles[index % borderStyles.length]}`}
                                         // value={value}
                                         onChange={(e) => swotUpdate(e)}
                                     />

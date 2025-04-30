@@ -41,7 +41,7 @@ export default function Home() {
         )}
 
         {showStartBtn && !isStart &&
-          <button ref={bottomRef} className='buttonak1' onClick={handleStart}>Start</button>
+          <button ref={bottomRef} className='buttonak1' onClick={handleStart}>Next</button>
         }
       </center>
 

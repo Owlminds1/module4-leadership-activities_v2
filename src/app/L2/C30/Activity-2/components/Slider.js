@@ -19,10 +19,10 @@ export default function Slider() {
             heading: "The Sports Team Rule",
             subHeading: "Only boys can join the school soccer team.",
             questions: [
-                "Does the new rule make enough SPACE for everyone?",
-                "How can students use their VOICE to challenge this rule?",
-                "Who is the right AUDIENCE to listen to these complaints?",
-                "How can students turn their ideas into INFLUENCE?"
+                "Does this rule give SPACE for everyone to feel included?",
+                "How to use VOICE to speak up?",
+                "Who is AUDIENCE to listen and act on it?",
+                "How to transform ideas to INFLUENCE?"
             ]
         },
         {
@@ -30,10 +30,10 @@ export default function Slider() {
             heading: "The Class Captain Rule",
             subHeading: "Only the tallest student in the class can be class captain.",
             questions: [
-                "What’s wrong with the SPACE in this rule?",
-                "How can students use their VOICE to fix this?",
-                "Who needs to be the AUDIENCE and listen to these ideas?",
-                "How can students turn their INFLUENCE into action?"
+                "Does this rule give SPACE for everyone to feel included?",
+                "How to use VOICE to speak up?",
+                "Who is AUDIENCE to listen and act on it?",
+                "How to transform ideas to INFLUENCE?"
             ]
         },
         {
@@ -41,10 +41,10 @@ export default function Slider() {
             heading: "The Playground Rule",
             subHeading: "Only students who can run fast are allowed to play in the playground. Slower students must stay in the classroom.",
             questions: [
-                "What’s wrong with the SPACE in this rule?",
-                "How can students use their VOICE to change this?",
-                "Who should be the AUDIENCE listening to these ideas?",
-                "How can students use their INFLUENCE to make recess fair?"
+                "Does this rule give SPACE for everyone to feel included?",
+                "How to use VOICE to speak up?",
+                "Who is AUDIENCE to listen and act on it?",
+                "How to transform ideas to INFLUENCE?"
             ]
         },
     ]
@@ -82,7 +82,7 @@ export default function Slider() {
             <div className="flex gap-4">
                 <div className="w-1/2 bg-blue-500___X p-4 text-white___X leftCon">
                     <h1 className='headingOg'>{obj[currentObjIndex]["heading"]}</h1>
-                    <h1 className="heading">{obj[currentObjIndex]["subHeading"]}</h1>
+                    {/* <h1 className="heading">{obj[currentObjIndex]["subHeading"]}</h1> */}
                     <Image alt="currentObj" className='currentObj' src={obj[currentObjIndex]["img"]} />
 
                 </div>

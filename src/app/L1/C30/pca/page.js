@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="mainContainer">
       <div className="headingContainer" id="headingContainer">
-        <h1 className="mainHeading">My Helping Hands Choice Board</h1>
+        <h1 className="mainHeading">My Helping Hands</h1>
       </div>
       <hr />
       <br />

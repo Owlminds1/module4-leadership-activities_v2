@@ -16,7 +16,7 @@ export default function Slider() {
         {
             img: S1,
             heading: "Tickling Too Much",
-            text: "James and his friend Ethan are playing. James starts tickling Ethan, and they laugh at first. But then Ethan said, ‘Stop!’ James is having fun, so James wonders if he should keep tickling.",
+            text: "James and Ethan are rolling with laughter as James launches a full-on tickle attack. Ethan suddenly bursts out, 'Stop!'  James still caught up in the fun, pauses and wonders — if he should continue tickling or call it quits?",
             choices: [
                 "Stop tickling and ask, ‘What should we play next?’",
                 "Keep tickling because it was fun at first."
@@ -108,12 +108,17 @@ export default function Slider() {
                 <h1 className="subHeading text-left w-1/2">{obj[currentObjIndex]["text"]}</h1>
             </div>
 
+            <h1 className='mt-4 text-[18px]'>
+                <i>Click on the button to make a chocide amd view it's consequences</i>
+            </h1>
             <div className="optMainCon w-full flex justify-center space-x-4">
                 {obj[currentObjIndex]["choices"].map((choice, index) => (
                     <div key={index} className="optMainCon2 flex flex-col items-center justify-center">
                         <button
                             onClick={() => handleOptSelected(index)}
                             className="bg-purple-700 text-white px-4 py-2 rounded-lg shadow-md hover:bg-purple-800 max-w-[250px] transition-all">
+                            <i className='text-[16px]'>Choice {index + 1}</i>
+                            <br />
                             {choice}
                         </button>
 
@@ -136,7 +141,7 @@ export default function Slider() {
             </div>
 
 
-            {tempChoice1_CC.length > 0 && tempChoice2_CC.length > 0 && currentObjIndex < obj.length - 1 && (
+            {(tempChoice1_CC.length > 0 || tempChoice2_CC.length > 0) && currentObjIndex < obj.length - 1 && (
                 <button onClick={handleNext} className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">
                     Next
                 </button>

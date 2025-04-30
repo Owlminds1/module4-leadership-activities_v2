@@ -16,21 +16,21 @@ export default function Slider() {
         {
             img: S1,
             heading: "The Fundraiser",
-            subHeading: "Your class is raising money for a local animal shelter. You’ve baked cookies, collected donations, and set a goal to raise $500 to help buy food and blankets for rescued animals. But it’s been two weeks… and you’ve only raised $100. The shelter is counting on your support — and time is running out!"
+            subHeading: "Your class is on a mission to raise $500 for a local animal shelter, to buy food, blankets, and supplies for animals in need. You’ve baked cookies, collected donations, and worked hard. But after two weeks, you’ve only gathered $100. The shelter is depending on you, and the clock is ticking!"
         },
         {
             img: S2,
             heading: "The Snack Dare",
-            subHeading: "Some kids at school were laughing about a party where someone ate a super spicy chip. You’re going to a birthday party this weekend, and one of those kids will be there. You’ve heard they like to dare others — like drinking weird mixes or eating hot sauce. You’re not sure what to do if they dare you too."
+            subHeading: "Everyone at school was cracking up about a party where someone dared to eat a super spicy chip! Now, you’re off to a birthday party this weekend — and guess what? One of those dare-loving kids will be there too. They’re famous for wild challenges, like drinking weird mixes or eating spoonfuls of hot sauce. You can’t help but wonder: what if they dare you next?"
         }
     ]
 
     const solutionObj = [
-        "Identify the Decision",
-        "Identify Possible Outcomes",
-        "Make the Decision",
-        "Brainstorm Options",
-        "Reflect on the Decision"
+        "List choices",
+        "List outcomes",
+        "Decide",
+        "Power up",
+        "Reflect on decisions"
     ]
 
 
@@ -70,7 +70,7 @@ export default function Slider() {
                     {currentSolutionObj.length < solutionObj.length &&
                         <center>
                             <button onClick={updateSolution} className="mt-4 p-2 bg-yellow-500 text-black rounded-lg">
-                                Update Solution
+                                Next
                             </button>
                         </center>
                     }

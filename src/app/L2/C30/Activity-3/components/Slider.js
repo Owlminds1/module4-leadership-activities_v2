@@ -28,8 +28,8 @@ export default function Slider() {
         {
             img: S3,
             heading: "The Sneaky Snack",
-            text: "Ethan was really hungry before dinner. His parents had said not to eat cookies, but he grabbed one anyway and ate it quickly.",
-            twist: "Later, his parents found out but weren’t mad because Ethan was actually feeling weak from missing lunch. They realized he needed a better snack plan before dinner."
+            text: "Ethan’s stomach was rumbling before dinner. His parents had said, “No cookies!” — but he was too hungry. He grabbed a cookie and gobbled it up before anyone could see.",
+            twist: "Later, his parents found out later — but instead of getting mad, they understood. Ethan had missed lunch and was feeling shaky, so they came up with a new plan: better snacks before dinner!"
         }
     ]
 

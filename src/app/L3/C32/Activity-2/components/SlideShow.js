@@ -74,7 +74,7 @@ export default function SlideShow() {
             if (currentObjIndex === (objects.length - 1)) {
                 nextQuestion()
             } else {
-                setModalTitle('You missed answering! Moving to the next question.');
+                setModalTitle('You missed answering! Move to the next question.');
                 setNextQ(true)
                 setOpenModal(true)
             }

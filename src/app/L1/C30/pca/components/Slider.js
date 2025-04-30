@@ -37,7 +37,7 @@ export default function Slider() {
                 <p>Your Name ____________</p>
             </div>
             <div className="p-6">
-                <h1 className="text-2xl font-bold mb-4">Choice Board</h1>
+                <h1 className="text-2xl font-bold mb-4">The Helping Chart</h1>
                 <div className="overflow-x-auto">
                     <table className="w-full border-collapse border border-gray-300 shadow-md rounded-lg">
                         <thead>

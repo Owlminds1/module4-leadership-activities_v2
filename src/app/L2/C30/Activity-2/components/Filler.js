@@ -22,9 +22,9 @@ export default function Filler(props) {
 
     const col2 = [
         "The pizza table",
-        "Kids share their topping wishes! ",
-        "Parents Really Listen ",
-        "Sam & Sophia’s choices where considered "
+        "Sam and his sister Sophia shout out their dream toppings!",
+        "Parents are all ears",
+        "Sam and Sophia’s picks got a big thumbs-up!"
     ]
 
     const col3 = [
@@ -73,12 +73,12 @@ export default function Filler(props) {
                 {currentCol2Temp.length < col2.length &&
                     <button
                         className='bg-[#296d8e] hover:bg-[#02557d] mt-4 font-semibold text-[17px] cursor-pointer text-white px-5 py-2 rounded'
-                        onClick={handleUpdateSol1}>Update Solution 1</button>
+                        onClick={handleUpdateSol1}>Next</button>
                 }
             </div>
 
             <div className="w-1/3 comDiv p-4 text-left">
-                <h1 className='text-[26px] mb-4 font-semibold'>Lundy Model</h1>
+                <h1 className='text-[26px] mb-4 font-semibold'>4-step process for inclusive decision making</h1>
                 <ul className='list-disc list-inside'>
                     {currentCol3Temp.map((col3, index) => (
                         <li key={index} className='mb-4 text-[20px]'>
@@ -91,7 +91,7 @@ export default function Filler(props) {
                 {currentCol3Index > -1 && currentCol3Temp.length < col3.length &&
                     <button
                         className='bg-[#296d8e] hover:bg-[#02557d] mt-4 font-semibold text-[17px] cursor-pointer text-white px-5 py-2 rounded'
-                        onClick={handleUpdateSol2}>Update Solution 2</button>
+                        onClick={handleUpdateSol2}>Next</button>
                 }
             </div>
 

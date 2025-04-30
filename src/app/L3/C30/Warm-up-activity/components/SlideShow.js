@@ -47,14 +47,6 @@ export default function SlideShow() {
             ]
         },
         {
-            "text": "Your older sibling lets you into their room — but only for 5 minutes. Do you:",
-            "options": [
-                "Respect the time and leave when asked?",
-                "Hide and try to stay longer?",
-                "Ask for 5 more minutes each time?"
-            ]
-        },
-        {
             "text": "Your parents say no to something you really want. Do you:",
             "options": [
                 "Ask again and again until they say yes?",
@@ -79,7 +71,7 @@ export default function SlideShow() {
             if (currentObjIndex === (objects.length - 1)) {
                 nextQuestion()
             } else {
-                setModalTitle('You missed answering! Moving to the next question.');
+                setModalTitle('You missed answering! Move to the next question.');
                 setNextQ(true)
                 setOpenModal(true)
             }
