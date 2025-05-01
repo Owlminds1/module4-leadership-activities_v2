@@ -20,8 +20,7 @@ const STARQuestion = (prop) => {
     return (
         <div className="max-w-2xl mx-auto p-6 bg-white shadow-2xl rounded-xl text-gray-800">
             <h1 className="text-2xl font-semibold mb-6 text-center">
-                How many elements does the STAR technique have?
-                And which are they?
+                What is the STAR technique, and what are its elements?
             </h1>
 
 
@@ -44,7 +43,7 @@ const STARQuestion = (prop) => {
                     </button>
                 }
                 {revealedIndex > solutionElements.length - 1 && (
-                    <button 
+                    <button
                         onClick={prop.handleNext}
                         className="cursor-pointer px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                         Next

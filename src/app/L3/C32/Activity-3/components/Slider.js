@@ -16,12 +16,12 @@ export default function Slider() {
         {
             img: S1,
             heading: "Getting Ready Stress",
-            subHeading: "Ava is trying to get ready for an event, but her parents keep asking for extra tasks to be done."
+            subHeading: "Ava is getting ready for an event, but her parents keep giving her extra chores."
         },
         {
             img: S2,
             heading: "Discussion Disruptions",
-            subHeading: "Ethan’s friend keeps interrupting him during a group discussion, while ethan is trying to say something."
+            subHeading: "Ethan is trying to speak during a group discussion, but his friend keeps cutting him off."
         },
         {
             img: S3,
@@ -38,8 +38,8 @@ export default function Slider() {
 
     return (
         <div className='slidesMainContainer'>
-            <h1 className="heading">{obj[currentObjIndex]["heading"]}</h1>
-            <h1 className="subHeading">{obj[currentObjIndex]["subHeading"]}</h1>
+            {/* <h1 className="heading">{obj[currentObjIndex]["heading"]}</h1> */}
+            <h1 className="heading">{obj[currentObjIndex]["subHeading"]}</h1>
             <Image alt="currentObj" className='currentObj' src={obj[currentObjIndex]["img"]} />
             {currentObjIndex < obj.length - 1 &&
                 <button onClick={handleNext}>Next</button>

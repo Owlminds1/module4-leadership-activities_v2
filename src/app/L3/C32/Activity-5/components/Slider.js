@@ -63,115 +63,121 @@ const screens = [
   },
 ];
 
-// Automatically build initial inputs object
-const initialInputs = {};
-screens.forEach(screen => {
-  screen.images.forEach(img => {
-    if (img.inputName) {
-      initialInputs[img.inputName] = "";
-    }
-  });
-});
+
 
 export default function Home() {
-  const [screenIndex, setScreenIndex] = useState(0);
-  const [inputs, setInputs] = useState(initialInputs);
+  const [inputs, setInputs] = useState({
+    taylorResponse: "",
+    samThinkResponse: "",
+    samUnderstandResponse: "",
+    taylorReply: "",
+    samAfterTaylorResponse: "",
+    teacherAdvice: "",
+    samSolution: "",
+    taylorSolution: "",
+  });
+
   const [submitted, setSubmitted] = useState(false);
+  const [currentScreen, setCurrentScreen] = useState(0);
+  const [displayedScreens, setDisplayedScreens] = useState([0]);
 
   const handleInputChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
   const handleNext = () => {
-    if (screenIndex < screens.length - 1) {
-      setScreenIndex(screenIndex + 1);
+    if (currentScreen < screens.length - 1) {
+      const nextScreen = currentScreen + 1;
+      setCurrentScreen(nextScreen);
+      setDisplayedScreens([...displayedScreens, nextScreen]);
     } else {
       setSubmitted(true);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center mt-6 p-4">
-      {!submitted ? (
-        <div className="bg-white p-8 rounded-xl shadow-2xl max-w-4xl w-full">
-          <h1 className="text-2xl font-bold mb-6 text-center">
-            {screens[screenIndex].heading}
-          </h1>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-pink-100 py-10 px-4 flex flex-col items-center">
+      <div className="w-full max-w-4xl bg-white p-6 rounded-2xl shadow-xl space-y-12">
+        {!submitted ? (
+          <>
+            {displayedScreens.map((screenIndex) => (
+              <div key={screenIndex} className="space-y-6">
+                <h2 className="text-xl font-bold text-center text-purple-800">
+                  {screens[screenIndex].heading}
+                </h2>
+                <div className="flex justify-around flex-wrap gap-8">
+                  {screens[screenIndex].images.map((img, imgIdx) => (
+                    <div key={imgIdx} className="flex flex-col items-center gap-4">
+                      <div className="relative">
+                        <Image
+                          src={img.src}
+                          alt={img.label}
+                          className="w-32 h-32 object-cover rounded-full border-4 border-purple-300"
+                        />
+                        {(img.message || inputs[img.inputName]) && (
 
-          <div className="flex justify-around items-start gap-8 mb-6">
-            {screens[screenIndex].images.map((img, idx) => (
-              <div key={idx} className="flex flex-col items-center gap-2 relative">
-                <Image
-                  src={img.src}
-                  alt={img.label}
-                  className="w-32 h-32 object-cover rounded-full"
-                />
+                          <div className="mt-4 left-full ml-2 bg-blue-200 text-blue-900 p-3 rounded-xl shadow-md max-w-xs text-md break-words whitespace-pre-wrap">
+                            {img.message || inputs[img.inputName]}
+                          </div>
 
-                {/* Show message only for Screen 0 (first screen) */}
-                {screenIndex === 0 && img.message && (
-                  <div className="top-full mt-2 p-3 bg-blue-100 text-blue-900 rounded-lg shadow-md text-center w-60 break-words text-md">
-                    {img.message}
-                  </div>)}
-
-                {/* Textarea if inputName exists */}
-                {img.inputName && (
-                  <textarea
-                    name={img.inputName}
-                    value={inputs[img.inputName]}
-                    onChange={handleInputChange}
-                    placeholder="Type your answer..."
-                    className="p-2 border rounded-md w-64 mt-4 h-24"
-                  />
-                )}
+                        )}
+                      </div>
+                      {img.inputName && screenIndex === currentScreen && (
+                        <textarea
+                          name={img.inputName}
+                          value={inputs[img.inputName]}
+                          onChange={handleInputChange}
+                          placeholder="Type your response..."
+                          className="w-64 p-2 border border-gray-300 rounded-md shadow-sm resize-none"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
-          </div>
+            <div className="flex justify-center pt-8">
 
-          <div className="flex justify-center mt-8">
-            <button
-              onClick={handleNext}
-              className="cursor-pointer px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition duration-300"
-            >
-              {screenIndex === screens.length - 1 ? "Submit" : "Next"}
-            </button>
-          </div>
-        </div>
-      ) : (
-        // Output after submission
-        <div className="bg-white p-8 rounded-xl shadow-2xl max-w-5xl w-full">
-          {screens.map((screen, idx) => (
-            <div key={idx} className="mb-8 border-b pb-6">
-              <h2 className="text-xl font-semibold mb-4">{screen.heading}</h2>
-
-              <div className="flex justify-around items-start gap-8 mb-4">
-                {screen.images.map((img, idx2) => (
-                  <div key={idx2} className="flex flex-col items-center gap-2 relative">
-                    <Image
-                      src={img.src}
-                      alt={img.label}
-                      className="w-24 h-24 object-cover rounded-full"
-                    />
-
-                    {/* Show message only on first screen */}
-                    {idx === 0 && img.message && (
-                      <div className="mt-2 p-3 bg-blue-100 text-blue-900 rounded-lg shadow-md text-center max-w-[250px] text-md font-bold">
-                        {img.message}
-                      </div>
-                    )}
-
-                    {/* Display input answer */}
-                    {img.inputName && (
-                      <div className="mt-2 p-3 bg-blue-100 text-blue-900 rounded-lg shadow-md text-center max-w-[250px] text-md">
-                        <span className="font-bold">{img.label} says:</span> {inputs[img.inputName]}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+              {currentScreen !== screens.length - 1 &&
+                <button
+                  onClick={handleNext}
+                  className="cursor-pointer px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+                >
+                  Next
+                </button>
+              }
             </div>
-          ))}
-        </div>
-      )}
+          </>
+        ) : (
+          <>
+            {screens.map((screen, screenIdx) => (
+              <div key={screenIdx} className="space-y-4">
+                <h2 className="text-xl font-bold text-center text-purple-800">{screen.heading}</h2>
+                <div className="flex justify-around flex-wrap gap-8">
+                  {screen.images.map((img, imgIdx) => (
+                    <div key={imgIdx} className="flex flex-col items-center gap-4">
+                      <div className="relative">
+                        <Image
+                          src={img.src}
+                          alt={img.label}
+                          className="w-24 h-24 object-cover rounded-full border-2 border-purple-300"
+                        />
+                        {(img.message || inputs[img.inputName]) && (
+                          <div className="absolute -top-4 left-full ml-2 bg-blue-200 text-blue-900 p-3 rounded-xl shadow-md max-w-xs text-sm before:absolute before:content-[''] before:w-4 before:h-4 before:bg-blue-200 before:rotate-45 before:-left-2 before:top-4 before:rounded-sm">
+                            {img.message || inputs[img.inputName]}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </>
+        )}
+      </div>
     </div>
+
+
   );
 }

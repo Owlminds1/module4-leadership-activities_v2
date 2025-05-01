@@ -18,7 +18,7 @@ export default function Slider() {
         {
             img: S1,
             heading: "Team Trouble",
-            subHeading: "Lucas is in a team of four. Everyone just picks what they want to do without talking. Later, two people are doing the same job and one task is left undone."
+            subHeading: "Lucas is in a team of four. Everyone chooses tasks without having a discussion, so two people end up doing the same job, and one task is left unfinished."
         },
         {
             img: S2,

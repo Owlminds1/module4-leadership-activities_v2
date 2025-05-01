@@ -26,7 +26,7 @@ export default function SlideShow() {
             "correctAnswer": 1
         },
         {
-            "text": "Why do people sometimes do social loaf in groups?",
+            "text": "Why does social loafing happen?",
             "options": [
                 "They enjoy helping others",
                 "They don’t know the answers",
@@ -36,7 +36,7 @@ export default function SlideShow() {
             "correctAnswer": 2
         },
         {
-            "text": "Which of these is a way to stop social loafing?",
+            "text": "What will prevent social loafing?",
             "options": [
                 "Ignore the problem",
                 "Make team goals clear and give everyone a role",
@@ -46,7 +46,7 @@ export default function SlideShow() {
             "correctAnswer": 1
         },
         {
-            "text": "What could happen if someone keeps social loafing?",
+            "text": "What is the effect of social loafing?",
             "options": [
                 "The group gets stronger",
                 "Everyone works harder",
@@ -56,7 +56,7 @@ export default function SlideShow() {
             "correctAnswer": 3
         },
         {
-            "text": "What’s a good sign that your team is working well together?",
+            "text": "How do we know that the team is working well together?",
             "options": [
                 "Only one person does the work",
                 "Everyone is talking at the same time",

@@ -46,9 +46,8 @@ export default function DragPage(props) {
                       ref={provided.innerRef}
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
-                      className={`p-4 rounded-xl text-center font-bold text-lg bg-blue-100 ${
-                        snapshot.isDragging ? "bg-blue-300" : ""
-                      }`}
+                      className={`p-4 rounded-xl text-center font-bold text-lg bg-blue-100 ${snapshot.isDragging ? "bg-blue-300" : ""
+                        }`}
                     >
                       {word}
                     </div>
@@ -64,8 +63,13 @@ export default function DragPage(props) {
       {isCorrect && (
         <div className="mt-6 flex flex-col items-center">
           <p className="text-green-600 font-semibold text-xl mb-4">Good job!</p>
-          <p className="text-black-600 font-semibold text-xl mb-4">Do you remember what STOP – SAY – THINK – CHOOSE – RESPECT is, and why it is used?</p>
-          <button 
+          <p className="text-black-600 font-semibold text-xl mb-4">
+            Do you remember what STOP – SAY – THINK – CHOOSE – RESPECT is?
+            <br />
+            <br />
+            Where is it used?
+          </p>
+          <button
             onClick={props.handleNext}
             className="px-6 py-2 cursor-pointer bg-green-800 hover:bg-green-600 text-white rounded-xl transition">
             Next

@@ -7,7 +7,7 @@ import Slider from './components/Slider'
 
 export default function Home() {
   return (
-    <div className="mainContainer bg-gray-100">
+    <div className="mainContainer bg-gradient-to-br from-indigo-100 to-pink-100">
       <div className="headingContainer" id="headingContainer">
         <h1 className="mainHeading">Comic Strip</h1>
       </div>

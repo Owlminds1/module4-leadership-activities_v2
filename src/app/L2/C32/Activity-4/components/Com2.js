@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const Com2 = (prop) => {
     const solutionElements = [
-        { meaning: "What does 'Space' mean in the LUNDY framework?" },
-        { meaning: "What does 'Voice' mean in the LUNDY framework?" },
-        { meaning: "What does 'Audience' mean in the LUNDY framework?" },
-        { meaning: "What does 'Influence' mean in the LUNDY framework?" },
+        { meaning: "What does 'Space' mean in the 4-step  decision-making process?" },
+        { meaning: "What does 'Voice' mean in the 4-step  decision-making process?" },
+        { meaning: "What does 'Audience' mean in the 4-step  decision-making process?" },
+        { meaning: "What does 'Influence' mean in the 4-step  decision-making process?" },
     ];
 
     const [revealedIndex, setRevealedIndex] = useState(0);
@@ -18,9 +18,9 @@ const Com2 = (prop) => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto p-6 bg-white shadow-2xl rounded-xl">
+        <div className="max-w-3xl mx-auto p-6 bg-white shadow-2xl rounded-xl">
             <h1 className="text-2xl font-semibold mb-6 text-center">
-                LUNDY framework
+                4-step decision-making process
             </h1>
 
 

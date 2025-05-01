@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="mainContainer bg-gray-50">
       <div className="headingContainer" id="headingContainer">
-        <h1 className="mainHeading">Stop & Think Adventure!</h1>
+        <h1 className="mainHeading">Stop & Think!</h1>
       </div>
       <hr />
       <br />

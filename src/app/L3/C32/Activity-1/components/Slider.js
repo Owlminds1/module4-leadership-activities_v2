@@ -103,9 +103,12 @@ export default function Home() {
             }
 
             {result && (
-                <p className="mt-6 text-2xl font-semibold text-black-1000 text-2xl w-[500px]">
+                <p className="mt-6 text-2xl text-black-1000 text-2xl w-[500px]">
                     {/* Leadership Quality: {initialPrizes.length - prizes.length} {result} */}
-                    Leadership Quality: {result}
+                    <span className='font-semibold  text-[#663399]'>Leadership Quality: {result}</span>
+                    <br />
+                    <br />
+                    Where have you shown this quality or seen someone showing this quality?
                 </p>
             )}
         </div>

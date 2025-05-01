@@ -16,12 +16,12 @@ export default function Slider() {
         {
             img: S1,
             heading: "Birthday Blues",
-            subHeading: "Alex didn’t invite Jamie to the birthday party, and Jamie is sad now."
+            subHeading: "Jamie feels hurt because Alex didn’t invite her to the birthday party."
         },
         {
             img: S2,
             heading: "Chore Time Clash",
-            subHeading: "Mom reminds Rohan to do chores while Rohan is playing."
+            subHeading: "While Rohan is playing, Mom reminds him that he still needs to do his chores."
         },
         {
             img: S3,

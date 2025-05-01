@@ -26,7 +26,7 @@ export default function Slider() {
         {
             img: S3,
             heading: "Toothpaste Trouble",
-            subHeading: "Sophie squeezed out too much toothpaste and left the cap off, and her mom sees it."
+            subHeading: "Sophie squeezed out too much toothpaste and left the cap on, and her mom sees it."
         },
     ]
 

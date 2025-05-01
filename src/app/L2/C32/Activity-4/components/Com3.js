@@ -16,7 +16,7 @@ export default function Slider() {
         {
             img: S1,
             heading: "The Forgotten Seat at the School Play",
-            subHeading: "Liam promised Oliver that he would save a seat during the school play. But when Oliver arrived, he saw Liam sitting with someone else. Liam waved at Oliver but didn’t make space for him.",
+            subHeading: "Liam had promised to save a seat for Oliver at the school play. But when Oliver arrived, Liam was already sitting with someone else. He waved at Oliver but didn’t make room for him.",
             solution: [
                 "Oliver pauses and stays calm before reacting.",
                 "Oliver says, “I felt disappointed when you didn’t save me a seat.”",
@@ -28,7 +28,7 @@ export default function Slider() {
         {
             img: S2,
             heading: "The Great Room Decoration Debate",
-            subHeading: "Ella and Jake share a bedroom. Jake loves superheroes and already started decorating the room with superhero posters. Ella feels the room should reflect both of their styles, but Jake didn’t ask for her opinion.",
+            subHeading: "Ella and Jake share a bedroom. Jake loves superheroes, so he decorated the room with superhero posters. Ella feels left out because Jake didn’t ask for her opinion—she wants the room to reflect both of their styles.",
             solution: [
                 "Does Ella have enough SPACE to share her ideas?",
                 "How can Ella use her VOICE in this situation?",
@@ -81,7 +81,7 @@ export default function Slider() {
     return (
         <div className='slidesMainContainer'>
             <h1 className='mb-2 text-[18px] font-semibold'>
-                {currentObj === 0 ? "Use STOP-SAY-THINK-CHOOSE-RESPECT" : "Use LUNDY "}Framework
+                {currentObj === 0 ? "Use STOP-SAY-THINK-CHOOSE-RESPECT Framework" : "Use 4-step decision-making process"}
             </h1>
 
             <div className="flex gap-4">

@@ -9,26 +9,23 @@ export default function Com2() {
     const [currentObjIndex, setCurrentObjIndex] = useState(0)
     const obj = [
         {
-            heading: "What advice do you have for kids who feel like giving up?",
-        },
-        {
-            heading: "Can you explain what the STAR method means?",
+            heading: "Ron gives up easily when tasks get difficult. What advice would you give him?",
         },
         {
             heading: "Why is it important to set a goal before you start something?",
         },
         {
-            heading: "How can tracking your progress make you feel better?",
+            heading: "What are the benefits of tracking progress?",
         },
         {
-            heading: "What would you say to someone who feels embarrassed to ask for help?",
+            heading: "Zoee is embarrassed to ask for help. What would you like to say to her?",
         },
         {
-            heading: "What’s a fun way you could reward yourself after working hard",
+            heading: "Suggest a few fun ways to reward oneself.",
         },
         {
-            news: "In Sunnytown, the kids are preparing for a big bike race. Some of them feel like giving up because it’s hard to practice every day.",
-            heading: " As our Motivation Expert, how would you use the STAR method to help them stay strong and excited?",
+            // news: "In Sunnytown, the kids are preparing for a big bike race. Some of them feel like giving up because it’s hard to practice every day.",
+            heading: "In Sunnytown, the kids are preparing for a big bike race. Some of them feel like giving up because it’s hard to practice every day. Please suggest how to keep them excited with the STAR method.",
         }
 
     ]

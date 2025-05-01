@@ -23,6 +23,12 @@ export default function Slider(props) {
         'border-yellow-400 shadow-md shadow-yellow-200',
     ];
 
+    const generalQuestions = [
+        "What’s good about this idea?",
+        "What might kids not like?",
+        "What could it lead to later?",
+        "What could go wrong?"
+    ];
 
     useEffect(() => {
         setCurrentSolutionObj([])
@@ -58,6 +64,11 @@ export default function Slider(props) {
                             {currentSolutionObj.map((value, index) => (
                                 <div key={index}>
                                     <p className='mb-2 font-semibold'>{value}</p>
+
+                                    <p>
+                                        {generalQuestions[index]}
+                                    </p>
+
                                     <textarea
                                         key={index}
                                         className={`w-full h-42 p-2 rounded border ${borderStyles[index % borderStyles.length]}`}
