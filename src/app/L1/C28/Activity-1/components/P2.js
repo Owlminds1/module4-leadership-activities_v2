@@ -115,13 +115,14 @@ export default function P2(props) {
 
     const closeModal = () => {
         setOpenModal(false)
-        if(answerIndexs.length === hideableIndexes.length){
+        if (answerIndexs.length === hideableIndexes.length) {
             props.handleNext()
         }
     }
 
     return (
         <div>
+            <h1 className='text-[21px] font-semibold'>Click the picture to remove items from the dining table.</h1>
             <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 p-4">
                 {images.map((imgData, index) => (
                     <div

@@ -11,7 +11,7 @@ export default function P3() {
     "Campaign Title",
     "Why is this campaign important?",
     "What problem are you trying to solve?",
-    "What change do you want to see happen?",
+    "What change do you want to see?",
     "Who needs to hear your message?",
     "Whom will you contact first, and why?",
     "How will you approach local authorities (like council members)?",
@@ -81,7 +81,7 @@ export default function P3() {
           onClick={generatePDF}
           className="bg-green-600 text-white px-8 py-3 text-lg rounded-lg shadow hover:bg-green-700 transition-all hover:scale-105"
         >
-          Generate pdf
+          Save
         </button>
       </div>
     </div>

@@ -8,7 +8,7 @@ import PI1 from '../assets/pi1.jpeg';
 
 export default function P1() {
     
-    const seen = "Let me tell you about a group of students in another town. They noticed that people were throwing plastic bottles and wrappers all over the local park. The litter was building up, and it was hurting the environment. They decided to start a campaign to raise awareness and reduce waste, but they need help to get started. ";
+    const seen = "Let me tell you about a group of students from the town of Cleanridge. They noticed that plastic bottles and wrappers were being thrown all over their local park. The litter was piling up and harming the environment. So, they decided to start a campaign to raise awareness and reduce waste—but they need help to get it off the ground.";
     
     return (
         <div className='slidesMainContainer'>

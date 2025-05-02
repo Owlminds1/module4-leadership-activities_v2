@@ -8,13 +8,11 @@ export default function P3(props) {
   const seenHeading = "Planning Your Goal";
 
   const questions = [
-    "My Green Goal?",
-    "Why does this matter?",
-    "Where and when I’ll do it?",
-    "What might make it tricky?",
-    "My backup plan?",
-    "Who can help me?",
-    "How will I celebrate after 7 days?"
+    "What exactly will I do?",
+    "When and where will I do it?",
+    "What could make it tricky?",
+    "What’s my backup plan?",
+    "How will I celebrate after a week?"
   ];
 
   const [answers, setAnswers] = useState(Array(questions.length).fill(''));

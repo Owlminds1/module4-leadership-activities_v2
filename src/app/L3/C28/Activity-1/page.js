@@ -15,12 +15,16 @@ export default function Home() {
   }
 
   return (
-    <div className="mainContainer bg-gray-50">
-      <div className="headingContainer" id="headingContainer">
-        <h1 className="mainHeading">Perspective Swap</h1>
-      </div>
-      <hr />
-      <br />
+    <div className="mainContainer">
+      {currentPart === 0 &&
+        <>
+          <div className="headingContainer" id="headingContainer">
+            <h1 className="mainHeading">Perspective Swap</h1>
+          </div>
+          <hr />
+          <br />
+        </>
+      }
       <center>
 
         {currentPart === 0 &&
@@ -33,9 +37,9 @@ export default function Home() {
           />
         }
 
-        
 
-        {currentPart < 1  &&
+
+        {currentPart < 1 &&
           <button
             onClick={handleNext}
             className="mt-[50px] bg-green-600 text-white px-[25px] py-[6px] text-[18px] rounded-[10px] border-0 cursor-pointer hover:text-[19px]">

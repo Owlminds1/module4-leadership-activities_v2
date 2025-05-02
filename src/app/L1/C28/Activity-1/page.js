@@ -47,7 +47,7 @@ export default function Home() {
           <button
             onClick={handleNext}
             className="mt-[50px] bg-green-600 text-white px-[25px] py-[6px] text-[18px] rounded-[10px] border-0 cursor-pointer hover:text-[19px]">
-            Next
+            {currentPart === 2 ? "Let' do it!" : 'Next'}
           </button>
         }
       </center>

@@ -9,11 +9,11 @@ export default function P3() {
 
   const questions = [
     "Campaign Title",
-    "What’s the problem your campaign is solving?",
-    "What’s the goal of your campaign?",
-    "How can you get people involved?",
-    "Where will your campaign happen?",
-    "Who can help you with your campaign?",
+    "What is the issue your campaign wants to fix?",
+    "What change do you want to see?",
+    "How will people take action with you?",
+    "Where will your campaign take place?",
+    "WHO can help you run your campaign?",
     "Campaign Slogan"
   ];
 

@@ -25,7 +25,7 @@ export default function P4(props) {
                     <ul className='mt-4 text-[22px] list-disc list-inside text-left mr-10'>
                         <li>Sort home/school rubbish properly</li>
                         <li>Turn off lights/devices when not in use</li>
-                        <li>Bring a reusable bottle</li>
+                        <li>Carry a reusable bottle</li>
                         <li>Collect scrap paper for reuse</li>
                         <li>Use less plastic at lunch</li>
                         <li>Water a plant daily</li>

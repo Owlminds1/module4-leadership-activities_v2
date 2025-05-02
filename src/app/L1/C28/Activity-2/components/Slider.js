@@ -35,7 +35,7 @@ export default function Slider() {
     const objSubHeading = [
         "",
         "Noah is learning to ride his bike without training wheels. He falls a few times and says, ‘I’m scared—I don’t want to try anymore.’",
-        "Mia and her best friend Layla are practicing a dance for the school assembly. They keep forgetting the moves and feel frustrated.",
+        "Mia and her best friend Layla are practicing a dance for the school assembly. They keep forgetting the moves.",
         "A group of classmates is trying to complete a huge puzzle. Some pieces are tricky, and they start to argue. They feel like giving up.",
         ""
     ]
@@ -49,7 +49,7 @@ export default function Slider() {
         ],
         [
             "What is Noah’s goal?",
-            "How can Noah track his progress",
+            "How can Noah track his progress?",
             "Who can help Noah or cheer him on?",
             "What reward can Noah give himself?"
         ],
@@ -69,7 +69,7 @@ export default function Slider() {
             "What is one thing I want to get better at?",
             "How will I track my progress?",
             "Who can help or cheer me on?",
-            "What will I reward myself for?"
+            "How will I reward myself?"
         ]
     ]
 

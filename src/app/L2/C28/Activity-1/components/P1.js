@@ -8,7 +8,7 @@ import PI1 from '../assets/pi1.jpeg';
 
 export default function P1() {
     
-    const seen = "At school, Liam saw a BIG mess near the school bins. Food was in the recycling, wrappers were in the compost, and paper was everywhere! Liam wants to clean it up, but he is not sure how he can do it. ";
+    const seen = "At school, Liam noticed a big mess near the recycling bins. There was food in the recycling bin, wrappers in the compost, and paper scattered everywhere! Liam wanted to clean it up, but he wasn’t sure how to start.";
     
     return (
         <div className='slidesMainContainer'>

@@ -35,7 +35,7 @@ export default function Slider() {
     const objSubHeading = [
         "",
         "Liam has been selected to give a small speech during the school assembly. He practised a lot but forgets his lines during rehearsal. He gets nervous and says, 'Maybe I’m not meant to speak in front of others.'",
-        "Ella is doing a group project with two friends, but they keep getting distracted and not helping. Ella feels like she’s doing all the work and says, 'Why should I even bother trying if no one else cares?'",
+        "Ella is working on a group project with two of her friends, but they keep getting distracted and aren’t helping much. Ella feels overwhelmed. “Why should I even bother trying,” she says, “if no one else seems to care?",
         "Team Blaze, a group of students including Maya, Aiden, and Zoe, is competing in a trivia quiz competition. They’ve made it to the final round but start arguing about answers. Maya says, 'Forget it, we’re just going to lose now!'",
         ""
     ]
@@ -45,7 +45,7 @@ export default function Slider() {
             "Be able to make pancakes without help by the weekend.",
             "Each time I try, I’ll note what went well and what I need to fix (like flipping them better or getting the mix right).",
             "Ask an adult to show me the steps safely or help me the first time.",
-            "Enjoy my pancakes and maybe add extra toppings once I get it right!"
+            "Enjoy my pancakes—and add toppings once I perfect them!"
         ],
         [
             "What is Liam’s goal?",
@@ -176,7 +176,7 @@ export default function Slider() {
                     {currentSolutionObj.length < solutionObj[currentObj].length &&
                         <center>
                             <button onClick={updateSolution} className="mt-4 p-2 bg-yellow-500 text-black rounded-lg">
-                                Update Solution
+                                Next
                             </button>
                         </center>
                     }

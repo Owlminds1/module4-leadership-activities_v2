@@ -35,7 +35,7 @@ export default function Slider() {
     const objSubHeading = [
         "",
         "Luca wants to build a LEGO spaceship all by himself. He starts strong, but the pieces keep falling off. After a few tries, he sighs and says, ‘I’m just not good at this!’",
-        "Sara and Maya are working together on a volcano science project. They get excited at first but then disagree on how to build it. The lava doesn’t flow properly in their first try, and both start feeling frustrated.",
+        "Sara and Maya are working together on a volcano science project. They get excited at first but then disagree on how to build it. The lava doesn’t flow properly in their first try, and both start feeling annoyed.",
         "A group of classmates is preparing a skit for the school assembly. At first, everyone is excited, but then they start forgetting their lines or not showing up to practice. The group feels like giving up.",
         ""
     ]
@@ -69,7 +69,7 @@ export default function Slider() {
             "What is one thing I want to get better at?",
             "How will I track my progress?",
             "Who can help or cheer me on?",
-            "What will I reward myself for?"
+            "How will i reward myself?"
         ]
     ]
 

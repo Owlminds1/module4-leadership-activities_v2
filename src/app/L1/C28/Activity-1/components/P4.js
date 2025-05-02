@@ -5,15 +5,13 @@ import { jsPDF } from 'jspdf';
 import './style.css';
 
 export default function P3() {
-  const seenHeading = "Planning Your Goal";
+  const seenHeading = "Planning your action";
 
   const questions = [
     "What jobs can I help with during mealtime?",
-    "When is the best time for me to do my mealtime jobs?",
-    "What can I do if I forget to help?",
+    "How do I set reminders for myself to help at meal time?",
     "How will I feel after helping with mealtime?",
-    "What will help me keep going, even if the job gets boring to do every day?",
-    "What fun thing can I do to celebrate reaching my goal?",
+    "What will help me keep going, even if the job gets boring to do every day? ",
     "Who at home can be part of my Home Harmony Hero team?"
   ];
 
@@ -78,7 +76,7 @@ export default function P3() {
           onClick={generatePDF}
           className="bg-green-600 text-white px-8 py-3 text-lg rounded-lg shadow hover:bg-green-700 transition-all hover:scale-105"
         >
-          Generate pdf
+          Submit
         </button>
       </div>
     </div>
