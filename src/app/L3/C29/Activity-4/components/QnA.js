@@ -29,10 +29,10 @@ export default function QnA() {
             text: "List 3 things that distract you when you're supposed to be doing something important.",
         },
         {
-            text: "Think of a time you took action quickly — how did it feel afterward?",
+            text: "How can breaking a big task into smaller steps make it easier to start?",
         },
         {
-            text: "Name something small you can do after class that you’ve been avoiding.",
+            text: "What distractions usually stop you from getting started?"
         }
     ]
 
@@ -44,7 +44,7 @@ export default function QnA() {
             if (currentObjIndex === (objects.length - 1)) {
                 nextQuestion()
             } else {
-                setModalTitle('Moving to next challenge!');
+                setModalTitle('Move to the next challenge!');
                 setNextQ(true)
                 setOpenModal(true)
             }

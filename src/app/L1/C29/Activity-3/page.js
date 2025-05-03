@@ -8,11 +8,9 @@ import Slider from './components/Slider'
 export default function Home() {
   return (
     <div className="mainContainer bg-gray-100">
-      <div className="headingContainer" id="headingContainer">
+      {/* <div className="headingContainer" id="headingContainer">
         <h1 className="mainHeading">Red Light, Green Light & Yellow Light</h1>
-      </div>
-      <hr />
-      <br />
+      </div> */}
       <center>
         <Slider />
       </center>

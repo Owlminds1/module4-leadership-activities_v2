@@ -55,65 +55,70 @@ export default function Slider() {
     return (
         <div>
             <div className="h-screen w-screen lightsMainCon bg-gray-100">
-                <div className="mb-8 text-left">
-                    <i>Light indicators : </i>
-                    <ul className="list-disc list-inside">
-                        <li><span className='font-semibold text-green-800'>Green Light</span> – Are they showing good initiative?</li>
-                        <li><span className='font-semibold text-yellow-700'>Yellow Light</span> – Are they doing nothing when they should have taken action?</li>
-                        <li><span className='font-semibold text-red-800'>Red Light</span> – Are they being bossy or too controlling?</li>
-                    </ul>
-                </div>
 
-                <div className='secContainer mb-8 shadow'>
-                    <h1 className='text-[20px] font-semibold mb-4'>Scenario {currentObjIndex + 1}</h1>
-                    <div className='secContainer1'>
-                        <h1 className="subHeading  w-[400px] text-left mr-6 text-[20px]">{obj[currentObjIndex]["subHeading"]}</h1>
-                        <Image alt="currentObj" className='currentObj w-[250px]' src={obj[currentObjIndex]["img"]} />
+                <div className="w-full flex justify-between mb-8 text-white text-lg font-medium">
+                    <div className="w-1/3 bg-green-500 p-2 text-left">
+                        <span className="font-semibold">Green Light</span> – This means the character is taking initiative.
+                    </div>
+                    <div className="w-1/3 bg-yellow-400 p-2 text-left text-black">
+                        <span className="font-semibold">Yellow Light</span> – This light shows that the character sees a problem or someone who needs help, but they aren’t doing anything about it.
+                    </div>
+                    <div className="w-1/3 bg-red-500 p-2 text-left">
+                        <span className="font-semibold">Red Light</span> – This light means the character is trying to control everything and not listening to others' ideas.
                     </div>
                 </div>
 
-                <div className="div2 flex flex-col items-center gap-6 p-6 rounded-2xl shadow-lg bg-white">
-                    <div
-                        className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-all duration-500 ${getGlow(
-                            light
-                        )}`}
-                        style={{
-                            backgroundColor:
-                                light === "red"
-                                    ? "#fa2c37"
-                                    : light === "yellow"
-                                        ? "#fdc800"
-                                        : light === "green"
-                                            ? "#06d706"
-                                            : "#e5e7eb",
-                            transition: "background-color 0.3s ease"
-                        }}
-                    >
+                <div className='flex '>
+                    <div className='w-1/2 secContainer shadow mr-12'>
+                        <h1 className='text-[20px] font-semibold mb-4'>Scenario {currentObjIndex + 1}</h1>
+                        <div className='secContainer1'>
+                            <h1 className="subHeading  w-[400px] text-left mr-6 text-[20px]">{obj[currentObjIndex]["subHeading"]}</h1>
+                            <Image alt="currentObj" className='currentObj w-[250px]' src={obj[currentObjIndex]["img"]} />
+                        </div>
                     </div>
 
-                    {/* Buttons */}
-                    <div className="flex gap-4">
-                        <button
-                            onClick={() => setLight("red")}
-                            className="cursor-pointer bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full shadow"
+                    <div className="w-1/2 div2 flex flex-col justify-center items-center gap-6 p-6 rounded-2xl shadow-lg bg-white">
+                        <div
+                            className={`w-38 h-38 rounded-full flex items-center justify-center mb-4 transition-all duration-500 ${getGlow(
+                                light
+                            )}`}
+                            style={{
+                                backgroundColor:
+                                    light === "red"
+                                        ? "#fa2c37"
+                                        : light === "yellow"
+                                            ? "#fdc800"
+                                            : light === "green"
+                                                ? "#06d706"
+                                                : "#e5e7eb",
+                                transition: "background-color 0.3s ease"
+                            }}
                         >
-                            Red Light
-                        </button>
-                        <button
-                            onClick={() => setLight("yellow")}
-                            className="cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded-full shadow"
-                        >
-                            Yellow Light
-                        </button>
-                        <button
-                            onClick={() => setLight("green")}
-                            className="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow"
-                        >
-                            Green Light
-                        </button>
+                        </div>
+
+                        {/* Buttons */}
+                        <div className="flex gap-4">
+                            <button
+                                onClick={() => setLight("red")}
+                                className="cursor-pointer bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full shadow"
+                            >
+                                Red Light
+                            </button>
+                            <button
+                                onClick={() => setLight("yellow")}
+                                className="cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded-full shadow"
+                            >
+                                Yellow Light
+                            </button>
+                            <button
+                                onClick={() => setLight("green")}
+                                className="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow"
+                            >
+                                Green Light
+                            </button>
+                        </div>
                     </div>
                 </div>
-
                 {currentObjIndex < obj.length - 1 &&
                     <button
                         className="mt-8 bg-blue-500 text-white px-8 py-2 cursor-pointer rounded hover:bg-green-900 shadow"
