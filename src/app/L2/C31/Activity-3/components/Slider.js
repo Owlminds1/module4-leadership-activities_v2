@@ -22,9 +22,9 @@ export default function Slider() {
     ];
 
     const objSubHeading = [
-        'Emma wanted to read her comic, but Noah was too loud. She felt upset because she couldn’t focus.',
+        'Emma wanted to read her comic, but Noah was too loud. She felt upset because she was not able to focus.',
         'Mia kicked the ball the wrong way, and the other team scored. Alex yelled, "Mia, you’re terrible at this game!" Mia looked sad and walked away.',
-        'At his cousin’s party, Ethan played musical chairs. When the music stopped, Kai bumped into him and grabbed the last chair. "I won!" Kai cheered. Ethan felt upset and a little left out'
+        'At his cousin’s party, Ethan played musical chairs. When the music stopped, Kai bumped into him and grabbed the last chair. "I won!" Kai cheered. Ethan felt upset and left.'
     ];
 
     const toleranceQtyObj = [

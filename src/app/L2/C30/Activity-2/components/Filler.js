@@ -30,7 +30,7 @@ export default function Filler(props) {
     const col3 = [
         "Everyone has a seat at the table.",
         "Everyone’s opinions are heard.",
-        "Decision-makers listen carefully.",
+        "Decision-makers listen carefully attentively (Sam’s parents pay attention to their ideas).",
         "Ideas are not just heard but also acted upon."
     ]
 

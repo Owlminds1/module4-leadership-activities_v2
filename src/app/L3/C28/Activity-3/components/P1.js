@@ -13,7 +13,7 @@ export default function P1() {
     return (
         <div className='slidesMainContainer'>
             <h1 className="heading">
-            Imagine riding your bike to school—racing friends and feeling free. But for students in another town, it's risky. Without bike lanes, busy roads make biking unsafe, and parents are worried too. These students want to start a campaign for safer routes—but they need help getting started.
+            Imagine riding your bike to school racing with friends. But also think about students living in another town. It's risky without bike lanes as busy roads make biking unsafe. Parents might get worried too. Some students want to campaign for safer routes.
             </h1>
             <Image alt="currentObj" className='currentObj' src={PI1} />
         </div>

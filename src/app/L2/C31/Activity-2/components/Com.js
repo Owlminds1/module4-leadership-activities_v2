@@ -44,7 +44,7 @@ export default function Mystery() {
             heading: "Choosing a Class Pet",
             c1_name: "Liam",
             c2_name: "Sophia",
-            c1_obj: "Liam wants a turtle because he thinks it’s easy to take care of.",
+            c1_obj: "Liam wants a turtle because he thinks it’s easy to manage.",
             c2_obj: "Sophia wants a bunny because she loves fluffy animals.",
             c1_questions: [
                 "Why does Liam think having a turtle is a better option?",

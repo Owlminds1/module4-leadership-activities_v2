@@ -21,10 +21,10 @@ export default function Slider() {
     ]
 
     const objHeading = [
-        "Ria's group is working on a class project, but one team member has stopped working.",
-        "Ben's group is making a poster for a class project, but one student keeps taking over and not letting others contribute. Some group members feel left out.",
+        "Ria’s group is working on a class project, but a team member has left.",
+        "Ben's group is designing a poster for a class project, but a student is too bossy to let others contribute. Some group members feel left out.",
         "Chloe's class is preparing for a group performance, but some students are nervous and afraid they will forget their lines. They don’t want to go on stage.",
-        "Nathan's was at beach with family when they noticed a group of younger kids playing too close to deep water. There are no adults nearby watching them"
+        "Nathan was at the beach with family when they noticed a group of younger kids playing too close to deep water. There were no adults nearby to watch."
     ]
 
     // (Is this leadership, or just kindness? Can small actions make someone a leader?)

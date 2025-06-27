@@ -29,9 +29,10 @@ export default function Slider() {
 
     const objSubHeading = [
         'At snack time, Noah bumped Emma’s juice. It spilled! Emma yelled, "You did that!" Noah said, "No, it was an accident!"',
-        'Mia and Lucas shared a room. Mum asked them to clean up. Mia cleaned, but Lucas kept playing. Mia got upset and said, "You never help! I have to do everything',
+        'During snack time, Noah spilled Emma’s juice. She yelled, "You did that!" Noah said, "No, it was a mistake!"',
+        'Mia and Lucas share a room. Mum asked both to tidy up. Mia did her share, but Lucas kept playing. Mia got upset and said, "You never help! I have to do everything.',
         'Zoe and Jake were watching TV. Jake wanted sports. Zoe wanted cartoons. Jake grabbed the remote and said, "I had it first!"  Zoe said, "That’s not fair!"',
-        'Liam and his older sister, Sophie, spotted one cookie left on the plate. As Liam reached for it, Sophie quickly grabbed it and said, "I got it first! It’s mine!" Liam frowned and said, "That’s not fair! I wanted it too!"'
+        'Liam and his older sister, Sophie, spotted a cookie left on the plate. As Liam reached for it, Sophie quickly grabbed it and said, "I got it first! It’s mine!" Liam frowned and said, "That’s not fair! I wanted it too!"'
     ]
 
     const solutionObj = [

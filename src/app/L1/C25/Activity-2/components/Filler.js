@@ -10,7 +10,7 @@ export default function Com(props) {
 
     const obj = [
         {
-            question: "Q. What did Maya do when she saw a problem?",
+            question: "Q. What did Maya do when she faced a problem?",
             answer: ""
         },
         {
@@ -34,7 +34,7 @@ export default function Com(props) {
             answer: "Initiative and Confidence"
         },
         {
-            question: "Q. Did Maya force her friends to play her games, or did she suggest and involve them?",
+            question: "Q. Did Maya insist on her friends to play games, or did she suggest getting involved?",
             answer: ""
         },
         {
@@ -42,7 +42,7 @@ export default function Com(props) {
             answer: "Teamwork, and Respect for Others"
         },
         {
-            question: "Q. Was Maya scared of trying something new, or did she show courage?",
+            question: "Q. Was Maya unsure of trying something new, or did she show courage?",
             answer: ""
         },
         {

@@ -17,7 +17,7 @@ export default function Slider() {
         {
             img: S1,
             heading:"The Group Project Starter",
-            subHeading:"Everyone was quiet during group work. Maya looked around and said, `Let’s decide who’s doing what so we can finish this on time. I’ll start by writing down our ideas. Who wants to help?`"
+            subHeading:"Everyone was talking at the end of art class. Liam grabbed a broom and shouted, “Ugh! You guys are so messy! Clean up NOW or I’ll tell the teacher!”"
         },
         {
             img: S2,
@@ -27,7 +27,7 @@ export default function Slider() {
         {
             img: S3,
             heading:"The Classroom Door Debate",
-            subHeading:"It was noisy in the hallway. Zoe got up, closed the door, and said, `I can’t concentrate with that noise. You all should’ve closed it earlier. Don’t let it happen again.`"
+            subHeading:"It was noisy in the hallway. Zoe got up, closed the door, and said, 'It’s hard to concentrate with that noise. You all should’ve closed it earlier. Don’t let it happen again.'"
         },
         {
             img: S4,

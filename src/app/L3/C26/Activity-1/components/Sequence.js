@@ -68,7 +68,7 @@ export default function DragDropOptions(props) {
         {
             heading: 'School Trip Dilemma',
             img: S1,
-            subHeading: "Fimona's class is going on a field trip. They have only one bus with limited space, and not all supplies fit. A team of students have to figure out the best way to pack supplies for the trip",
+            subHeading: "Fimona's class is going on a field trip. There’s only one bus with limited space, and not all supplies fit. A team of students have to figure out the best way to pack.",
             tasks: [
                 'Move supplies.',
                 'Prioritise essential supplies.',
@@ -90,7 +90,7 @@ export default function DragDropOptions(props) {
         {
             heading: 'The Rescue Mission',
             img: S2,
-            subHeading: 'A plane crashes on a deserted island, leaving a group stranded. They must survive and find a way to escape within 24 hours. Resources are limited, and they need to use their skills wisely. ',
+            subHeading: 'A group is stranded after a plane crashes on a remote island. They must survive and escape within 24 hours. Resources are limited so they have to use their skills wisely.',
             tasks: [
                 'Build a strong shelter.',
                 'Find a clean water source.',
@@ -112,7 +112,7 @@ export default function DragDropOptions(props) {
         {
             heading: 'The Space Station Crisis',
             img: S3,
-            subHeading: "A spaceship’s oxygen system is failing, and the crew has only 30 minutes to fix it before running out of air. Everyone must use their expertise to restore the system while staying calm under pressure.",
+            subHeading: "A spaceship’s oxygen system is crashing, and the crew has only 30 minutes to fix before air goes out. Everyone must use their expertise to restore the system calmly.",
             tasks: [
                 'Repair the broken oxygen system.',
                 'Analyze the oxygen system to assist with repairs.',

@@ -15,7 +15,7 @@ export default function Filler() {
     ]
     
     const objHeading = [
-        'Rhyan is six years old. He loves playing, but he doesn’t help much at home. His parents feel tired doing so much household work. One day, he realizes he wants to help them and make them happy. But he’s not sure how!'
+        'Rhyan is six years old. He loves playing, but he doesn’t help much at home. His parents feel tired doing so much household work. Later, he realizes he wants to help and make his parents happy. But he’s not sure how!'
     ]
 
     const handleNext = () => {

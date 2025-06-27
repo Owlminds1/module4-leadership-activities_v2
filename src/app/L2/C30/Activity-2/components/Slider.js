@@ -20,7 +20,7 @@ export default function Slider() {
             subHeading: "Only boys can join the school soccer team.",
             questions: [
                 "Does this rule give SPACE for everyone to feel included?",
-                "How to use VOICE to speak up?",
+                "How to use your VOICE to speak up?",
                 "Who is AUDIENCE to listen and act on it?",
                 "How to transform ideas to INFLUENCE?"
             ]
@@ -31,7 +31,7 @@ export default function Slider() {
             subHeading: "Only the tallest student in the class can be class captain.",
             questions: [
                 "Does this rule give SPACE for everyone to feel included?",
-                "How to use VOICE to speak up?",
+                "How to use your VOICE to speak up?",
                 "Who is AUDIENCE to listen and act on it?",
                 "How to transform ideas to INFLUENCE?"
             ]
@@ -39,10 +39,10 @@ export default function Slider() {
         {
             img: R3,
             heading: "The Playground Rule",
-            subHeading: "Only students who can run fast are allowed to play in the playground. Slower students must stay in the classroom.",
+            subHeading: "Only the tallest student in the class can be the class captain. ",
             questions: [
                 "Does this rule give SPACE for everyone to feel included?",
-                "How to use VOICE to speak up?",
+                "How to use your VOICE to speak up?",
                 "Who is AUDIENCE to listen and act on it?",
                 "How to transform ideas to INFLUENCE?"
             ]

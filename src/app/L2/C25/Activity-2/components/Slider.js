@@ -4,6 +4,7 @@ import './style.css'
 
 
 import Image from 'next/image'
+import S0 from '../assets/s0.jpeg';
 import S1 from '../assets/s1.jpeg';
 import S2 from '../assets/s2.jpeg';
 import S3 from '../assets/s1.jpeg';
@@ -16,6 +17,7 @@ import { useState } from 'react';
 export default function Slider() {
     const [currentObj, setCurrentObj] = useState(0)
     const obj = [
+        "Humility",
         "Empathy",
         "Teamwork",
         "Determination",
@@ -24,14 +26,16 @@ export default function Slider() {
     ]
 
     const objHeading = [
-        'Empathy means understanding and caring about how others feel. A leader with empathy listens, supports, and helps others in need. They don’t ignore someone who is upset, they try to help!',
+        'Humility means not bragging but instead giving credit to others for their input. A humble leader listens and learns instead of showing off.',
+        'Empathy means understanding and feeling for others. A leader with empathy listens, supports, and helps. They don’t ignore others who may be upset; instead they try to help!',
         'Teamwork means working together and making sure everyone gets a chance to help. Good leaders support their team and share responsibilities.',
-        'Determination means never giving up, even when something is hard. A leader keeps trying and encourages others to do the same.',
+        'Determination means never giving up, even when something is challenging. A leader keeps trying and encourages others to do the same.',
         'Being responsible means keeping promises, making good choices, and setting a good example for others.',
         'Confidence means believing in yourself and your ideas. A confident leader speaks up, tries new things, and encourages others to do the same.',
     ]
 
     const objImg = [
+        S0,
         S1,
         S2,
         S3,

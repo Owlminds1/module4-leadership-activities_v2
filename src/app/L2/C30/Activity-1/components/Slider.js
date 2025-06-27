@@ -56,7 +56,7 @@ export default function Slider() {
         {
             img: S3,
             heading: "The Homework Shortcut",
-            text: "Lily has homework due tomorrow. Her friend tells her, ‘Just copy my answers, and we’ll both save time!’ What should she do?",
+            text: "Lily’s homework is due tomorrow. Her friend tells her, ‘Just copy my answers so we both save time!’ What should she do?",
             choices: [
                 "Do the work herself, even if it takes longer.",
                 "Copy the answers to save time."

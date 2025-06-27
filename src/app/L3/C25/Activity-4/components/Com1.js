@@ -17,10 +17,10 @@ export default function Com1() {
                 <div className="w-1/2 p-6 bg-white shadow-lg rounded-lg text-left">
                     <h1 className='text-center heading'>Bossy Leader</h1>
                     <ol className='list-decimal p-6 subHeading'>
-                        <li><b>Gives orders without listening</b> : Expects others to follow without discussion.</li>
-                        <li className='mt-2'><b>Focuses only on results, not teamwork</b> : Cares more about winning than working together.</li>
-                        <li className='mt-2'><b>Blames others for mistakes</b> : Avoids responsibility and shifts fault to teammates.</li>
-                        <li className='mt-2'><b>Doesn't value others' opinions</b> : Ignores feedback and makes decisions alone.</li>
+                        <li><b>Gives orders without listening</b> : Expects others to follow without discussing first.</li>
+                        <li className='mt-2'><b>Focuses only on results, not teamwork</b> : Prioritises winning over working together.</li>
+                        <li className='mt-2'><b>Plays the blame game</b> : Shifts faults onto teammates to avoid responsibility for their own actions.</li>
+                        <li className='mt-2'><b>Undervalues others' opinions</b> : Makes decisions alone instead of incorporating feedback.</li>
                     </ol>
 
                 </div>

@@ -16,7 +16,7 @@ export default function Slider() {
         {
             img: S1,
             heading: "Dinner Table Helpers",
-            subHeading:"Dinner is finished. The plates and cups are still on the table. Everyone is watching TV, and no one has said to clear the table."
+            subHeading:"Dinner is done. The plates and cups are still on the table. The TV is on but the table is still messy."
         },
         {
             img: S2,
@@ -26,7 +26,7 @@ export default function Slider() {
         {
             img: S3,
             heading: "Package at the Door",
-            subHeading:"You walk past your front door and see a parcel sitting there."
+            subHeading:"You notice a parcel parked at your front door."
         }
     ]
 

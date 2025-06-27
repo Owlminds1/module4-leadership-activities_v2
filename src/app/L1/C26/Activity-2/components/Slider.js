@@ -17,7 +17,7 @@ export default function Slider() {
     ]
     
     const objHeading = [
-        "It’s time to go home, and Rohan can’t find his jacket! Rohan remembers leaving it somewhere, but he doesn't know where. What should he do?",
+        "It’s time to go home, but Rohan is not able to find his jacket! He remembers keeping it somewhere, but doesn't know where. What should he do?",
         'Ella wants to make friendship bracelets for all her classmates, but it’s taking too long. How can you finish them faster?'
     ]
 

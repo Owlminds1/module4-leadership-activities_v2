@@ -35,7 +35,7 @@ export default function Slider() {
     const objSubHeading = [
         "",
         "Liam has been selected to give a small speech during the school assembly. He practised a lot but forgets his lines during rehearsal. He gets nervous and says, 'Maybe I’m not meant to speak in front of others.'",
-        "Ella is working on a group project with two of her friends, but they keep getting distracted and aren’t helping much. Ella feels overwhelmed. “Why should I even bother trying,” she says, “if no one else seems to care?",
+        'Ella is working on a group project with two friends, but they keep getting distracted and are not helpful. Ella feels overwhelmed. “Why should I even bother trying,” she says, “if no one else seems to bother?”',
         "Team Blaze, a group of students including Maya, Aiden, and Zoe, is competing in a trivia quiz competition. They’ve made it to the final round but start arguing about answers. Maya says, 'Forget it, we’re just going to lose now!'",
         ""
     ]

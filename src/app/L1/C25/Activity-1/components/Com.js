@@ -7,23 +7,23 @@ export default function Com() {
 
     const obj = [
         {
-            question: "Leo listened to the animals and helped them. What quality does this show?",
+            question: "Leo listened to the creatures then helped. What quality does this show?",
             answer: "Kindness"
         },
         {
-            question: "Leo knew that on climbing the tallest hill, he would be able to find water for everyone. What quality does this show?",
+            question: "Leo knew that by climbing the tallest hill, he would be able to find water for everyone. What quality does this show?",
             answer: "Wisdom"
         },
         {
-            question: "Leo led the animals through a long and dangerous journey without fear. What quality did this show?",
+            question: "Leo led the creatures through a long and challenging journey with courage. What quality did this show?",
             answer: "Bravery"
         },
         {
-            question: "Leo did not think only about himself. He cared for all the animals. What quality does this show?",
+            question: "Leo did not think only about himself but showed kindness towards all creatures. What quality does this show?",
             answer: "Selflessness"
         },
         {
-            question: "During the journey, Leo protected the smaller animals from predators. What quality did this show?",
+            question: "During the journey, Leo protected the smaller creatures from predators. What quality did this show?",
             answer: "Responsibility"
         }
     ];

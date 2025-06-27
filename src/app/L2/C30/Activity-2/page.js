@@ -26,7 +26,7 @@ export default function Home() {
     <div className="mainContainer">
       <div className="headingContainer" id="headingContainer">
         <h1 className="mainHeading">
-          {isStart ? 'Council of Kids - Let’s Make the Rules!' : 'Pizza Party'}
+          {isStart ? 'Council of kids' : 'Pizza Party'}
         </h1>
       </div>
       <hr />

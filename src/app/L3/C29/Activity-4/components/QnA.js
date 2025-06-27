@@ -11,7 +11,7 @@ export default function QnA() {
 
     const [currentObjIndex, setCurrentObjIndex] = useState(0);
     const [timeLeft, setTimeLeft] = useState(30);
-
+    
     const objects = [
         {
             text: "Name 3 tasks you wanted to do this week but haven’t done yet.",
@@ -29,7 +29,7 @@ export default function QnA() {
             text: "List 3 things that distract you when you're supposed to be doing something important.",
         },
         {
-            text: "How can breaking a big task into smaller steps make it easier to start?",
+            text: "How can organizing a big task into smaller steps make it easier to start?",
         },
         {
             text: "What distractions usually stop you from getting started?"

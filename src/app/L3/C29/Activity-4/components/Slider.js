@@ -14,7 +14,7 @@ export default function Slider() {
         {
             img: S1,
             heading:"The Homework Delay",
-            subHeading:"Sophie knows she has math homework due tomorrow, but she keeps watching YouTube videos instead."
+            subHeading:"Sophie knows she has math homework due tomorrow, but she keeps watching YouTube shorts instead."
         }
     ]
 

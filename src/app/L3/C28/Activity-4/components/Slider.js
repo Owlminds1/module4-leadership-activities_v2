@@ -24,7 +24,7 @@ export default function StoryChooser() {
         <div className="text-left w-[700px]">
           <h1 className="font-semibold text-[25px] mb-4">Do you know what a manifesto is?</h1>
           <p className="text-[18px] mb-4">
-            Well, a manifesto is a powerful message from a leader. It declares:
+            A manifesto is a powerful message from a leader. It’s a personal leadership statement — clear, passionate, and full of purpose. It impresses others and drives them to believe in the leader and rally together.
           </p>
           <ul className="list-decimal list-inside text-[18px] mb-4 transition-all duration-500">
             {visibleItems >= 1 && <li>What you believe in</li>}
@@ -32,7 +32,7 @@ export default function StoryChooser() {
             {visibleItems >= 3 && <li>How you plan to do it</li>}
             {visibleItems >= 4 && <li>What promise you make to those who support you</li>}
           </ul>
-          <button 
+          <button
             className="cursor-pointer mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             onClick={handleNextClick}
           >
@@ -42,13 +42,13 @@ export default function StoryChooser() {
       ) : (
         <div className="text-left w-[700px]">
           <h1 className="font-semibold text-[25px] mb-6">Greta Thunberg</h1>
-          <Image 
-            className="mb-2 w-[300px] rounded-[10px] shadow-xl p-6 bg-gray-100" 
-            src={GT} 
-            alt="gt" 
+          <Image
+            className="mb-2 w-[300px] rounded-[10px] shadow-xl p-6 bg-gray-100"
+            src={GT}
+            alt="gt"
           />
           <i>
-            <a 
+            <a
               target="_blank"
               className="text-blue-500"
               href="https://en.wikipedia.org/wiki/Greta_Thunberg"
@@ -57,7 +57,7 @@ export default function StoryChooser() {
             </a>
           </i>
           <h1 className="text-[22px] mt-4">
-            She’s a young climate activist from Sweden who started speaking up about global warming when she was just 15. 
+            She’s a young climate activist from Sweden who started speaking up about global warming when she was just 15.
             She began with one sign outside her school — and now millions of people around the world listen to her.
           </h1>
         </div>

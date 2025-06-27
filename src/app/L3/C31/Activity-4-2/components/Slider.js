@@ -25,10 +25,11 @@ export default function Slider() {
     const obj = [
         {
             char: C1,
+            charName: "Emma",
             scenario: "Playing Video Games vs. Playing Outside",
             opi: [
-                "Playing video games is better",
-                "Playing outside is better"
+                "Playing video games",
+                "Playing outside"
             ],
             opiStatement: [
                 "Emma believes playing outside is better than playing video games!",
@@ -37,10 +38,11 @@ export default function Slider() {
         },
         {
             char: C2,
+            charName: "Max",
             scenario: "Having a Set Bedtime vs. Choosing Your Own Bedtime",
             opi: [
-                "Should have a set bedtime",
-                "Should choose their own bedtime"
+                "Do you think kids should have a set bedtime,",
+                "Or should they be allowed to choose when to sleep?",
             ],
             opiStatement: [
                 "Max believes kids should be allowed to choose their own bedtime!",
@@ -159,7 +161,7 @@ export default function Slider() {
                 y += wrappedResponse.length * 7 + 5;
             });
 
-            y += 10; 
+            y += 10;
 
             if (y > 270) {
                 doc.addPage();
@@ -176,7 +178,7 @@ export default function Slider() {
             <h1 className='scenario'>Scenario : {obj[currentObjIndex]["scenario"]}</h1>
             {selectedOpi === -1 &&
                 <div className='optionsCon'>
-                    <p className='text-[17px] font-semibold'>Select one option</p>
+                    <p className='text-[17px] font-semibold'>What is your opinion ?</p>
                     <button onClick={() => handleOpiSelection(0)}>
                         {obj[currentObjIndex]["opi"][0]}
                     </button>
@@ -187,10 +189,15 @@ export default function Slider() {
             }
 
             {selectedOpi > -1 &&
-                <div className='statementCon'>
-                    <Image className='char' src={obj[currentObjIndex]["char"]} alt='char' />
-                    <h1 className='statement'>Statement : {obj[currentObjIndex]["opiStatement"][selectedOpi]}</h1>
-                </div>
+                <>
+                    <p className="text-[22px]">
+                        {obj[currentObjIndex]["charName"]} has a different opinion than yours.
+                    </p>
+                    <div className='statementCon'>
+                        <Image className='char' src={obj[currentObjIndex]["char"]} alt='char' />
+                        <h1 className='statement'>Statement : {obj[currentObjIndex]["opiStatement"][selectedOpi]}</h1>
+                    </div>
+                </>
             }
 
             {inputErr &&
@@ -199,6 +206,9 @@ export default function Slider() {
 
             {selectedOpi > -1 &&
                 <div className='qna1'>
+                    <p className="mt-[20px] mb-[15px] text-[18px]">
+                        Can you use the Three-Step Response Framework and respectfully show a disagreement with {obj[currentObjIndex]["charName"]}'s opinion?
+                    </p>
                     {frameWorkQ.map((q, i) => (
                         <div className='listCon' key={i}>
                             <h2>{q}</h2>

@@ -12,7 +12,7 @@ export default function Slider() {
     const obj = [
         {
             scenario: "Making the Most of New Playground Space",
-            scenarioT: "The school has recently expanded, and there is now extra space available. Students have the opportunity to help decide how to use it. Most students (Delta group) want to build a new basketball court to encourage teamwork and physical activity. A smaller group (Sigma group) prefers a quiet reading area because not everyone enjoys sports. ",
+            scenarioT: "The school has recently expanded. Students have the opportunity to help decide how to use the additional space. Most students (Delta group) want to build a new basketball court to encourage teamwork and physical activity. A smaller group (Sigma group) prefers a quiet reading area because not everyone enjoys sports. ",
             questions: [
                 "Why does your group believe a basketball court is the best choice?",
                 "Why is your group’s choice important?",
@@ -21,7 +21,7 @@ export default function Slider() {
         },
         {
             scenario: "The Community Safety Debate",
-            scenarioT: "A local town is debating a new safety rule. The majority group, called Delta, wants to set a curfew for all kids under 14, requiring them to be home by 8 PM to help keep them safe. A smaller group, called Sigma, argues that kids who have parental permission and show responsibility should be allowed to stay out later. They believe it’s unfair to restrict all kids because of a few concerns.",
+            scenarioT: "A local town is debating a new safety rule. The majority group, called Delta, wants to set a curfew for all kids under 14, requiring them to be home by 8 PM to ensure safety. A smaller group, called Sigma, argues that kids who have parental permission and show responsibility should be allowed to stay out until late. They believe it’s unfair to restrict all kids because of a few concerns",
             questions: [
                 "How does your group feel about the curfew?",
                 "Why does your group think this is the best solution?",

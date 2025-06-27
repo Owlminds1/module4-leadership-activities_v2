@@ -27,8 +27,8 @@ export default function Slider() {
     ]
 
     const objSubHeading = [
-        "Ava always sits with her best friend, Olivia, at lunch. But today, Olivia went ahead without her and sat with someone else. Ava feels left out and upset. She angrily says, 'You ignored me and left me out on purpose! You don’t care about our friendship!' Olivia looks surprised and doesn’t know what to say.",
-        "Ethan’s younger brother, Noah, took his favorite book without asking and accidentally damaged the cover. When Ethan sees it, he yells, 'You always take my things without asking! You ruined my book!' Noah looks down, feeling upset.",
+        'Ava always eats lunch with her best friend, Olivia. But today, Olivia went ahead alone to join someone else. Ava feels left out and upset. She angrily says, "You ignored me and left me out on purpose! You don’t respect our friendship!" Olivia looks surprised and doesn’t know what to say.',
+        'Ethan’s younger brother, Noah, took his favorite book without asking and mistakenly tore the cover. When Ethan noticed it, he yelled, "You always take my things without asking! You ruined my book!" Noah looks down, feeling upset.',
         "Liam and his friend, Jake, had planned to go to the park together. But at the last minute, Jake canceled without giving a clear reason. Feeling frustrated, Liam messaged him, 'You don’t care about our plans! You always cancel at the last minute!' Jake saw the message but didn’t reply"
     ]
 

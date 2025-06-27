@@ -21,12 +21,12 @@ export default function Slider() {
         {
             img: S2,
             heading: " Birthday Switch-Up",
-            subHeading: "Arjun had been counting down the days to his birthday party at the arcade. But when the morning finally arrived, he saw that his little sister looked sad — the noise and flashing lights weren’t her favorite. Wanting her to enjoy the day too, he Arjun switched the plan and took everyone to the zoo. His sister’s bright smile made it worth it, but deep down, Arjun couldn’t shake his own disappointment."
+            subHeading: "Arjun had been counting down the days to his birthday party at the arcade. But when the morning finally arrived, he saw that his little sister looked sad — the noise and flashing lights weren’t her favorite. Wanting her to enjoy the day too, Arjun switched the plan and took everyone to the biodiversity reserve. His sister’s bright smile made it worth it, but deep down, Arjun still felt disappointed."
         },
         {
             img: S3,
             heading: "The Missing Sock Blame",
-            subHeading: "Sam was in a panic before his football match — his favorite socks were missing!  He blamed his sister and even got their mum involved. But later, while digging through his sports bag, Sam found the socks — right where he had packed them and totally forgotten!"
+            subHeading: "Sam panicked before his football match as his favorite socks were missing! He blamed his sister and even got their mum involved. But later, while digging through his bag, Sam found the socks! They were right where he had packed but he totally forgot!"
         },
     ]
 

@@ -16,7 +16,7 @@ export default function Slider() {
         {
             img: S1,
             heading: "Tickling Too Much",
-            text: "James and Ethan are rolling with laughter as James launches a full-on tickle attack. Ethan suddenly bursts out, 'Stop!'  James still caught up in the fun, pauses and wonders — if he should continue tickling or call it quits?",
+            text: "James and Ethan laugh as James tickles. Ethan says, 'Stop!' but James continues. He then pauses and wonders if he should keep tickling or not?",
             choices: [
                 "Stop tickling and ask, ‘What should we play next?’",
                 "Keep tickling because it was fun at first."
@@ -29,14 +29,14 @@ export default function Slider() {
             choice2_CC: [
                 "Ethan might feel annoyed or even upset.",
                 "Ethan might not want to play with James anymore.",
-                "An adult might remind James that it’s important to listen when someone says stop.",
+                "An adult might remind James that it’s important to listen when others say stop.",
             ],
             ans: 0
         },
         {
             img: S2,
             heading: "Sharing a Snack",
-            text: "Isabella has a yummy snack, and her friend Lily asks if she can have some. Isabella really likes her snack and doesn't want to share, but Isabella also doesn't want Lily to feel left out.",
+            text: "Isabella’s friend Lily asks if she can have some of her snacks. But Isabella really likes it so doesn't want to share. She also doesn't want Lily to feel left out.",
             choices: [
                 "Isabella keeps the snack for herself.",
                 "Isabella shares a little bit of her snack with Lily."
@@ -58,12 +58,12 @@ export default function Slider() {
             text: "Ava is watching her favourite cartoon when her father asks if she would like to join him baking cookies together.",
             choices: [
                 "Ava pauses the show and joins her father in the kitchen.",
-                "Ava tells her father that she wants to finish your show first."
+                "Ava tells her father that she wants to finish the show first."
             ],
             choice1_CC: [
                 "Ava spends fun time with her father.",
                 "Ava learns how to bake and help in the kitchen.",
-                "Ava still might have time to watch her show later.",
+                "Ava might still be able to watch the show.",
             ],
             choice2_CC: [
                 "Ava gets to finish watching her favourite show.",

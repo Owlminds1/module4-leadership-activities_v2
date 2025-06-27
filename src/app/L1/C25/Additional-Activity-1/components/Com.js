@@ -10,7 +10,7 @@ export default function Com() {
             question: "What happened to the little red train in the story?"
         },
         {
-            question: "Who refused to help? Why do you think they said no?"
+            question: "Who didn’t help? Why do you think they said no?"
         },
         {
             question: "Who finally helped? What made the Little Blue Engine different from the others?"

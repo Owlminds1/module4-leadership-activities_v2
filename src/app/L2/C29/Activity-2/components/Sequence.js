@@ -5,14 +5,14 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import Modal from "@/components/ModalInit";
 
 const initialOptions = [
-    { id: "1", text:"The teacher notices and praises your responsibility." , answer: "You throw your rubbish in the bin after lunch without being reminded."},
+    { id: "1", text:"The teacher notices and praises your action." , answer: "You throw your rubbish in the bin after lunch without being reminded."},
     { id: "2", text:"Everyone feels respected and excited to share.", answer: "You say, `Let’s listen to everyone’s idea before we decide.`"},
     { id: "3", text:"Your classmate feels upset and doesn't want to work with you.", answer: "You grab the markers from a classmate and say, `I need them now!`"},
     { id: "4", text:"The group feels included and enjoys working together.", answer: "You ask your group, “Do you want to take turns being the leader?”"},
     { id: "5", text:"Your friend feels embarrassed and stops drawing.", answer: "You shout, `That’s not how you do it!` while your friend is drawing."},
-    { id: "6", text:"Others see you as respectful and polite.", answer: "You wait patiently for your turn while others are speaking."},
+    { id: "6", text:"Others see you as respectful and polite.", answer: "You wait for your turn while others speak."},
     { id: "7", text:"Your classmate feels thankful and smiles.", answer: "You offer to help a classmate who dropped all their books."},
-    { id: "8", text:"The teacher feels disrespected and disappointed.", answer: "You roll your eyes when your teacher asks you to fix your mistake."}
+    { id: "8", text:"The teacher feels disrespected and disappointed.", answer: "You look away when your teacher asks you to correct your mistake."}
 ];
 
 const shuffleArray = (array) => {

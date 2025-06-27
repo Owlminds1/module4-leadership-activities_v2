@@ -15,7 +15,7 @@ export default function Slider() {
     const obj = [
         'I see why you think that making new friends is important because it helps us meet new people and learn different things',
         'But I feel differently because old friends already know and understand us, and strong friendships take time to build.',
-        'I guess we both agree that friendships : whether old or new, are important for having fun and supporting each other!'
+        'I guess we both agree that friendships, whether old or new, are important to appreciate and support each other!'
     ]
     const scenario = "Making New Friends vs. Sticking with Old Friends";
 

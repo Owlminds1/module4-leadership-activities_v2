@@ -5,11 +5,11 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import Modal from "@/components/ModalInit";
 
 const initialOptions = [
-    { id: "1", text: "Your friend smiles and shares with you later.", answer: "Share toy" },
-    { id: "2", text: "You don’t have lunch at school.", answer: "Forget lunchbox" },
-    { id: "3", text: "They get distracted and can’t focus on their book.", answer: "Talk Loudly" },
-    { id: "4", text: "They smile and feel happy.", answer: "Say thank you" },
-    { id: "5", text: "Someone steps on your toys and gets hurt.", answer: "Don't clean up after playing with toys" },
+    { id: "1", text: "Your friend smiles and shares with you later.", answer: "You share your toy." },
+    { id: "2", text: "You don’t have lunch at school.", answer: "You forget your lunchbox." },
+    { id: "3", text: "They get distracted and can’t focus on their book.", answer: "You talk loudly while someone is reading." },
+    { id: "4", text: "They smile and feel happy.", answer: "You say “Thank you.”" },
+    { id: "5", text: "Someone steps on your toys and gets hurt.", answer: "You don’t clean up your toys." },
     { id: "6", text: "Your class gets a new fish in the tank.", answer: "-" },
     { id: "7", text: "The school bell rings earlier than usual.", answer: "-" },
 ];

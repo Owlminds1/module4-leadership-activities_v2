@@ -22,12 +22,12 @@ export default function Slider() {
         {
             img: S2,
             heading: "The Quiet Helper",
-            subHeading: "Ella noticed her friend couldn’t find their pencil. She went to the supply box, got an extra pencil, and handed it to them without saying a word."
+            subHeading: "Ella noticed her friend trying to find their pencil. She went to the supply box, got an extra pencil, and handed it without saying a word. "
         },
         {
             img: S3,
             heading: "The Messy Mix-Up",
-            subHeading: "Noah saw the classroom was a bit messy after craft time. He clapped his hands and said loudly, 'Everyone! Clean up now! This place is a mess!' Then he started cleaning up himself."
+            subHeading: "Noah saw the classroom was a bit messy after craft time. He clapped his hands and said loudly, “Everyone! Tidy up now! This place is a mess!” Then he started tidying up too."
         },
         {
             img: S4,

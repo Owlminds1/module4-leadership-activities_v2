@@ -16,7 +16,7 @@ export default function Slider() {
         {
             img: S1,
             heading: "The Fundraiser",
-            subHeading: "Your class is on a mission to raise $500 for a local animal shelter, to buy food, blankets, and supplies for animals in need. You’ve baked cookies, collected donations, and worked hard. But after two weeks, you’ve only gathered $100. The shelter is depending on you, and the clock is ticking!"
+            subHeading: "Your class is on a mission to raise $500 for a national park— to buy food, blankets, and supplies for the creatures. You’ve baked cookies, raised funds, and worked hard. But after two weeks, you’ve only gathered $100. The national park is counting on you and the clock is ticking!"
         },
         {
             img: S2,

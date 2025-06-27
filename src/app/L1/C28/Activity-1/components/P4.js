@@ -8,8 +8,8 @@ export default function P3() {
   const seenHeading = "Planning your action";
 
   const questions = [
-    "What jobs can I help with during mealtime?",
-    "How do I set reminders for myself to help at meal time?",
+    "What can I help with during mealtime?",
+    "How do I set reminders to help during meals?",
     "How will I feel after helping with mealtime?",
     "What will help me keep going, even if the job gets boring to do every day? ",
     "Who at home can be part of my Home Harmony Hero team?"

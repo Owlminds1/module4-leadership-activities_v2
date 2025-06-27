@@ -21,7 +21,7 @@ export default function Slider() {
     ]
 
     const objHeading = [
-        'At the end of the day, the classroom is messy, and everyone is rushing to leave.',
+        'At the end of the day, the classroom gets messy but all students are ready to go home instead of tidying the space.',
         'Ira is about to go on stage for a class performance but suddenly feels too nervous to perform.',
         "During recess, Zoho and his friends are trying to carry a big, heavy box of sports equipment, but it's too hard for them to lift.",
         'Ava and Sam both want to use the same swing, and they start arguing.'

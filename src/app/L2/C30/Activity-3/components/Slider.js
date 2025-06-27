@@ -16,8 +16,8 @@ export default function Slider() {
         {
             img: S1,
             heading: "The Juice Spill Secret",
-            text: "Emma accidentally spilled juice on the carpet but didn’t tell anyone. She covered it with a towel and went back to watching TV.",
-            twist: "Later, her little brother slipped near the spot. Emma rushed to help and admitted she had spilled the juice. Her parents were glad she told the truth and helped clean it together."
+            text: "Emma mistakenly spilled juice on the carpet but didn’t tell anyone. She covered it with a towel and went to watch TV",
+            twist: "Later, her little brother slipped near the spot. Emma rushed to help and admitted she had spilled the juice. Her parents were glad she told the truth and helped scrub together."
         },
         {
             img: S2,
@@ -28,8 +28,8 @@ export default function Slider() {
         {
             img: S3,
             heading: "The Sneaky Snack",
-            text: "Ethan’s stomach was rumbling before dinner. His parents had said, “No cookies!” — but he was too hungry. He grabbed a cookie and gobbled it up before anyone could see.",
-            twist: "Later, his parents found out later — but instead of getting mad, they understood. Ethan had missed lunch and was feeling shaky, so they came up with a new plan: better snacks before dinner!"
+            text: "Ethan’s stomach was rumbling before dinner. His parents had said, “No cookies!” But as he was too hungry, he grabbed a cookie and gobbled it up before anyone saw.",
+            twist: "Later, his parents found out but instead of scolding, they understood. Ethan had missed lunch and was feeling shaky, so they came up with a new plan: better snacks before dinner!"
         }
     ]
 

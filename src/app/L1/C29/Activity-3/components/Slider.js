@@ -18,11 +18,11 @@ export default function Slider() {
     const obj = [
         {
             img: S1,
-            subHeading: "Luca saw that the books on the reading shelf were messy. He quietly started putting them back in the right places without being asked."
+            subHeading: "Luca noticed a messy reading shelf. He quietly started arranging the books without being asked."
         },
         {
             img: S2,
-            subHeading: "Olivia saw her friend spill their water bottle but looked away and didn’t say anything."
+            subHeading: "Olivia saw a friend spill their water bottle. Instead of saying something, she looked away."
         },
         {
             img: S3,

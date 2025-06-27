@@ -26,7 +26,7 @@ export default function Slider() {
         'A teacher in a classroom.',
         'A firefighter courageously rescuing people.',
         'A basketball team captain delivering a motivational speech to their teammates before a game.',
-        'A zookeeper feeding animals in a zoo.',
+        'A forest official feeding tigers in a forest reserve',
         'Ron helping Ria who fell on the playground.'
     ];
 

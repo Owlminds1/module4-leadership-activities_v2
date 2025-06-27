@@ -23,8 +23,8 @@ export default function Slider() {
 
     const objSubHeading = [
         'Emma and Jake went to an ice cream shop. Emma ordered chocolate, and Jake ordered vanilla. But when they got their cones, the flavors were switched! Emma took a bite of her ice cream and frowned. "I don’t like this!" she said. Jake looked upset too. "I wanted vanilla, not chocolate!" he said.',
-        'Liam had just joined the class. He spoke a different language and didn’t know all the games yet. At recess, he saw the kids playing tag and ran in to join. Some kids paused, unsure what to do. "Who’s that?" one whispered. "He doesn’t know the rules," another said quietly.',
-        'Mia and Noah were happily coloring together. When Mia wanted the red crayon, she saw Noah already using it. She crossed her arms and grumbled, "You’re taking too long!" Noah felt hurt and pulled the crayon closer. Both wished things had gone differently and didn’t feel happy anymore.'
+        'Liam had just joined the class. He speaks a different language and doesn’t know all the games yet. During recess, he noticed the kids playing tag and asked to join. Some kids paused, unsure what to do. "Who’s that?" a student whispered. "He doesn’t know the rules," another said quietly.',
+        'Mia and Noah were happily coloring together. When Mia wanted the red crayon, she noticed Noah already using it. She crossed her arms and grumbled, "You’re taking too long!" Noah felt hurt and pulled the crayon closer. Both wished things had gone differently and didn’t feel happy anymore.'
     ];
 
     const toleranceQtyObj = [

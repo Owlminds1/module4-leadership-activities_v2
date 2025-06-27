@@ -25,7 +25,7 @@ export default function Slider() {
     ]
 
     const objSubHeading = [
-        'Lily and Max are building a block tower together. Max accidentally knocks it over while reaching for a block. Lily says, "You ruined it! You always mess things up!" Max looks upset and stops playing.',
+        'Lily and Max are building a jenga tower together. Max mistakenly knocks it over while reaching for a piece. Lily says, "You ruined it! You always mess things up!" Max looks upset and stops playing.',
         'Sophia sits down to start her work but realizes her pencil is missing. She sees Oliver using a pencil that looks just like hers. She frowns and says, "You took my pencil! Give it back!" Oliver looks surprised and says, "No, I didn’t!"',
         'Emma and Jack both want to play with the same teddy bear during playtime. Jack grabs it first, and Emma says, "You always take the best toys! That’s not fair!" Jack looks annoyed and hugs the teddy bear tightly.'
     ]

@@ -78,7 +78,7 @@ export default function RightColumn() {
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Who Should Be the Sports Captain?</h2>
               <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-                Two students—Amara and Jayden—are keen to lead. Read about them, ask questions, summarise, and choose who should lead the club.
+              You get to choose the team captain for your school’s brand-new Sports Club! Two students—Amara and Jayden—are excited about the role. Both want to lead. You interview by asking thoughtful questions to decide who would make the best team captain.
               </p>
             </div>
 
@@ -90,9 +90,10 @@ export default function RightColumn() {
                 <div className="flex gap-4 text-left">
                   <Image src={C1} alt="Amara" className="rounded-xl w-28 h-28 object-cover" />
                   <ul className="text-gray-700 text-[16px] list-disc pl-4">
-                    <li><strong>Strengths:</strong> Organised, calm, handles conflict well.</li>
-                    <li><strong>Weakness:</strong> Not very sporty but inclusive and encouraging.</li>
-                    <li><strong>Wants:</strong> A fun, fair club where all feel welcome.</li>
+                    <li><strong>Strengths:</strong> Organised, calm under pressure, good at managing schedules and resolving conflicts.
+                    </li>
+                    <li><strong>Weakness:</strong> Not very sporty but makes everyone feel included and encouraged.</li>
+                    <li><strong>Wants:</strong> To make the club fun and fair for everyone, even if they’re not athletic</li>
                   </ul>
                 </div>
               </div>
@@ -103,9 +104,9 @@ export default function RightColumn() {
                 <div className="flex gap-4 text-left">
                   <Image src={C2} alt="Jayden" className="rounded-xl w-28 h-28 object-cover" />
                   <ul className="text-gray-700 text-[16px] list-disc pl-4">
-                    <li><strong>Strengths:</strong> Energetic, leads games, sporty.</li>
-                    <li><strong>Weakness:</strong> Gets too competitive, may overlook quieter members.</li>
-                    <li><strong>Wants:</strong> Help team win inter-school games.</li>
+                    <li><strong>Strengths:</strong> Passionate about sports, high energy, always leading games.</li>
+                    <li><strong>Weakness:</strong> Gets too competitive, doesn’t always listen to quieter voices.</li>
+                    <li><strong>Wants:</strong> To focus on training and winning inter-school matches.</li>
                   </ul>
                 </div>
               </div>
