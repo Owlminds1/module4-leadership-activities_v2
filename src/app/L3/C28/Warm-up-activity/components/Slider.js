@@ -9,10 +9,9 @@ export default function StoryChooser() {
     'The Magical Forest',
     'A Mystery at the Museum',
     'Robots Take Over the School',
-    'An Island of Talking Animals',
     'The Secret Underground City',
     'A Dragon in the Backyard',
-    'A Zoo with a Secret Portal',
+    'A Savannah with a Secret Portal',
     'Aliens Visit Earth for a Day',
     'The Haunted Library',
   ];

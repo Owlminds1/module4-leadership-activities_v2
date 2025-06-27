@@ -28,7 +28,7 @@ export default function Com1(props) {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-50">
-      <h1 className="text-2xl font-bold mb-6">Drag and drop the words to arrange them in the correct order.</h1>
+      <h1 className="text-2xl font-bold mb-6">Can you please help put it in the right order?</h1>
 
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="words">

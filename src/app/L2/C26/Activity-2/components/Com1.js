@@ -32,13 +32,13 @@ export default function Com1() {
             img: S1,
             heading: "The Balloon is Losing Hot Air Rapidly!",
             subHeading: "There’s a leak in the balloon, and it’s sinking quickly! You must drop something to stay airborne longer.",
-            ans: 6
+            ans: 5
         },
         {
             img: S2,
             heading: "The Balloon is Drifting Over the Ocean!",
             subHeading: "Strong winds have pushed your balloon over the sea. You need to drop weight to avoid sinking into the water.",
-            ans: 5
+            ans: 6
         },
         {
             img: S3,

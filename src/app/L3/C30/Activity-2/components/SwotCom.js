@@ -24,11 +24,13 @@ export default function Slider(props) {
     ];
 
 
+
+
     const generalQuestions = [
-        "What’s good about this idea?",
+        "How is this idea impactful?",
         "What might kids not like?",
-        "What could it lead to later?",
-        "What could go wrong?"
+        "What are the long term benefits?",
+        "What might go wrong?",
     ];
 
     const borderStyles = [
@@ -74,9 +76,9 @@ export default function Slider(props) {
                                 <div key={index} className='flex flex-col justify-evenly'>
                                     {/* {console.log(props.questions)} */}
                                     <p className='mb-2 font-semibold'>{value}</p>
-                                    {props && props.questionSet && 
+                                    {props && props.questionSet &&
                                         <p>
-                                            {props.questionSet === 'nonGeneral' ? nonGeneral[index]: generalQuestions[index]}
+                                            {props.questionSet === 'nonGeneral' ? nonGeneral[index] : generalQuestions[index]}
                                         </p>
                                     }
                                     <textarea

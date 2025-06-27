@@ -22,12 +22,12 @@ export default function Slider() {
         {
             img: S2,
             heading: "Project Power",
-            subHeading: "During group project time at school, Sophie turned to her classmates and said, `Emma, you do the writing. Noah, don’t say anything—just listen to me.`"
+            subHeading: "During a group project at school, Sophie turns to her classmates to say, 'Emma, you do the writing. Noah, don’t do anything, else you will mess up the project."
         },
         {
             img: S3,
             heading: "Play Trouble",
-            subHeading: "While playing at home, Ava looked at her brother Jake and said firmly, `Jake, I’m the leader, and you have to play the way I say!`"
+            subHeading: "While playing at home, Ava looked at her brother Jake and said firmly, `Jake, if you want to play, just do as I say!`"
         },
         {
             img: S4,

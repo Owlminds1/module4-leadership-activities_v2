@@ -35,7 +35,7 @@ export default function Slider(props) {
             heading: "Class Fund – How Should We Use It?",
             swotHeading1: "SWOT analysis for Option A – Science Kits",
             swotHeading2: "SWOT analysis for Option A – Class Trip",
-            subHeading: "Your class won $500 after a kindness challenge. Now your teacher wants your group to decide how to spend it wisely. There are two choices…” Option A: Buy Science Kits for hands-on learning. Option B: Plan a fun, learning-filled class trip."
+            subHeading: "Your class won $500 after a kindness challenge. Now your teacher wants your group to decide how to spend it wisely. You can choose: Option A: Buy Science Kits for hands-on learning. Option B: Plan a fun, learning-filled class trip."
         }
     ]
 

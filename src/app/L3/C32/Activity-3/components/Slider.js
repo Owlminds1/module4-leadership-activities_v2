@@ -21,7 +21,7 @@ export default function Slider() {
         {
             img: S2,
             heading: "Discussion Disruptions",
-            subHeading: "Ethan is trying to speak during a group discussion, but his friend keeps cutting him off."
+            subHeading: "Ethan is trying to speak during a group discussion, but his friend keeps interrupting."
         },
         {
             img: S3,

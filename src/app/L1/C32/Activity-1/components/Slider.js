@@ -16,12 +16,12 @@ export default function Slider() {
         {
             img: S1,
             heading: "Spilled Snacks",
-            subHeading: "Liam sees his classmate Maya crying because she dropped her snacks on the floor."
+            subHeading: "Liam sees his classmate Maya crying because she spilled her food on the floor."
         },
         {
             img: S2,
             heading: "Mum Needs Help ",
-            subHeading: "Ella sees her mum carrying heavy grocery bags and looking tired."
+            subHeading: "Ella notices her mum carrying heavy grocery bags and looking tired."
         },
         {
             img: S3,

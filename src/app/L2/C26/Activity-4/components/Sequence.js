@@ -46,8 +46,8 @@ export default function DragDropOptions(props) {
     Answer Set Planning a School Field Trip: 
         Task 1 : Jack 
         Task 2 : Lily 
-        Task 3 : Olivia 
-        Task 4 : James 
+        Task 3 : James
+        Task 4 : Olivia 
         Task 5 : Ryan
 */
 
@@ -93,7 +93,7 @@ export default function DragDropOptions(props) {
                 { id: 5, name: 'Ryan', img: S2_C5, skills: ['Creative and good at making posters and reminders', 'Knows a lot about nature and outdoor activities'] },
             ],
             ans: [
-                [1], [2], [4], [3], [5]
+                [1], [2], [3], [4], [5]
             ]
         }
     ];

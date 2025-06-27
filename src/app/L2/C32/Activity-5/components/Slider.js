@@ -8,7 +8,7 @@ import C3 from '../assets/c3.jpeg';
 
 const screens = [
   {
-    heading: "Mia and Jack were a part of a soccer team, and they lost, and Mia thinks Jack didn't try hard enough.",
+    heading: "Mia and Jack were a part of a soccer team, and they lost. Now Mia thinks Jack didn’t try hard enough.",
     images: [
       { src: C1, label: "Mia", message: "Jack, you made us lose the soccer match!" },
       { src: C2, label: "Jack" },
