@@ -10,7 +10,6 @@ import S2 from '../assets/s2.jpeg';
 import S3 from '../assets/s3.jpeg';
 import S4 from '../assets/s4.jpeg';
 import S5 from '../assets/s5.jpeg';
-import S6 from '../assets/s6.jpeg';
 
 import { useState } from 'react';
 
@@ -40,8 +39,7 @@ export default function Slider() {
         S2,
         S3,
         S4,
-        S5,
-        S6
+        S5
     ]
 
     // (Is this leadership, or just kindness? Can small actions make someone a leader?)
